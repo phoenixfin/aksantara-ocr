@@ -34,6 +34,11 @@ class TrainConfig:
     mixed_precision: bool = True
     num_workers: int = 2
     grad_clip: float | None = 1.0
+    # "auto" preloads when the decoded array fits in preload_max_gb, which is
+    # the usual case at 64px (~0.4 GB for the full corpus) and never at 224px
+    # (~4.9 GB). "always"/"never" override the decision.
+    preload: str = "auto"
+    preload_max_gb: float = 2.0
 
 
 @dataclass

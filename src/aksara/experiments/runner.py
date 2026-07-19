@@ -23,7 +23,12 @@ import pandas as pd
 import torch
 from torch.utils.data import DataLoader
 
-from ..data.dataset import AksaraDataset, build_class_index
+from ..data.dataset import (
+    AksaraDataset,
+    PreloadedAksaraDataset,
+    build_class_index,
+    estimate_preload_bytes,
+)
 from ..data.transforms import build_transform
 from ..engine import metrics as metrics_mod
 from ..engine.train import TrainConfig, train_model
@@ -142,6 +147,17 @@ def run_one(
     class_names = list(class_to_idx)
     grayscale = REGISTRY[exp.model].grayscale
 
+    # Decide once for the whole experiment so train/val/test share a strategy.
+    preload_bytes = estimate_preload_bytes(len(data), exp.image_size, grayscale)
+    if train_cfg.preload == "always":
+        use_preload = True
+    elif train_cfg.preload == "never":
+        use_preload = False
+    else:
+        use_preload = preload_bytes <= train_cfg.preload_max_gb * 1e9
+    if use_preload:
+        print(f"    preloading {preload_bytes / 1e9:.2f} GB into memory")
+
     loaders = {}
     for split in ("train", "val", "test"):
         subset = data[data["split"] == split]
@@ -149,13 +165,26 @@ def run_one(
             raise ValueError(f"Split {split!r} is empty for {exp.run_id}")
 
         is_train = split == "train"
-        dataset = AksaraDataset(
-            subset,
-            class_to_idx,
-            transform=build_transform(exp.augmentation, exp.image_size, is_train, grayscale),
-            label_column=label_column,
-            grayscale=grayscale,
-        )
+        transform = build_transform(exp.augmentation, exp.image_size, is_train, grayscale)
+        if use_preload:
+            dataset = PreloadedAksaraDataset(
+                subset,
+                class_to_idx,
+                image_size=exp.image_size,
+                transform=transform,
+                label_column=label_column,
+                grayscale=grayscale,
+                cache_dir=results_dir.parent / "preload_cache",
+                progress=progress,
+            )
+        else:
+            dataset = AksaraDataset(
+                subset,
+                class_to_idx,
+                transform=transform,
+                label_column=label_column,
+                grayscale=grayscale,
+            )
         generator = torch.Generator()
         generator.manual_seed(exp.seed)
         loaders[split] = DataLoader(

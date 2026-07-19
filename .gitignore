@@ -19,3 +19,6 @@ configs/cleaning_changelog*.csv
 
 .ipynb_checkpoints/
 .DS_Store
+
+# Preloaded uint8 image arrays — rebuilt on demand, large.
+preload_cache/

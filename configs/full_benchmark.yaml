@@ -1,0 +1,43 @@
+# Table 1 of the paper: every architecture on the unified task, 3 seeds.
+#
+# Fixed at image_size 64 for CNNs / 224 for transformers (the runner drops
+# invalid combinations), medium augmentation, pretrained where available.
+# The ablation configs vary one axis at a time from this baseline.
+
+matrix:
+  models:
+    # from scratch
+    - lenet5
+    - simplecnn_d2
+    - simplecnn_d3
+    - simplecnn_d4
+    - simplecnn_d3_nobn
+    # pretrained CNNs
+    - resnet18
+    - resnet50
+    - efficientnet_b0
+    - mobilenetv3_small
+    - densenet121
+    - convnext_tiny
+    # transformers
+    - vit_tiny
+    - vit_small
+    - deit_small
+    - swin_tiny
+  tasks: [unified]
+  image_sizes: [64, 224]
+  augmentations: [medium]
+  pretrained: [true, false]
+  seeds: [0, 1, 2]
+
+train:
+  epochs: 40
+  batch_size: 64
+  lr: 0.001
+  weight_decay: 0.0001
+  optimizer: adamw
+  scheduler: cosine
+  label_smoothing: 0.1
+  early_stopping_patience: 8
+  mixed_precision: true
+  num_workers: 2

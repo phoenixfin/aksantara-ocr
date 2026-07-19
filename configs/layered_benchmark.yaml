@@ -1,0 +1,35 @@
+# Model comparison for the layered classifier.
+#
+# Both stages swept across architectures so the paper can say which backbone is
+# best *for this pipeline*, not just for a flat 895-way task.
+#
+# Stage 1 (script_id, 13 classes) is an easy problem and will saturate — that
+# saturation is itself a reportable result. Stage 2 is where architecture
+# choice actually shows.
+
+matrix:
+  models:
+    - lenet5
+    - simplecnn_d3
+    - resnet18
+    - efficientnet_b0
+    - convnext_tiny
+    - vit_tiny
+  tasks: [script_id, per_script]
+  image_sizes: [64]
+  augmentations: [medium]
+  pretrained: [true, false]
+  seeds: [0, 1, 2]
+  scripts: all
+
+train:
+  epochs: 25
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 0.0001
+  optimizer: adamw
+  scheduler: cosine
+  label_smoothing: 0.1
+  early_stopping_patience: 6
+  mixed_precision: true
+  num_workers: 4

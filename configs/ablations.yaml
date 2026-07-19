@@ -1,0 +1,24 @@
+# Ablation sweeps. Each axis varies against a small, fixed set of
+# representative models — one scratch CNN, one pretrained CNN, one transformer —
+# so the sweep stays affordable while covering all three families.
+#
+# Run as a separate matrix from full_benchmark so the tables stay separable.
+
+matrix:
+  models: [simplecnn_d3, resnet18, vit_tiny]
+  tasks: [unified]
+  image_sizes: [32, 48, 64, 96, 128, 224]
+  augmentations: [none, light, medium, heavy]
+  pretrained: [true, false]
+  seeds: [0, 1, 2]
+
+train:
+  epochs: 30
+  batch_size: 64
+  lr: 0.001
+  optimizer: adamw
+  scheduler: cosine
+  label_smoothing: 0.1
+  early_stopping_patience: 8
+  mixed_precision: true
+  num_workers: 2

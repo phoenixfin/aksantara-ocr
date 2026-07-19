@@ -1,0 +1,37 @@
+# Tier 1 — the publishable minimum for Table 1.
+#
+# Eight architectures instead of fifteen: two from-scratch, four pretrained
+# CNNs, two transformers. Each family keeps its most-cited representative, so
+# the table still spans the full range of approaches a reviewer expects while
+# costing roughly half of full_benchmark.yaml.
+#
+# Run full_benchmark.yaml later if compute allows; results merge cleanly because
+# run ids are unique.
+
+matrix:
+  models:
+    - lenet5
+    - simplecnn_d3
+    - resnet18
+    - resnet50
+    - efficientnet_b0
+    - convnext_tiny
+    - vit_tiny
+    - swin_tiny
+  tasks: [unified]
+  image_sizes: [64, 224]
+  augmentations: [medium]
+  pretrained: [true, false]
+  seeds: [0, 1, 2]
+
+train:
+  epochs: 40
+  batch_size: 64
+  lr: 0.001
+  weight_decay: 0.0001
+  optimizer: adamw
+  scheduler: cosine
+  label_smoothing: 0.1
+  early_stopping_patience: 8
+  mixed_precision: true
+  num_workers: 2

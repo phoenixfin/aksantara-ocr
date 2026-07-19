@@ -1,0 +1,32 @@
+# The layered classifier: stage 1 identifies the script, stage 2 classifies the
+# character within it.
+#
+# Both stages must be present, at the same seeds, for
+# scripts/05_hierarchical_eval.py to compute end-to-end accuracy. It pairs
+# stage 1 with stage 2 by seed, so a system reported at seed 0 is one coherent
+# pipeline rather than a mix.
+#
+# Cost note: per_script runs are cheap individually — each sees only its own
+# script's images — so the 13 of them together cost roughly one pass over the
+# corpus, not thirteen.
+
+matrix:
+  models: [resnet18]
+  tasks: [script_id, per_script]
+  image_sizes: [64]
+  augmentations: [medium]
+  pretrained: [true]
+  seeds: [0, 1, 2]
+  scripts: all
+
+train:
+  epochs: 25
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 0.0001
+  optimizer: adamw
+  scheduler: cosine
+  label_smoothing: 0.1
+  early_stopping_patience: 6
+  mixed_precision: true
+  num_workers: 4

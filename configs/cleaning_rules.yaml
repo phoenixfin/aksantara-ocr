@@ -1,0 +1,70 @@
+# Cleaning rules for aksara dataset v2 -> v3.
+#
+# Every rule below was verified against the data, not assumed. The reasoning is
+# recorded here because this file is the provenance record for the v3 release.
+#
+#   python scripts/06_clean_dataset.py \
+#       --data-root data/full --out data/clean --rules configs/cleaning_rules.yaml --dry-run
+
+# --- 1. Stray files -----------------------------------------------------------
+# Jawa/all_class/Vokal È holds 4 loose photo-editor exports beside its 20 real
+# class folders. They form a 4-image "class" that breaks any stratified split.
+drop_files:
+  - pattern: "Jawa/all_class/Vokal È/Picsart_*.jpg"
+    reason: "Photo-editor export left loose beside the class folders; not a character class."
+
+# --- 2. Contradictory labels --------------------------------------------------
+# Four image pairs are byte-identical but filed under two labels, so one copy in
+# each pair is wrong. Each was inspected against reference samples from both
+# candidate classes; the copy listed here is the one that does not match.
+# These use `path:` (exact literal), not `pattern:` (glob). The filenames
+# contain square brackets, which glob matching reads as a character class — a
+# glob rule for them matches nothing and fails silently.
+  - path: "Bima/wa/72.png"
+    reason: "Identical to Bima/pa/71.png. Glyph is a single hooked curve (pa); wa is a double hump. Confidence: high."
+  - path: "Bima/ha/6.png"
+    reason: "Identical to Bima/a/6.png. Glyph has one peak and a single dot (a); ha is a double arch with two dots. Confidence: good."
+  - path: "Sunda/Vowel I/Hi/rarangken[i]_18.jpg"
+    reason: "Identical to Sunda/Vowel E/He/rarangken[e]_18.jpg. Diacritic is the caret used for -e (He), not the hook for -i. Confidence: high."
+  - path: "Sunda/Vowel Eu/Ngeu/rarangken[eu]_3.jpg"
+    reason: "Identical to Sunda/Vowel Eu/Neu/rarangken[eu]_3.jpg. Glyph lacks the angular bottom-right foot that distinguishes Ngeu. Confidence: moderate — worth a second look."
+
+# --- 3. Misfiled folders ------------------------------------------------------
+# Six folders of 20 syllable images were nested under Vowel A/sa instead of
+# their own vowel groups. Evidence: every S-syllable folder holds 80 images
+# while all its siblings hold 100, and these six folders hold exactly the
+# missing 20 each. Moving them restores all six to 100.
+move_folders:
+  - from: "Sunda/Vowel A/sa/rarangken e"
+    to: "Sunda/Vowel E/Se"
+    reason: "Se has 80 images vs siblings' 100; these 20 restore it."
+  - from: "Sunda/Vowel A/sa/rarangken eu"
+    to: "Sunda/Vowel Eu/Seu"
+    reason: "Seu has 80 images vs siblings' 100; these 20 restore it."
+  - from: "Sunda/Vowel A/sa/rarangken i"
+    to: "Sunda/Vowel I/Si"
+    reason: "Si has 80 images vs siblings' 100; these 20 restore it."
+  - from: "Sunda/Vowel A/sa/rarangken o"
+    to: "Sunda/Vowel O/So"
+    reason: "So has 80 images vs siblings' 100; these 20 restore it."
+  - from: "Sunda/Vowel A/sa/rarangken u"
+    to: "Sunda/Vowel U/Su"
+    reason: "Su has 80 images vs siblings' 100; these 20 restore it."
+  - from: "Sunda/Vowel A/sa/rarangken é"
+    to: "Sunda/Vowel É/Sé"
+    reason: "Sé has 80 images vs siblings' 100; these 20 restore it."
+
+# --- 4. Duplicates ------------------------------------------------------------
+# Global scope so any cross-class duplicate I have not already resolved is
+# surfaced rather than silently collapsed. drop_contradictions stays false:
+# when two labels disagree, deleting one at random bakes a known error into the
+# "cleaned" data. Same-class duplicates are pure redundancy and are collapsed.
+dedupe:
+  enabled: true
+  scope: global
+  drop_contradictions: false
+
+# --- Deliberately NOT changed -------------------------------------------------
+# Jawa/variations/ (1,066 images across 8 classes whose names also occur in
+# all_class/) was checked for overlap: zero byte-identical files shared with
+# all_class. It is genuine additional data and is kept.

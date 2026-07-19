@@ -1,0 +1,26 @@
+# Per-script and script-identification tasks.
+#
+# 'per_script' trains one classifier per script (~20 classes each) and answers
+# "which scripts are hardest?". 'script_id' asks whether the scripts are even
+# distinguishable from a single character — a useful sanity property to report.
+#
+# scripts: all -> populated from the manifest at runtime.
+
+matrix:
+  models: [simplecnn_d3, resnet18, vit_tiny]
+  tasks: [per_script, script_id]
+  image_sizes: [64, 224]
+  augmentations: [medium]
+  pretrained: [true, false]
+  seeds: [0, 1, 2]
+  scripts: all
+
+train:
+  epochs: 30
+  batch_size: 64
+  lr: 0.001
+  optimizer: adamw
+  scheduler: cosine
+  early_stopping_patience: 8
+  mixed_precision: true
+  num_workers: 2

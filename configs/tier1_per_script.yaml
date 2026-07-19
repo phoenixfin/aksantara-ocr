@@ -1,0 +1,24 @@
+# Tier 1: per-script difficulty + script identification.
+#
+# One model only. The question here is "which scripts are hard?", not "which
+# model is best" — that is already answered by tier1_benchmark. Sweeping models
+# again multiplies cost by the number of scripts for no additional finding.
+
+matrix:
+  models: [resnet18]
+  tasks: [per_script, script_id]
+  image_sizes: [224]
+  augmentations: [medium]
+  pretrained: [true]
+  seeds: [0, 1, 2]
+  scripts: all
+
+train:
+  epochs: 30
+  batch_size: 64
+  lr: 0.001
+  optimizer: adamw
+  scheduler: cosine
+  early_stopping_patience: 8
+  mixed_precision: true
+  num_workers: 2

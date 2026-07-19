@@ -1,0 +1,23 @@
+# Tier 1 ablation: input resolution, everything else held fixed.
+#
+# Answers "how small can these images be before accuracy drops?" — a practical
+# question for anyone who downloads the dataset, and cheap to answer.
+
+matrix:
+  models: [resnet18]
+  tasks: [unified]
+  image_sizes: [32, 48, 64, 96, 128, 224]
+  augmentations: [medium]
+  pretrained: [true]
+  seeds: [0, 1, 2]
+
+train:
+  epochs: 40
+  batch_size: 64
+  lr: 0.001
+  optimizer: adamw
+  scheduler: cosine
+  label_smoothing: 0.1
+  early_stopping_patience: 8
+  mixed_precision: true
+  num_workers: 2

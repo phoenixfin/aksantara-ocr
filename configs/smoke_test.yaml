@@ -1,0 +1,17 @@
+# Minimal matrix — verifies the pipeline end to end in a few minutes.
+# Run this before launching the full benchmark.
+
+matrix:
+  models: [simplecnn_d2, resnet18]
+  tasks: [unified]
+  image_sizes: [64]
+  augmentations: [medium]
+  pretrained: [true, false]   # 'true' is dropped for scratch models automatically
+  seeds: [0]
+
+train:
+  epochs: 2
+  batch_size: 32
+  lr: 0.001
+  early_stopping_patience: 0
+  num_workers: 2

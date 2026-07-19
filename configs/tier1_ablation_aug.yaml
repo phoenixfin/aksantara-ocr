@@ -1,0 +1,27 @@
+# Tier 1 ablation: augmentation strength, everything else held fixed.
+#
+# One axis per config rather than one big cross-product. A cross-product over
+# every axis at once costs multiplicatively and produces cells no table in the
+# paper will ever cite.
+#
+# Point --results at the same directory as the other tier1 configs so the
+# report aggregates them together.
+
+matrix:
+  models: [resnet18]
+  tasks: [unified]
+  image_sizes: [64]
+  augmentations: [none, light, medium, heavy]
+  pretrained: [true, false]
+  seeds: [0, 1, 2]
+
+train:
+  epochs: 40
+  batch_size: 64
+  lr: 0.001
+  optimizer: adamw
+  scheduler: cosine
+  label_smoothing: 0.1
+  early_stopping_patience: 8
+  mixed_precision: true
+  num_workers: 2

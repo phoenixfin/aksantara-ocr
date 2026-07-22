@@ -44,6 +44,14 @@ def main() -> int:
     parser.add_argument("--rerun", action="store_true", help="Re-run even if results exist.")
     parser.add_argument("--device", default=None)
     parser.add_argument(
+        "--preload-cache",
+        type=Path,
+        default=None,
+        help="Where to keep preloaded uint8 arrays. Defaults to a system temp "
+             "directory, deliberately outside --results so the multi-GB arrays "
+             "are not swept into a results archive.",
+    )
+    parser.add_argument(
         "--time-budget",
         type=float,
         default=None,
@@ -92,6 +100,7 @@ def main() -> int:
         results_dir,
         skip_existing=not args.rerun,
         time_budget_hours=args.time_budget,
+        preload_cache_dir=args.preload_cache,
     )
 
     if results.empty:

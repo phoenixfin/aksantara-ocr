@@ -13,6 +13,7 @@ from __future__ import annotations
 import itertools
 import json
 import platform
+import tempfile
 import time
 import traceback
 from dataclasses import asdict, dataclass, field
@@ -125,6 +126,17 @@ def _task_columns(task: str) -> tuple[str, str | None]:
     raise ValueError(f"Unknown task: {task!r}")
 
 
+def default_preload_cache() -> Path:
+    """Where preloaded uint8 arrays live.
+
+    Deliberately outside the results directory: these are multi-GB regenerable
+    scratch files (~1.2 GB for this corpus at 64px), and the results directory
+    gets archived and downloaded. Keeping them apart means the download stays
+    small and no config change can accidentally ship a gigabyte of pixels.
+    """
+    return Path(tempfile.gettempdir()) / "aksara_preload"
+
+
 def run_one(
     exp: Experiment,
     frame: pd.DataFrame,
@@ -132,6 +144,7 @@ def run_one(
     device: torch.device,
     results_dir: Path,
     progress: bool = True,
+    preload_cache_dir: Path | None = None,
 ) -> dict:
     """Train and evaluate a single experiment; write artifacts; return a summary row."""
     set_seed(exp.seed)
@@ -174,7 +187,7 @@ def run_one(
                 transform=transform,
                 label_column=label_column,
                 grayscale=grayscale,
-                cache_dir=results_dir.parent / "preload_cache",
+                cache_dir=preload_cache_dir or default_preload_cache(),
                 progress=progress,
             )
         else:
@@ -274,6 +287,7 @@ def run_matrix(
     skip_existing: bool = True,
     progress: bool = True,
     time_budget_hours: float | None = None,
+    preload_cache_dir: Path | None = None,
 ) -> pd.DataFrame:
     """Run the matrix, optionally stopping before ``time_budget_hours`` elapses.
 
@@ -310,7 +324,9 @@ def run_matrix(
         print(f"[{i}/{len(experiments)}] run: {exp.run_id}")
         run_started = time.time()
         try:
-            payload = run_one(exp, frame, train_cfg, device, results_dir, progress)
+            payload = run_one(
+                exp, frame, train_cfg, device, results_dir, progress, preload_cache_dir
+            )
             m = payload["test_metrics"]
             print(f"    acc={m['accuracy']:.4f}  macro_f1={m['macro_f1']:.4f}")
             durations.append(time.time() - run_started)

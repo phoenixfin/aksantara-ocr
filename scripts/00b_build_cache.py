@@ -21,6 +21,7 @@ keep only the format normalization.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import sys
 import time
 from concurrent.futures import ProcessPoolExecutor
@@ -29,6 +30,20 @@ from pathlib import Path
 from PIL import Image
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff", ".webp"}
+
+
+def _cache_name(relative: Path) -> Path:
+    """Destination path for a cached image.
+
+    Cached files are always PNG, but the *name* must stay unique. Simply
+    replacing the extension merges "1.jpg" and "1.png" into one file; this
+    corpus contains 83 such pairs (Batak/na, Kawi/cha, Jawi/...), so that
+    silently loses 83 images. Appending ".png" instead of replacing it keeps
+    every name distinct while leaving already-PNG files untouched.
+    """
+    if relative.suffix.lower() == ".png":
+        return relative
+    return relative.with_name(relative.name + ".png")
 
 
 def _resize_one(job: tuple[str, str, int, bool]) -> str | None:
@@ -79,10 +94,30 @@ def main() -> int:
         raise SystemExit(f"No images found under {args.data_root}")
 
     jobs = [
-        (str(p), str(args.out / p.relative_to(args.data_root).with_suffix(".png")),
+        (str(p), str(args.out / _cache_name(p.relative_to(args.data_root))),
          args.size, not args.rgb)
         for p in sources
     ]
+
+    # Two source files must never claim one destination. Replacing the suffix
+    # with ".png" collapses "1.jpg" and "1.png" onto the same name, and the
+    # skip-if-exists check below then drops one of them silently — the cache
+    # ends up smaller than the dataset with nothing to indicate why.
+    claims: dict[str, list[str]] = {}
+    for source_path, destination, _, _ in jobs:
+        claims.setdefault(destination, []).append(source_path)
+    collisions = {d: s for d, s in claims.items() if len(s) > 1}
+    if collisions:
+        print(f"\nERROR: {len(collisions)} destination(s) claimed by multiple sources:")
+        for destination, source_paths in list(collisions.items())[:5]:
+            print(f"  {destination}")
+            for source_path in source_paths:
+                print(f"      <- {source_path}")
+        raise SystemExit(
+            f"{sum(len(s) - 1 for s in collisions.values())} image(s) would be lost. "
+            "This is a bug in the cache naming scheme — please report it."
+        )
+
     todo = [j for j in jobs if not Path(j[1]).exists()]
     print(f"{len(sources)} image(s); {len(jobs) - len(todo)} already cached, {len(todo)} to do.")
 
@@ -113,10 +148,40 @@ def main() -> int:
             print(f"  {e}")
 
     source_mb = sum(p.stat().st_size for p in sources) / 1e6
-    cached = list(args.out.rglob("*.png"))
-    cache_mb = sum(p.stat().st_size for p in cached) / 1e6
-    print(f"\nsize: {source_mb:.0f} MB -> {cache_mb:.0f} MB")
-    print(f"\nNext:\n  python scripts/01_prepare_data.py --data-root {args.out}")
+    # Count only this run's own destinations. Globbing the output directory
+    # counts anything else already there — point two runs at one cache and the
+    # arithmetic goes nonsensical rather than reporting what this run produced.
+    expected_paths = [Path(destination) for _, destination, _, _ in jobs]
+    present = [p for p in expected_paths if p.exists()]
+    cache_mb = sum(p.stat().st_size for p in present) / 1e6
+    print(f"\nimages: {len(sources)} source -> {len(present)} cached")
+    print(f"size  : {source_mb:.0f} MB -> {cache_mb:.0f} MB")
+
+    if len(present) != len(sources):
+        missing = [p for p in expected_paths if not p.exists()]
+        print(f"\nWARNING: {len(missing)} image(s) missing from the cache, e.g.:")
+        for path in missing[:5]:
+            print(f"  {path}")
+
+    # Downscaling can make distinct originals byte-identical. Those pairs are a
+    # leakage path if they straddle the train/test boundary, and the count
+    # depends on the cache resolution — so it is measured here rather than
+    # assumed, and 01_prepare_data.py --drop-duplicates removes them.
+    digests: dict[str, int] = {}
+    for path in present:
+        digest = hashlib.md5(path.read_bytes()).hexdigest()
+        digests[digest] = digests.get(digest, 0) + 1
+    merged = sum(count - 1 for count in digests.values() if count > 1)
+    if merged:
+        print(
+            f"\nNOTE: {merged} image(s) became byte-identical to another at "
+            f"{args.size}px (they differ in the source).\n"
+            "      Downscaling merged them. They are a leakage path if split "
+            "across train/test —\n"
+            "      pass --drop-duplicates to 01_prepare_data.py to remove them."
+        )
+
+    print(f"\nNext:\n  python scripts/01_prepare_data.py --data-root {args.out} --drop-duplicates")
     return 0
 
 

@@ -44,6 +44,13 @@ def main() -> int:
     parser.add_argument("--rerun", action="store_true", help="Re-run even if results exist.")
     parser.add_argument("--device", default=None)
     parser.add_argument(
+        "--num-workers",
+        type=int,
+        default=None,
+        help="Override the config's dataloader worker count. Kaggle has 4 vCPUs, "
+             "Colab 2 — tune per platform without editing the config.",
+    )
+    parser.add_argument(
         "--preload-cache",
         type=Path,
         default=None,
@@ -76,6 +83,8 @@ def main() -> int:
 
     spec = MatrixSpec(**_filter_kwargs(MatrixSpec, matrix_cfg))
     train_cfg = TrainConfig(**_filter_kwargs(TrainConfig, config.get("train", {})))
+    if args.num_workers is not None:
+        train_cfg.num_workers = args.num_workers
 
     experiments = expand(spec)
     print(f"\nMatrix expands to {len(experiments)} experiments -> {results_dir}")

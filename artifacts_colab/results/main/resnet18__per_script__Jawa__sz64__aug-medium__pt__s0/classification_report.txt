@@ -1,0 +1,134 @@
+                       precision    recall  f1-score   support
+
+ all_class/Vokal A/ba     0.9420    0.9701    0.9559        67
+ all_class/Vokal A/ca     0.9884    1.0000    0.9942        85
+ all_class/Vokal A/da     0.9091    0.9302    0.9195        86
+all_class/Vokal A/dha     1.0000    1.0000    1.0000        87
+ all_class/Vokal A/ga     0.9857    1.0000    0.9928        69
+ all_class/Vokal A/ha     0.9683    1.0000    0.9839        61
+ all_class/Vokal A/ja     1.0000    1.0000    1.0000        88
+ all_class/Vokal A/ka     1.0000    0.9839    0.9919        62
+ all_class/Vokal A/la     0.9683    0.9839    0.9760        62
+ all_class/Vokal A/ma     0.9886    1.0000    0.9943        87
+ all_class/Vokal A/na     0.9529    0.9419    0.9474        86
+all_class/Vokal A/nga     1.0000    1.0000    1.0000        15
+all_class/Vokal A/nya     0.9692    0.9692    0.9692        65
+ all_class/Vokal A/pa     0.9457    0.9775    0.9613        89
+ all_class/Vokal A/ra     1.0000    1.0000    1.0000        67
+ all_class/Vokal A/sa     0.9888    0.9888    0.9888        89
+ all_class/Vokal A/ta     0.9688    0.9841    0.9764        63
+all_class/Vokal A/tha     1.0000    0.8667    0.9286        15
+ all_class/Vokal A/wa     1.0000    0.9647    0.9820        85
+ all_class/Vokal A/ya     0.9510    0.9798    0.9652        99
+ all_class/Vokal E/be     1.0000    1.0000    1.0000         3
+ all_class/Vokal E/ce     1.0000    1.0000    1.0000         3
+ all_class/Vokal E/de     1.0000    1.0000    1.0000         4
+all_class/Vokal E/dhe     1.0000    1.0000    1.0000         3
+ all_class/Vokal E/ge     1.0000    1.0000    1.0000         3
+ all_class/Vokal E/he     0.7500    1.0000    0.8571         3
+ all_class/Vokal E/je     1.0000    1.0000    1.0000         3
+ all_class/Vokal E/ke     1.0000    1.0000    1.0000         4
+ all_class/Vokal E/le     0.7500    1.0000    0.8571         3
+ all_class/Vokal E/me     1.0000    1.0000    1.0000         3
+ all_class/Vokal E/ne     1.0000    1.0000    1.0000         3
+all_class/Vokal E/nge     1.0000    0.6667    0.8000         3
+all_class/Vokal E/nye     1.0000    1.0000    1.0000         3
+ all_class/Vokal E/pe     1.0000    0.6667    0.8000         3
+ all_class/Vokal E/re     1.0000    1.0000    1.0000         4
+ all_class/Vokal E/se     0.7500    1.0000    0.8571         3
+ all_class/Vokal E/te     1.0000    0.6667    0.8000         3
+all_class/Vokal E/the     1.0000    1.0000    1.0000         3
+ all_class/Vokal E/we     1.0000    1.0000    1.0000         3
+ all_class/Vokal E/ye     1.0000    1.0000    1.0000         3
+ all_class/Vokal I/bi     1.0000    1.0000    1.0000         3
+ all_class/Vokal I/ci     1.0000    1.0000    1.0000         4
+all_class/Vokal I/dhi     1.0000    1.0000    1.0000         3
+ all_class/Vokal I/di     0.7500    1.0000    0.8571         3
+ all_class/Vokal I/gi     1.0000    0.6667    0.8000         3
+ all_class/Vokal I/hi     0.7500    1.0000    0.8571         3
+ all_class/Vokal I/ji     1.0000    1.0000    1.0000         3
+ all_class/Vokal I/ki     1.0000    1.0000    1.0000         3
+ all_class/Vokal I/li     0.8000    1.0000    0.8889         4
+ all_class/Vokal I/mi     0.7500    1.0000    0.8571         3
+all_class/Vokal I/ngi     0.7500    1.0000    0.8571         3
+ all_class/Vokal I/ni     1.0000    1.0000    1.0000         3
+all_class/Vokal I/nyi     1.0000    0.6667    0.8000         3
+ all_class/Vokal I/pi     0.7500    1.0000    0.8571         3
+ all_class/Vokal I/ri     1.0000    1.0000    1.0000         3
+ all_class/Vokal I/si     1.0000    1.0000    1.0000         4
+all_class/Vokal I/thi     1.0000    1.0000    1.0000         3
+ all_class/Vokal I/ti     1.0000    0.6667    0.8000         3
+ all_class/Vokal I/wi     0.6000    1.0000    0.7500         3
+ all_class/Vokal I/yi     0.7500    1.0000    0.8571         3
+ all_class/Vokal O/bo     0.6667    0.6667    0.6667         3
+ all_class/Vokal O/co     0.6667    0.6667    0.6667         3
+all_class/Vokal O/dho     1.0000    0.7500    0.8571         4
+ all_class/Vokal O/do     1.0000    0.3333    0.5000         3
+ all_class/Vokal O/go     1.0000    0.3333    0.5000         3
+ all_class/Vokal O/ho     0.7500    1.0000    0.8571         3
+ all_class/Vokal O/jo     0.6667    0.6667    0.6667         3
+ all_class/Vokal O/ko     1.0000    0.3333    0.5000         3
+ all_class/Vokal O/lo     0.7500    1.0000    0.8571         3
+ all_class/Vokal O/mo     1.0000    1.0000    1.0000         4
+all_class/Vokal O/ngo     0.5000    0.3333    0.4000         3
+ all_class/Vokal O/no     0.4286    1.0000    0.6000         3
+all_class/Vokal O/nyo     1.0000    1.0000    1.0000         3
+ all_class/Vokal O/po     1.0000    0.3333    0.5000         3
+ all_class/Vokal O/ro     0.6000    1.0000    0.7500         3
+ all_class/Vokal O/so     0.6667    0.6667    0.6667         3
+all_class/Vokal O/tho     0.7500    0.7500    0.7500         4
+ all_class/Vokal O/to     0.5000    0.3333    0.4000         3
+ all_class/Vokal O/wo     0.5000    1.0000    0.6667         3
+ all_class/Vokal O/yo     1.0000    1.0000    1.0000         3
+ all_class/Vokal U/bu     1.0000    1.0000    1.0000         3
+ all_class/Vokal U/cu     0.6667    0.6667    0.6667         3
+all_class/Vokal U/dhu     0.7500    1.0000    0.8571         3
+ all_class/Vokal U/du     0.6667    1.0000    0.8000         4
+ all_class/Vokal U/gu     1.0000    1.0000    1.0000         3
+ all_class/Vokal U/hu     0.6000    1.0000    0.7500         3
+ all_class/Vokal U/ju     1.0000    0.6667    0.8000         3
+ all_class/Vokal U/ku     1.0000    1.0000    1.0000         3
+ all_class/Vokal U/lu     1.0000    0.6667    0.8000         3
+ all_class/Vokal U/mu     1.0000    1.0000    1.0000         3
+all_class/Vokal U/ngu     0.5000    0.5000    0.5000         4
+ all_class/Vokal U/nu     1.0000    0.3333    0.5000         3
+all_class/Vokal U/nyu     1.0000    1.0000    1.0000         3
+ all_class/Vokal U/pu     0.7500    1.0000    0.8571         3
+ all_class/Vokal U/ru     1.0000    1.0000    1.0000         3
+ all_class/Vokal U/su     0.6667    0.6667    0.6667         3
+all_class/Vokal U/thu     0.5000    0.3333    0.4000         3
+ all_class/Vokal U/tu     0.7500    0.7500    0.7500         4
+ all_class/Vokal U/wu     1.0000    0.3333    0.5000         3
+ all_class/Vokal U/yu     1.0000    1.0000    1.0000         3
+ all_class/Vokal È/bè     1.0000    1.0000    1.0000         3
+ all_class/Vokal È/cè     1.0000    1.0000    1.0000         3
+all_class/Vokal È/dhè     1.0000    1.0000    1.0000         3
+ all_class/Vokal È/dè     0.6667    0.6667    0.6667         3
+ all_class/Vokal È/gè     1.0000    1.0000    1.0000         3
+ all_class/Vokal È/hè     0.6000    1.0000    0.7500         3
+ all_class/Vokal È/jè     1.0000    1.0000    1.0000         3
+ all_class/Vokal È/kè     1.0000    1.0000    1.0000         3
+ all_class/Vokal È/lè     1.0000    1.0000    1.0000         4
+ all_class/Vokal È/mè     1.0000    0.6667    0.8000         3
+all_class/Vokal È/ngè     1.0000    0.3333    0.5000         3
+all_class/Vokal È/nyè     1.0000    1.0000    1.0000         3
+ all_class/Vokal È/nè     1.0000    0.6667    0.8000         3
+ all_class/Vokal È/pè     1.0000    0.6667    0.8000         3
+ all_class/Vokal È/rè     1.0000    1.0000    1.0000         3
+ all_class/Vokal È/sè     1.0000    1.0000    1.0000         4
+all_class/Vokal È/thè     1.0000    0.6667    0.8000         3
+ all_class/Vokal È/tè     1.0000    0.6667    0.8000         3
+ all_class/Vokal È/wè     0.5000    0.3333    0.4000         3
+ all_class/Vokal È/yè     1.0000    0.6667    0.8000         3
+        variations/ba     0.9000    1.0000    0.9474         9
+        variations/ga     1.0000    0.9444    0.9714        18
+        variations/ha     0.8571    0.7059    0.7742        17
+        variations/ka     0.9200    0.9200    0.9200        25
+        variations/la     1.0000    0.8947    0.9444        19
+       variations/nya     1.0000    1.0000    1.0000        23
+        variations/ra     1.0000    0.9524    0.9756        21
+        variations/ta     1.0000    0.9000    0.9474        20
+
+             accuracy                         0.9530      1893
+            macro avg     0.9017    0.8693    0.8666      1893
+         weighted avg     0.9580    0.9530    0.9514      1893

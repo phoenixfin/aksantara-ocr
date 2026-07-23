@@ -1,0 +1,484 @@
+{
+  "experiment": {
+    "model": "resnet18",
+    "task": "per_script",
+    "image_size": 64,
+    "augmentation": "medium",
+    "pretrained": true,
+    "seed": 2,
+    "script_filter": "Ogan"
+  },
+  "run_id": "resnet18__per_script__Ogan__sz64__aug-medium__pt__s2",
+  "num_classes": 23,
+  "class_names": [
+    "Be",
+    "Ce",
+    "De",
+    "E",
+    "Embe",
+    "Empe",
+    "Ence",
+    "Ende",
+    "Ge",
+    "He",
+    "Je",
+    "Ke",
+    "Le",
+    "Me",
+    "Ne",
+    "Nge",
+    "Nye",
+    "Pe",
+    "Re",
+    "Se",
+    "Te",
+    "We",
+    "Ye"
+  ],
+  "n_train": 2629,
+  "n_val": 525,
+  "n_test": 525,
+  "test_metrics": {
+    "accuracy": 0.9980952380952381,
+    "balanced_accuracy": 0.9980237154150197,
+    "macro_f1": 0.9980638082739925,
+    "weighted_f1": 0.9980933531255154,
+    "cohen_kappa": 0.9980086254964212,
+    "top5_accuracy": 0.9980952380952381,
+    "per_class": {
+      "Be": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Ce": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "De": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      },
+      "E": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Embe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Empe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Ence": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Ende": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Ge": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "He": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      },
+      "Je": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Ke": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Le": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Me": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Ne": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Nge": {
+        "precision": 1.0,
+        "recall": 0.9545454545454546,
+        "f1": 0.9767441860465116,
+        "support": 22
+      },
+      "Nye": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Pe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Re": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Se": {
+        "precision": 0.9583333333333334,
+        "recall": 1.0,
+        "f1": 0.9787234042553191,
+        "support": 23
+      },
+      "Te": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "We": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Ye": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      }
+    }
+  },
+  "best_val_metrics": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "cohen_kappa": 1.0,
+    "top5_accuracy": 1.0,
+    "per_class": {
+      "Be": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Ce": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      },
+      "De": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "E": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Embe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Empe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Ence": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Ende": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Ge": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      },
+      "He": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Je": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Ke": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Le": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Me": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Ne": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Nge": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      },
+      "Nye": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Pe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Re": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Se": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "Te": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "We": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      },
+      "Ye": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      }
+    }
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 2.9944081847864488,
+      "val_accuracy": 0.3352380952380952,
+      "val_macro_f1": 0.2416939090634178,
+      "lr": 0.000996057350657239
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.9218643871084644,
+      "val_accuracy": 0.7942857142857143,
+      "val_macro_f1": 0.772254190815899,
+      "lr": 0.0009842915805643156
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.921727210838743,
+      "val_accuracy": 0.9523809523809523,
+      "val_macro_f1": 0.9520613273847355,
+      "lr": 0.0009648882429441258
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.740165528053111,
+      "val_accuracy": 0.9942857142857143,
+      "val_macro_f1": 0.9943198469213356,
+      "lr": 0.0009381533400219318
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.6869308633829714,
+      "val_accuracy": 0.9885714285714285,
+      "val_macro_f1": 0.9886460880560873,
+      "lr": 0.0009045084971874737
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.6765951921886344,
+      "val_accuracy": 0.9904761904761905,
+      "val_macro_f1": 0.99052219271347,
+      "lr": 0.0008644843137107057
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.6554553806895129,
+      "val_accuracy": 0.9942857142857143,
+      "val_macro_f1": 0.9943647856922603,
+      "lr": 0.0008187119948743448
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.6502150217812974,
+      "val_accuracy": 0.9980952380952381,
+      "val_macro_f1": 0.9981087470449173,
+      "lr": 0.0007679133974894982
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.6429050271843902,
+      "val_accuracy": 0.9923809523809524,
+      "val_macro_f1": 0.9924294877530937,
+      "lr": 0.0007128896457825362
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.6372024042382355,
+      "val_accuracy": 1.0,
+      "val_macro_f1": 1.0,
+      "lr": 0.0006545084971874736
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.6372538787097067,
+      "val_accuracy": 1.0,
+      "val_macro_f1": 1.0,
+      "lr": 0.0005936906572928624
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.6295342627429563,
+      "val_accuracy": 1.0,
+      "val_macro_f1": 1.0,
+      "lr": 0.0005313952597646568
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.6276123112669096,
+      "val_accuracy": 1.0,
+      "val_macro_f1": 1.0,
+      "lr": 0.00046860474023534336
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.6282142527251245,
+      "val_accuracy": 1.0,
+      "val_macro_f1": 1.0,
+      "lr": 0.0004063093427071377
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.6320465196670803,
+      "val_accuracy": 0.9980952380952381,
+      "val_macro_f1": 0.9981087470449173,
+      "lr": 0.00034549150281252644
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.6265736067417503,
+      "val_accuracy": 0.9961904761904762,
+      "val_macro_f1": 0.9961725553189098,
+      "lr": 0.00028711035421746366
+    }
+  ],
+  "epochs_run": 16,
+  "best_epoch": 10,
+  "train_seconds": 21.10388469696045,
+  "num_params": 11188311,
+  "most_confused": [
+    {
+      "true": "Nge",
+      "predicted": "Se",
+      "count": 1,
+      "rate": 0.045454545454545456
+    }
+  ],
+  "train_config": {
+    "epochs": 25,
+    "batch_size": 128,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "optimizer": "adamw",
+    "scheduler": "cosine",
+    "label_smoothing": 0.1,
+    "early_stopping_patience": 6,
+    "mixed_precision": true,
+    "num_workers": 4,
+    "grad_clip": 1.0,
+    "preload": "auto",
+    "preload_max_gb": 2.0
+  },
+  "environment": {
+    "torch": "2.11.0+cu128",
+    "device": "cuda",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "python": "3.12.13"
+  }
+}

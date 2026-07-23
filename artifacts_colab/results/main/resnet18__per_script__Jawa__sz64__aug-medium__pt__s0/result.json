@@ -1,0 +1,2026 @@
+{
+  "experiment": {
+    "model": "resnet18",
+    "task": "per_script",
+    "image_size": 64,
+    "augmentation": "medium",
+    "pretrained": true,
+    "seed": 0,
+    "script_filter": "Jawa"
+  },
+  "run_id": "resnet18__per_script__Jawa__sz64__aug-medium__pt__s0",
+  "num_classes": 128,
+  "class_names": [
+    "all_class/Vokal A/ba",
+    "all_class/Vokal A/ca",
+    "all_class/Vokal A/da",
+    "all_class/Vokal A/dha",
+    "all_class/Vokal A/ga",
+    "all_class/Vokal A/ha",
+    "all_class/Vokal A/ja",
+    "all_class/Vokal A/ka",
+    "all_class/Vokal A/la",
+    "all_class/Vokal A/ma",
+    "all_class/Vokal A/na",
+    "all_class/Vokal A/nga",
+    "all_class/Vokal A/nya",
+    "all_class/Vokal A/pa",
+    "all_class/Vokal A/ra",
+    "all_class/Vokal A/sa",
+    "all_class/Vokal A/ta",
+    "all_class/Vokal A/tha",
+    "all_class/Vokal A/wa",
+    "all_class/Vokal A/ya",
+    "all_class/Vokal E/be",
+    "all_class/Vokal E/ce",
+    "all_class/Vokal E/de",
+    "all_class/Vokal E/dhe",
+    "all_class/Vokal E/ge",
+    "all_class/Vokal E/he",
+    "all_class/Vokal E/je",
+    "all_class/Vokal E/ke",
+    "all_class/Vokal E/le",
+    "all_class/Vokal E/me",
+    "all_class/Vokal E/ne",
+    "all_class/Vokal E/nge",
+    "all_class/Vokal E/nye",
+    "all_class/Vokal E/pe",
+    "all_class/Vokal E/re",
+    "all_class/Vokal E/se",
+    "all_class/Vokal E/te",
+    "all_class/Vokal E/the",
+    "all_class/Vokal E/we",
+    "all_class/Vokal E/ye",
+    "all_class/Vokal I/bi",
+    "all_class/Vokal I/ci",
+    "all_class/Vokal I/dhi",
+    "all_class/Vokal I/di",
+    "all_class/Vokal I/gi",
+    "all_class/Vokal I/hi",
+    "all_class/Vokal I/ji",
+    "all_class/Vokal I/ki",
+    "all_class/Vokal I/li",
+    "all_class/Vokal I/mi",
+    "all_class/Vokal I/ngi",
+    "all_class/Vokal I/ni",
+    "all_class/Vokal I/nyi",
+    "all_class/Vokal I/pi",
+    "all_class/Vokal I/ri",
+    "all_class/Vokal I/si",
+    "all_class/Vokal I/thi",
+    "all_class/Vokal I/ti",
+    "all_class/Vokal I/wi",
+    "all_class/Vokal I/yi",
+    "all_class/Vokal O/bo",
+    "all_class/Vokal O/co",
+    "all_class/Vokal O/dho",
+    "all_class/Vokal O/do",
+    "all_class/Vokal O/go",
+    "all_class/Vokal O/ho",
+    "all_class/Vokal O/jo",
+    "all_class/Vokal O/ko",
+    "all_class/Vokal O/lo",
+    "all_class/Vokal O/mo",
+    "all_class/Vokal O/ngo",
+    "all_class/Vokal O/no",
+    "all_class/Vokal O/nyo",
+    "all_class/Vokal O/po",
+    "all_class/Vokal O/ro",
+    "all_class/Vokal O/so",
+    "all_class/Vokal O/tho",
+    "all_class/Vokal O/to",
+    "all_class/Vokal O/wo",
+    "all_class/Vokal O/yo",
+    "all_class/Vokal U/bu",
+    "all_class/Vokal U/cu",
+    "all_class/Vokal U/dhu",
+    "all_class/Vokal U/du",
+    "all_class/Vokal U/gu",
+    "all_class/Vokal U/hu",
+    "all_class/Vokal U/ju",
+    "all_class/Vokal U/ku",
+    "all_class/Vokal U/lu",
+    "all_class/Vokal U/mu",
+    "all_class/Vokal U/ngu",
+    "all_class/Vokal U/nu",
+    "all_class/Vokal U/nyu",
+    "all_class/Vokal U/pu",
+    "all_class/Vokal U/ru",
+    "all_class/Vokal U/su",
+    "all_class/Vokal U/thu",
+    "all_class/Vokal U/tu",
+    "all_class/Vokal U/wu",
+    "all_class/Vokal U/yu",
+    "all_class/Vokal \u00c8/b\u00e8",
+    "all_class/Vokal \u00c8/c\u00e8",
+    "all_class/Vokal \u00c8/dh\u00e8",
+    "all_class/Vokal \u00c8/d\u00e8",
+    "all_class/Vokal \u00c8/g\u00e8",
+    "all_class/Vokal \u00c8/h\u00e8",
+    "all_class/Vokal \u00c8/j\u00e8",
+    "all_class/Vokal \u00c8/k\u00e8",
+    "all_class/Vokal \u00c8/l\u00e8",
+    "all_class/Vokal \u00c8/m\u00e8",
+    "all_class/Vokal \u00c8/ng\u00e8",
+    "all_class/Vokal \u00c8/ny\u00e8",
+    "all_class/Vokal \u00c8/n\u00e8",
+    "all_class/Vokal \u00c8/p\u00e8",
+    "all_class/Vokal \u00c8/r\u00e8",
+    "all_class/Vokal \u00c8/s\u00e8",
+    "all_class/Vokal \u00c8/th\u00e8",
+    "all_class/Vokal \u00c8/t\u00e8",
+    "all_class/Vokal \u00c8/w\u00e8",
+    "all_class/Vokal \u00c8/y\u00e8",
+    "variations/ba",
+    "variations/ga",
+    "variations/ha",
+    "variations/ka",
+    "variations/la",
+    "variations/nya",
+    "variations/ra",
+    "variations/ta"
+  ],
+  "n_train": 9470,
+  "n_val": 1893,
+  "n_test": 1893,
+  "test_metrics": {
+    "accuracy": 0.9529846804014791,
+    "balanced_accuracy": 0.8693352803751276,
+    "macro_f1": 0.8666397735259365,
+    "weighted_f1": 0.9514110019097682,
+    "cohen_kappa": 0.9514066592060177,
+    "top5_accuracy": 0.99418911780243,
+    "per_class": {
+      "all_class/Vokal A/ba": {
+        "precision": 0.9420289855072463,
+        "recall": 0.9701492537313433,
+        "f1": 0.9558823529411765,
+        "support": 67
+      },
+      "all_class/Vokal A/ca": {
+        "precision": 0.9883720930232558,
+        "recall": 1.0,
+        "f1": 0.9941520467836257,
+        "support": 85
+      },
+      "all_class/Vokal A/da": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9302325581395349,
+        "f1": 0.9195402298850575,
+        "support": 86
+      },
+      "all_class/Vokal A/dha": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 87
+      },
+      "all_class/Vokal A/ga": {
+        "precision": 0.9857142857142858,
+        "recall": 1.0,
+        "f1": 0.9928057553956835,
+        "support": 69
+      },
+      "all_class/Vokal A/ha": {
+        "precision": 0.9682539682539683,
+        "recall": 1.0,
+        "f1": 0.9838709677419355,
+        "support": 61
+      },
+      "all_class/Vokal A/ja": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 88
+      },
+      "all_class/Vokal A/ka": {
+        "precision": 1.0,
+        "recall": 0.9838709677419355,
+        "f1": 0.991869918699187,
+        "support": 62
+      },
+      "all_class/Vokal A/la": {
+        "precision": 0.9682539682539683,
+        "recall": 0.9838709677419355,
+        "f1": 0.976,
+        "support": 62
+      },
+      "all_class/Vokal A/ma": {
+        "precision": 0.9886363636363636,
+        "recall": 1.0,
+        "f1": 0.9942857142857143,
+        "support": 87
+      },
+      "all_class/Vokal A/na": {
+        "precision": 0.9529411764705882,
+        "recall": 0.9418604651162791,
+        "f1": 0.9473684210526315,
+        "support": 86
+      },
+      "all_class/Vokal A/nga": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "all_class/Vokal A/nya": {
+        "precision": 0.9692307692307692,
+        "recall": 0.9692307692307692,
+        "f1": 0.9692307692307692,
+        "support": 65
+      },
+      "all_class/Vokal A/pa": {
+        "precision": 0.9456521739130435,
+        "recall": 0.9775280898876404,
+        "f1": 0.9613259668508287,
+        "support": 89
+      },
+      "all_class/Vokal A/ra": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 67
+      },
+      "all_class/Vokal A/sa": {
+        "precision": 0.9887640449438202,
+        "recall": 0.9887640449438202,
+        "f1": 0.9887640449438202,
+        "support": 89
+      },
+      "all_class/Vokal A/ta": {
+        "precision": 0.96875,
+        "recall": 0.9841269841269841,
+        "f1": 0.9763779527559056,
+        "support": 63
+      },
+      "all_class/Vokal A/tha": {
+        "precision": 1.0,
+        "recall": 0.8666666666666667,
+        "f1": 0.9285714285714286,
+        "support": 15
+      },
+      "all_class/Vokal A/wa": {
+        "precision": 1.0,
+        "recall": 0.9647058823529412,
+        "f1": 0.9820359281437125,
+        "support": 85
+      },
+      "all_class/Vokal A/ya": {
+        "precision": 0.9509803921568627,
+        "recall": 0.9797979797979798,
+        "f1": 0.9651741293532339,
+        "support": 99
+      },
+      "all_class/Vokal E/be": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/ce": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/de": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "all_class/Vokal E/dhe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/ge": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/he": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal E/je": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/ke": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "all_class/Vokal E/le": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal E/me": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/ne": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/nge": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal E/nye": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/pe": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal E/re": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "all_class/Vokal E/se": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal E/te": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal E/the": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/we": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/ye": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/bi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/ci": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "all_class/Vokal I/dhi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/di": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal I/gi": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal I/hi": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal I/ji": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/ki": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/li": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8888888888888888,
+        "support": 4
+      },
+      "all_class/Vokal I/mi": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal I/ngi": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal I/ni": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/nyi": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal I/pi": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal I/ri": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/si": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "all_class/Vokal I/thi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/ti": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal I/wi": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "support": 3
+      },
+      "all_class/Vokal I/yi": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal O/bo": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "support": 3
+      },
+      "all_class/Vokal O/co": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "support": 3
+      },
+      "all_class/Vokal O/dho": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "support": 4
+      },
+      "all_class/Vokal O/do": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 3
+      },
+      "all_class/Vokal O/go": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 3
+      },
+      "all_class/Vokal O/ho": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal O/jo": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "support": 3
+      },
+      "all_class/Vokal O/ko": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 3
+      },
+      "all_class/Vokal O/lo": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal O/mo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "all_class/Vokal O/ngo": {
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4,
+        "support": 3
+      },
+      "all_class/Vokal O/no": {
+        "precision": 0.42857142857142855,
+        "recall": 1.0,
+        "f1": 0.6,
+        "support": 3
+      },
+      "all_class/Vokal O/nyo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal O/po": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 3
+      },
+      "all_class/Vokal O/ro": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "support": 3
+      },
+      "all_class/Vokal O/so": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "support": 3
+      },
+      "all_class/Vokal O/tho": {
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75,
+        "support": 4
+      },
+      "all_class/Vokal O/to": {
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4,
+        "support": 3
+      },
+      "all_class/Vokal O/wo": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "support": 3
+      },
+      "all_class/Vokal O/yo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/bu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/cu": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "support": 3
+      },
+      "all_class/Vokal U/dhu": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal U/du": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "support": 4
+      },
+      "all_class/Vokal U/gu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/hu": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "support": 3
+      },
+      "all_class/Vokal U/ju": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal U/ku": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/lu": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal U/mu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/ngu": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "support": 4
+      },
+      "all_class/Vokal U/nu": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 3
+      },
+      "all_class/Vokal U/nyu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/pu": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal U/ru": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/su": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "support": 3
+      },
+      "all_class/Vokal U/thu": {
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4,
+        "support": 3
+      },
+      "all_class/Vokal U/tu": {
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75,
+        "support": 4
+      },
+      "all_class/Vokal U/wu": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 3
+      },
+      "all_class/Vokal U/yu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/b\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/c\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/dh\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/d\u00e8": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/g\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/h\u00e8": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/j\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/k\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/l\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "all_class/Vokal \u00c8/m\u00e8": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/ng\u00e8": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/ny\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/n\u00e8": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/p\u00e8": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/r\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/s\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "all_class/Vokal \u00c8/th\u00e8": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/t\u00e8": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/w\u00e8": {
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/y\u00e8": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "variations/ba": {
+        "precision": 0.9,
+        "recall": 1.0,
+        "f1": 0.9473684210526315,
+        "support": 9
+      },
+      "variations/ga": {
+        "precision": 1.0,
+        "recall": 0.9444444444444444,
+        "f1": 0.9714285714285714,
+        "support": 18
+      },
+      "variations/ha": {
+        "precision": 0.8571428571428571,
+        "recall": 0.7058823529411765,
+        "f1": 0.7741935483870968,
+        "support": 17
+      },
+      "variations/ka": {
+        "precision": 0.92,
+        "recall": 0.92,
+        "f1": 0.92,
+        "support": 25
+      },
+      "variations/la": {
+        "precision": 1.0,
+        "recall": 0.8947368421052632,
+        "f1": 0.9444444444444444,
+        "support": 19
+      },
+      "variations/nya": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 23
+      },
+      "variations/ra": {
+        "precision": 1.0,
+        "recall": 0.9523809523809523,
+        "f1": 0.975609756097561,
+        "support": 21
+      },
+      "variations/ta": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526315,
+        "support": 20
+      }
+    }
+  },
+  "best_val_metrics": {
+    "accuracy": 0.9550977284733227,
+    "balanced_accuracy": 0.9039942321713508,
+    "macro_f1": 0.9010726039448004,
+    "weighted_f1": 0.9548317437046093,
+    "cohen_kappa": 0.9536027003600365,
+    "top5_accuracy": 0.9984152139461173,
+    "per_class": {
+      "all_class/Vokal A/ba": {
+        "precision": 0.9393939393939394,
+        "recall": 0.9393939393939394,
+        "f1": 0.9393939393939394,
+        "support": 66
+      },
+      "all_class/Vokal A/ca": {
+        "precision": 0.9882352941176471,
+        "recall": 0.9767441860465116,
+        "f1": 0.9824561403508771,
+        "support": 86
+      },
+      "all_class/Vokal A/da": {
+        "precision": 0.9764705882352941,
+        "recall": 0.9651162790697675,
+        "f1": 0.9707602339181286,
+        "support": 86
+      },
+      "all_class/Vokal A/dha": {
+        "precision": 0.945054945054945,
+        "recall": 0.9885057471264368,
+        "f1": 0.9662921348314607,
+        "support": 87
+      },
+      "all_class/Vokal A/ga": {
+        "precision": 0.9710144927536232,
+        "recall": 0.9710144927536232,
+        "f1": 0.9710144927536232,
+        "support": 69
+      },
+      "all_class/Vokal A/ha": {
+        "precision": 0.8571428571428571,
+        "recall": 0.9836065573770492,
+        "f1": 0.916030534351145,
+        "support": 61
+      },
+      "all_class/Vokal A/ja": {
+        "precision": 1.0,
+        "recall": 0.9885057471264368,
+        "f1": 0.9942196531791907,
+        "support": 87
+      },
+      "all_class/Vokal A/ka": {
+        "precision": 1.0,
+        "recall": 0.9523809523809523,
+        "f1": 0.975609756097561,
+        "support": 63
+      },
+      "all_class/Vokal A/la": {
+        "precision": 1.0,
+        "recall": 0.9838709677419355,
+        "f1": 0.991869918699187,
+        "support": 62
+      },
+      "all_class/Vokal A/ma": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 87
+      },
+      "all_class/Vokal A/na": {
+        "precision": 0.9662921348314607,
+        "recall": 1.0,
+        "f1": 0.9828571428571429,
+        "support": 86
+      },
+      "all_class/Vokal A/nga": {
+        "precision": 0.9333333333333333,
+        "recall": 0.9333333333333333,
+        "f1": 0.9333333333333333,
+        "support": 15
+      },
+      "all_class/Vokal A/nya": {
+        "precision": 1.0,
+        "recall": 0.9692307692307692,
+        "f1": 0.984375,
+        "support": 65
+      },
+      "all_class/Vokal A/pa": {
+        "precision": 0.9772727272727273,
+        "recall": 0.9662921348314607,
+        "f1": 0.9717514124293786,
+        "support": 89
+      },
+      "all_class/Vokal A/ra": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 67
+      },
+      "all_class/Vokal A/sa": {
+        "precision": 0.946236559139785,
+        "recall": 0.9887640449438202,
+        "f1": 0.967032967032967,
+        "support": 89
+      },
+      "all_class/Vokal A/ta": {
+        "precision": 0.9821428571428571,
+        "recall": 0.873015873015873,
+        "f1": 0.9243697478991597,
+        "support": 63
+      },
+      "all_class/Vokal A/tha": {
+        "precision": 1.0,
+        "recall": 0.9333333333333333,
+        "f1": 0.9655172413793104,
+        "support": 15
+      },
+      "all_class/Vokal A/wa": {
+        "precision": 0.9882352941176471,
+        "recall": 0.9882352941176471,
+        "f1": 0.9882352941176471,
+        "support": 85
+      },
+      "all_class/Vokal A/ya": {
+        "precision": 0.9787234042553191,
+        "recall": 0.9292929292929293,
+        "f1": 0.9533678756476683,
+        "support": 99
+      },
+      "all_class/Vokal E/be": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "support": 3
+      },
+      "all_class/Vokal E/ce": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal E/de": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal E/dhe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/ge": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/he": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "support": 4
+      },
+      "all_class/Vokal E/je": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/ke": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/le": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "all_class/Vokal E/me": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/ne": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/nge": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "support": 3
+      },
+      "all_class/Vokal E/nye": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal E/pe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/re": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal E/se": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "support": 4
+      },
+      "all_class/Vokal E/te": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal E/the": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal E/we": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal E/ye": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/bi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/ci": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal I/dhi": {
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75,
+        "support": 4
+      },
+      "all_class/Vokal I/di": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/gi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/hi": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "support": 3
+      },
+      "all_class/Vokal I/ji": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal I/ki": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/li": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal I/mi": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "support": 4
+      },
+      "all_class/Vokal I/ngi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/ni": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/nyi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/pi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/ri": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal I/si": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal I/thi": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "support": 4
+      },
+      "all_class/Vokal I/ti": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal I/wi": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal I/yi": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal O/bo": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "support": 3
+      },
+      "all_class/Vokal O/co": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 3
+      },
+      "all_class/Vokal O/dho": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal O/do": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "support": 4
+      },
+      "all_class/Vokal O/go": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal O/ho": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "support": 3
+      },
+      "all_class/Vokal O/jo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal O/ko": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 3
+      },
+      "all_class/Vokal O/lo": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "support": 3
+      },
+      "all_class/Vokal O/mo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal O/ngo": {
+        "precision": 0.6,
+        "recall": 0.75,
+        "f1": 0.6666666666666666,
+        "support": 4
+      },
+      "all_class/Vokal O/no": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "support": 3
+      },
+      "all_class/Vokal O/nyo": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal O/po": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal O/ro": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal O/so": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "support": 3
+      },
+      "all_class/Vokal O/tho": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal O/to": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "support": 4
+      },
+      "all_class/Vokal O/wo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal O/yo": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal U/bu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/cu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/dhu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/du": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 3
+      },
+      "all_class/Vokal U/gu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "all_class/Vokal U/hu": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal U/ju": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/ku": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/lu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/mu": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal U/ngu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/nu": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8888888888888888,
+        "support": 4
+      },
+      "all_class/Vokal U/nyu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/pu": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "support": 3
+      },
+      "all_class/Vokal U/ru": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/su": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/thu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal U/tu": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal U/wu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "all_class/Vokal U/yu": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/b\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/c\u00e8": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/dh\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/d\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/g\u00e8": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/h\u00e8": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/j\u00e8": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/k\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/l\u00e8": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/m\u00e8": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "support": 4
+      },
+      "all_class/Vokal \u00c8/ng\u00e8": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/ny\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/n\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/p\u00e8": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/r\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/s\u00e8": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/th\u00e8": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8888888888888888,
+        "support": 4
+      },
+      "all_class/Vokal \u00c8/t\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/w\u00e8": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "all_class/Vokal \u00c8/y\u00e8": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "support": 3
+      },
+      "variations/ba": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 9
+      },
+      "variations/ga": {
+        "precision": 0.8947368421052632,
+        "recall": 0.9444444444444444,
+        "f1": 0.918918918918919,
+        "support": 18
+      },
+      "variations/ha": {
+        "precision": 0.75,
+        "recall": 0.8823529411764706,
+        "f1": 0.8108108108108109,
+        "support": 17
+      },
+      "variations/ka": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 25
+      },
+      "variations/la": {
+        "precision": 0.8947368421052632,
+        "recall": 0.8947368421052632,
+        "f1": 0.8947368421052632,
+        "support": 19
+      },
+      "variations/nya": {
+        "precision": 1.0,
+        "recall": 0.9090909090909091,
+        "f1": 0.9523809523809523,
+        "support": 22
+      },
+      "variations/ra": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 22
+      },
+      "variations/ta": {
+        "precision": 0.9523809523809523,
+        "recall": 1.0,
+        "f1": 0.975609756097561,
+        "support": 20
+      }
+    }
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 3.6433890113105494,
+      "val_accuracy": 0.36450079239302696,
+      "val_macro_f1": 0.05732162652933108,
+      "lr": 0.000996057350657239
+    },
+    {
+      "epoch": 2,
+      "train_loss": 2.3312379332001636,
+      "val_accuracy": 0.618066561014263,
+      "val_macro_f1": 0.13240113099244818,
+      "lr": 0.0009842915805643156
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.7794436539616731,
+      "val_accuracy": 0.7580559957739038,
+      "val_macro_f1": 0.3597456867412001,
+      "lr": 0.0009648882429441258
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.4489861356419016,
+      "val_accuracy": 0.843634442683571,
+      "val_macro_f1": 0.5967891387552664,
+      "lr": 0.0009381533400219318
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.29580174846911,
+      "val_accuracy": 0.8663497094558901,
+      "val_macro_f1": 0.7000568076766988,
+      "lr": 0.0009045084971874737
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.2049252565710196,
+      "val_accuracy": 0.9059693608029583,
+      "val_macro_f1": 0.7641023583388304,
+      "lr": 0.0008644843137107057
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.1478960668902212,
+      "val_accuracy": 0.873217115689382,
+      "val_macro_f1": 0.7524268565633695,
+      "lr": 0.0008187119948743448
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.105682876520449,
+      "val_accuracy": 0.8742736397253037,
+      "val_macro_f1": 0.7747571094205066,
+      "lr": 0.0007679133974894982
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.066776857658072,
+      "val_accuracy": 0.9239302694136292,
+      "val_macro_f1": 0.8414902661918108,
+      "lr": 0.0007128896457825362
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.054702119540262,
+      "val_accuracy": 0.9408346539883783,
+      "val_macro_f1": 0.8607422086470305,
+      "lr": 0.0006545084971874736
+    },
+    {
+      "epoch": 11,
+      "train_loss": 1.0233894657811746,
+      "val_accuracy": 0.9255150554675119,
+      "val_macro_f1": 0.8056684112843078,
+      "lr": 0.0005936906572928624
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.008912424729014,
+      "val_accuracy": 0.5853143159006867,
+      "val_macro_f1": 0.5214536827200289,
+      "lr": 0.0005313952597646568
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.9867315892810681,
+      "val_accuracy": 0.9440042260961437,
+      "val_macro_f1": 0.8809114917611245,
+      "lr": 0.00046860474023534336
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.9782535717504959,
+      "val_accuracy": 0.9418911780243,
+      "val_macro_f1": 0.8597242168010244,
+      "lr": 0.0004063093427071377
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.9680075566393521,
+      "val_accuracy": 0.9545694664553619,
+      "val_macro_f1": 0.8883827305473159,
+      "lr": 0.00034549150281252644
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.9608738507237581,
+      "val_accuracy": 0.9503433703116746,
+      "val_macro_f1": 0.8838743154838631,
+      "lr": 0.00028711035421746366
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.9482201435372092,
+      "val_accuracy": 0.9519281563655573,
+      "val_macro_f1": 0.8844823192726378,
+      "lr": 0.00023208660251050156
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.9420459652651955,
+      "val_accuracy": 0.9513998943475964,
+      "val_macro_f1": 0.8881378200042347,
+      "lr": 0.00018128800512565513
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.9293264862350576,
+      "val_accuracy": 0.9508716323296355,
+      "val_macro_f1": 0.8749886552501829,
+      "lr": 0.00013551568628929433
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.9285865002222272,
+      "val_accuracy": 0.9550977284733227,
+      "val_macro_f1": 0.9010726039448004,
+      "lr": 9.549150281252634e-05
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.9249071153818994,
+      "val_accuracy": 0.9535129424194401,
+      "val_macro_f1": 0.8920686130690719,
+      "lr": 6.184665997806823e-05
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.9239460869852567,
+      "val_accuracy": 0.9540412044374009,
+      "val_macro_f1": 0.8935025531824459,
+      "lr": 3.511175705587433e-05
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.917493326497808,
+      "val_accuracy": 0.9550977284733227,
+      "val_macro_f1": 0.8959119625626079,
+      "lr": 1.570841943568452e-05
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.924627893049085,
+      "val_accuracy": 0.9529846804014791,
+      "val_macro_f1": 0.8905814394615822,
+      "lr": 3.942649342761118e-06
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.920816625926915,
+      "val_accuracy": 0.9540412044374009,
+      "val_macro_f1": 0.894413399441633,
+      "lr": 0.0
+    }
+  ],
+  "epochs_run": 25,
+  "best_epoch": 20,
+  "train_seconds": 98.26334285736084,
+  "num_params": 11242176,
+  "most_confused": [
+    {
+      "true": "all_class/Vokal A/da",
+      "predicted": "all_class/Vokal A/na",
+      "count": 4,
+      "rate": 0.046511627906976744
+    },
+    {
+      "true": "all_class/Vokal A/na",
+      "predicted": "all_class/Vokal A/da",
+      "count": 4,
+      "rate": 0.046511627906976744
+    },
+    {
+      "true": "variations/ha",
+      "predicted": "all_class/Vokal A/ya",
+      "count": 3,
+      "rate": 0.17647058823529413
+    },
+    {
+      "true": "all_class/Vokal A/nya",
+      "predicted": "all_class/Vokal A/ba",
+      "count": 2,
+      "rate": 0.03076923076923077
+    },
+    {
+      "true": "all_class/Vokal A/pa",
+      "predicted": "all_class/Vokal A/da",
+      "count": 2,
+      "rate": 0.02247191011235955
+    },
+    {
+      "true": "all_class/Vokal A/tha",
+      "predicted": "all_class/Vokal A/ba",
+      "count": 2,
+      "rate": 0.13333333333333333
+    },
+    {
+      "true": "all_class/Vokal A/wa",
+      "predicted": "all_class/Vokal A/pa",
+      "count": 2,
+      "rate": 0.023529411764705882
+    },
+    {
+      "true": "all_class/Vokal A/ya",
+      "predicted": "variations/ha",
+      "count": 2,
+      "rate": 0.020202020202020204
+    },
+    {
+      "true": "all_class/Vokal O/do",
+      "predicted": "all_class/Vokal O/no",
+      "count": 2,
+      "rate": 0.6666666666666666
+    },
+    {
+      "true": "all_class/Vokal O/go",
+      "predicted": "all_class/Vokal O/ro",
+      "count": 2,
+      "rate": 0.6666666666666666
+    },
+    {
+      "true": "all_class/Vokal O/ko",
+      "predicted": "all_class/Vokal O/no",
+      "count": 2,
+      "rate": 0.6666666666666666
+    },
+    {
+      "true": "all_class/Vokal U/nu",
+      "predicted": "all_class/Vokal U/du",
+      "count": 2,
+      "rate": 0.6666666666666666
+    },
+    {
+      "true": "all_class/Vokal U/thu",
+      "predicted": "all_class/Vokal U/ngu",
+      "count": 2,
+      "rate": 0.6666666666666666
+    },
+    {
+      "true": "all_class/Vokal \u00c8/w\u00e8",
+      "predicted": "all_class/Vokal I/wi",
+      "count": 2,
+      "rate": 0.6666666666666666
+    },
+    {
+      "true": "variations/ha",
+      "predicted": "all_class/Vokal A/ha",
+      "count": 2,
+      "rate": 0.11764705882352941
+    },
+    {
+      "true": "variations/ta",
+      "predicted": "all_class/Vokal A/ta",
+      "count": 2,
+      "rate": 0.1
+    },
+    {
+      "true": "all_class/Vokal A/ba",
+      "predicted": "all_class/Vokal A/nya",
+      "count": 1,
+      "rate": 0.014925373134328358
+    },
+    {
+      "true": "all_class/Vokal A/ba",
+      "predicted": "variations/ba",
+      "count": 1,
+      "rate": 0.014925373134328358
+    },
+    {
+      "true": "all_class/Vokal A/da",
+      "predicted": "all_class/Vokal A/pa",
+      "count": 1,
+      "rate": 0.011627906976744186
+    },
+    {
+      "true": "all_class/Vokal A/da",
+      "predicted": "all_class/Vokal A/sa",
+      "count": 1,
+      "rate": 0.011627906976744186
+    }
+  ],
+  "train_config": {
+    "epochs": 25,
+    "batch_size": 128,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "optimizer": "adamw",
+    "scheduler": "cosine",
+    "label_smoothing": 0.1,
+    "early_stopping_patience": 6,
+    "mixed_precision": true,
+    "num_workers": 4,
+    "grad_clip": 1.0,
+    "preload": "auto",
+    "preload_max_gb": 2.0
+  },
+  "environment": {
+    "torch": "2.11.0+cu128",
+    "device": "cuda",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "python": "3.12.13"
+  }
+}

@@ -1,0 +1,14 @@
+script_filter,resnet18,mean
+Jawa,87.92,87.92
+Jawi,95.37,95.37
+Bima,97.36,97.36
+Sunda,97.73,97.73
+Lontara,99.42,99.42
+Bali,99.47,99.47
+Pallawa,99.54,99.54
+Minangkabau,99.57,99.57
+Dunging-Iban,99.64,99.64
+Batak,99.8,99.8
+Ogan,99.81,99.81
+Kawi,99.92,99.92
+Lampung,99.95,99.95

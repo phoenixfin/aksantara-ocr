@@ -1,0 +1,2011 @@
+{
+  "experiment": {
+    "model": "resnet18",
+    "task": "per_script",
+    "image_size": 64,
+    "augmentation": "medium",
+    "pretrained": true,
+    "seed": 0,
+    "script_filter": "Lontara"
+  },
+  "run_id": "resnet18__per_script__Lontara__sz64__aug-medium__pt__s0",
+  "num_classes": 138,
+  "class_names": [
+    "Vowel A/A",
+    "Vowel A/Ba",
+    "Vowel A/Ca",
+    "Vowel A/Da",
+    "Vowel A/Ga",
+    "Vowel A/Ha",
+    "Vowel A/Ja",
+    "Vowel A/Ka",
+    "Vowel A/La",
+    "Vowel A/Ma",
+    "Vowel A/Mpa",
+    "Vowel A/Na",
+    "Vowel A/Nca",
+    "Vowel A/Nga",
+    "Vowel A/Ngka",
+    "Vowel A/Nra",
+    "Vowel A/Nya",
+    "Vowel A/Pa",
+    "Vowel A/Ra",
+    "Vowel A/Sa",
+    "Vowel A/Ta",
+    "Vowel A/Wa",
+    "Vowel A/YA",
+    "Vowel E/Be",
+    "Vowel E/Ce",
+    "Vowel E/De",
+    "Vowel E/E",
+    "Vowel E/Ge",
+    "Vowel E/He",
+    "Vowel E/Je",
+    "Vowel E/Ke",
+    "Vowel E/Le",
+    "Vowel E/Me",
+    "Vowel E/Mpa",
+    "Vowel E/Nce",
+    "Vowel E/Ne",
+    "Vowel E/Nge",
+    "Vowel E/Ngke",
+    "Vowel E/Nre",
+    "Vowel E/Nye",
+    "Vowel E/Pe",
+    "Vowel E/Re",
+    "Vowel E/Se",
+    "Vowel E/Te",
+    "Vowel E/We",
+    "Vowel E/Ye",
+    "Vowel I/Bi",
+    "Vowel I/Ci",
+    "Vowel I/Di",
+    "Vowel I/Gi",
+    "Vowel I/Hi",
+    "Vowel I/I",
+    "Vowel I/Ji",
+    "Vowel I/Ki",
+    "Vowel I/Li",
+    "Vowel I/Mi",
+    "Vowel I/Mpi",
+    "Vowel I/Nci",
+    "Vowel I/Ngi",
+    "Vowel I/Ngki",
+    "Vowel I/Ni",
+    "Vowel I/Nri",
+    "Vowel I/Nyi",
+    "Vowel I/Pi",
+    "Vowel I/Ri",
+    "Vowel I/Si",
+    "Vowel I/Ti",
+    "Vowel I/Wi",
+    "Vowel I/Yi",
+    "Vowel O/Bo",
+    "Vowel O/Co",
+    "Vowel O/Do",
+    "Vowel O/Go",
+    "Vowel O/Ho",
+    "Vowel O/Jo",
+    "Vowel O/Ko",
+    "Vowel O/Lo",
+    "Vowel O/Mo",
+    "Vowel O/Mpo",
+    "Vowel O/Nco",
+    "Vowel O/Ngko",
+    "Vowel O/Ngo",
+    "Vowel O/No",
+    "Vowel O/Nro",
+    "Vowel O/Nyo",
+    "Vowel O/O",
+    "Vowel O/Po",
+    "Vowel O/Ro",
+    "Vowel O/So",
+    "Vowel O/To",
+    "Vowel O/Wo",
+    "Vowel O/Yo",
+    "Vowel U/Bu",
+    "Vowel U/Cu",
+    "Vowel U/Du",
+    "Vowel U/Gu",
+    "Vowel U/Hu",
+    "Vowel U/Ju",
+    "Vowel U/Ku",
+    "Vowel U/Lu",
+    "Vowel U/Mpu",
+    "Vowel U/Mu",
+    "Vowel U/Ncu",
+    "Vowel U/Ngku",
+    "Vowel U/Ngu",
+    "Vowel U/Nru",
+    "Vowel U/Nu",
+    "Vowel U/Nyu",
+    "Vowel U/Pu",
+    "Vowel U/Ru",
+    "Vowel U/Su",
+    "Vowel U/Tu",
+    "Vowel U/U",
+    "Vowel U/Wu",
+    "Vowel U/Yu",
+    "Vowel \u00c9/Be'",
+    "Vowel \u00c9/Ce'",
+    "Vowel \u00c9/De'",
+    "Vowel \u00c9/E'",
+    "Vowel \u00c9/Ge'",
+    "Vowel \u00c9/He'",
+    "Vowel \u00c9/Je'",
+    "Vowel \u00c9/Ke'",
+    "Vowel \u00c9/Le'",
+    "Vowel \u00c9/Me'",
+    "Vowel \u00c9/Mpe'",
+    "Vowel \u00c9/Nce'",
+    "Vowel \u00c9/Ne'",
+    "Vowel \u00c9/Nge'",
+    "Vowel \u00c9/Ngke'",
+    "Vowel \u00c9/Nre'",
+    "Vowel \u00c9/Nye'",
+    "Vowel \u00c9/Pe'",
+    "Vowel \u00c9/Re'",
+    "Vowel \u00c9/Se'",
+    "Vowel \u00c9/Te'",
+    "Vowel \u00c9/We'",
+    "Vowel \u00c9/Ye'"
+  ],
+  "n_train": 4575,
+  "n_val": 914,
+  "n_test": 914,
+  "test_metrics": {
+    "accuracy": 0.9956236323851203,
+    "balanced_accuracy": 0.9948872785829306,
+    "macro_f1": 0.9951554995033256,
+    "weighted_f1": 0.9955586649240916,
+    "cohen_kappa": 0.9955712065433727,
+    "top5_accuracy": 1.0,
+    "per_class": {
+      "Vowel A/A": {
+        "precision": 0.9473684210526315,
+        "recall": 1.0,
+        "f1": 0.972972972972973,
+        "support": 18
+      },
+      "Vowel A/Ba": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Ca": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/Da": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Ga": {
+        "precision": 1.0,
+        "recall": 0.9444444444444444,
+        "f1": 0.9714285714285714,
+        "support": 18
+      },
+      "Vowel A/Ha": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/Ja": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Ka": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/La": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Ma": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Mpa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Na": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Nca": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/Nga": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Ngka": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Nra": {
+        "precision": 0.95,
+        "recall": 1.0,
+        "f1": 0.9743589743589743,
+        "support": 19
+      },
+      "Vowel A/Nya": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Pa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/Ra": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Sa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/Ta": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Wa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/YA": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel E/Be": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Ce": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel E/De": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/E": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8888888888888888,
+        "support": 4
+      },
+      "Vowel E/Ge": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8888888888888888,
+        "support": 5
+      },
+      "Vowel E/He": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Je": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Ke": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Le": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel E/Me": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Mpa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Nce": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel E/Ne": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Nge": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Ngke": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Nre": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel E/Nye": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Pe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Re": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel E/Se": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Te": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/We": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Ye": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Bi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Ci": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Di": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Gi": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8888888888888888,
+        "support": 4
+      },
+      "Vowel I/Hi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/I": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Ji": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Ki": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Li": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Mi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Mpi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Nci": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Ngi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Ngki": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Ni": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Nri": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Nyi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Pi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Ri": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Si": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Ti": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Wi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Yi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Bo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel O/Co": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Do": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Go": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Ho": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel O/Jo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Ko": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Lo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel O/Mo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Mpo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Nco": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Ngko": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel O/Ngo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/No": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Nro": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Nyo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel O/O": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Po": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Ro": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel O/So": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/To": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Wo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Yo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel U/Bu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Cu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Du": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Gu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel U/Hu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Ju": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Ku": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel U/Lu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Mpu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Mu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Ncu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel U/Ngku": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Ngu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Nru": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel U/Nu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Nyu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Pu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Ru": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel U/Su": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Tu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/U": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Wu": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8888888888888888,
+        "support": 5
+      },
+      "Vowel U/Yu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Be'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Ce'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel \u00c9/De'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/E'": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "support": 4
+      },
+      "Vowel \u00c9/Ge'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/He'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel \u00c9/Je'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Ke'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Le'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel \u00c9/Me'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Mpe'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Nce'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Ne'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel \u00c9/Nge'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Ngke'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Nre'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Nye'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel \u00c9/Pe'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Re'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Se'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel \u00c9/Te'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/We'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Ye'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      }
+    }
+  },
+  "best_val_metrics": {
+    "accuracy": 0.9967177242888403,
+    "balanced_accuracy": 0.99597423510467,
+    "macro_f1": 0.9953071083505866,
+    "weighted_f1": 0.9967281442117328,
+    "cohen_kappa": 0.9966785054970613,
+    "top5_accuracy": 1.0,
+    "per_class": {
+      "Vowel A/A": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Ba": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Ca": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/Da": {
+        "precision": 1.0,
+        "recall": 0.9444444444444444,
+        "f1": 0.9714285714285714,
+        "support": 18
+      },
+      "Vowel A/Ga": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Ha": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Ja": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/Ka": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/La": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 17
+      },
+      "Vowel A/Ma": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Mpa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/Na": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Nca": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Nga": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/Ngka": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Nra": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/Nya": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Pa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/Ra": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Sa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/Ta": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel A/Wa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 18
+      },
+      "Vowel A/YA": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 19
+      },
+      "Vowel E/Be": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Ce": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel E/De": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/E": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8888888888888888,
+        "support": 4
+      },
+      "Vowel E/Ge": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/He": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel E/Je": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Ke": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "support": 4
+      },
+      "Vowel E/Le": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel E/Me": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Mpa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Nce": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Ne": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel E/Nge": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Ngke": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Nre": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel E/Nye": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Pe": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Re": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Se": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel E/Te": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/We": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel E/Ye": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Bi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Ci": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Di": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Gi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Hi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/I": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Ji": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Ki": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8888888888888888,
+        "support": 4
+      },
+      "Vowel I/Li": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Mi": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8888888888888888,
+        "support": 4
+      },
+      "Vowel I/Mpi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Nci": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Ngi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Ngki": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Ni": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Nri": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Nyi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Pi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Ri": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Si": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Ti": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel I/Wi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel I/Yi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Bo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Co": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel O/Do": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Go": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Ho": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel O/Jo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Ko": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Lo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Mo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel O/Mpo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Nco": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Ngko": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Ngo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel O/No": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Nro": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Nyo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel O/O": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Po": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Ro": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/So": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel O/To": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Wo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel O/Yo": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Bu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel U/Cu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Du": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Gu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel U/Hu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Ju": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Ku": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Lu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel U/Mpu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Mu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Ncu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel U/Ngku": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Ngu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Nru": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Nu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel U/Nyu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Pu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Ru": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Su": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel U/Tu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/U": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel U/Wu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel U/Yu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Be'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Ce'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/De'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel \u00c9/E'": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "support": 4
+      },
+      "Vowel \u00c9/Ge'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/He'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel \u00c9/Je'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Ke'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Le'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Me'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel \u00c9/Mpe'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Nce'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Ne'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel \u00c9/Nge'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Ngke'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Nre'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Nye'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel \u00c9/Pe'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Re'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Se'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Te'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Vowel \u00c9/We'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      },
+      "Vowel \u00c9/Ye'": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      }
+    }
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 4.2832910785258145,
+      "val_accuracy": 0.2538293216630197,
+      "val_macro_f1": 0.06756596385494204,
+      "lr": 0.000996057350657239
+    },
+    {
+      "epoch": 2,
+      "train_loss": 2.6294122445257635,
+      "val_accuracy": 0.5962800875273523,
+      "val_macro_f1": 0.44697415713742816,
+      "lr": 0.0009842915805643156
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.632828004242944,
+      "val_accuracy": 0.8643326039387309,
+      "val_macro_f1": 0.8167711555276611,
+      "lr": 0.0009648882429441258
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.1781672837304287,
+      "val_accuracy": 0.9573304157549234,
+      "val_macro_f1": 0.939708104908506,
+      "lr": 0.0009381533400219318
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.0294974220776167,
+      "val_accuracy": 0.9671772428884027,
+      "val_macro_f1": 0.9596129467410933,
+      "lr": 0.0009045084971874737
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.9702012544381814,
+      "val_accuracy": 0.9814004376367614,
+      "val_macro_f1": 0.9798637607419074,
+      "lr": 0.0008644843137107057
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.9408030121183135,
+      "val_accuracy": 0.9857768052516411,
+      "val_macro_f1": 0.9799498114715506,
+      "lr": 0.0008187119948743448
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.9206808598966546,
+      "val_accuracy": 0.9901531728665208,
+      "val_macro_f1": 0.9865735017908931,
+      "lr": 0.0007679133974894982
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.8973822383802446,
+      "val_accuracy": 0.9945295404814004,
+      "val_macro_f1": 0.9920674735892128,
+      "lr": 0.0007128896457825362
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.8885511736270508,
+      "val_accuracy": 0.9956236323851203,
+      "val_macro_f1": 0.9930584311019095,
+      "lr": 0.0006545084971874736
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.8916724562384392,
+      "val_accuracy": 0.9923413566739606,
+      "val_macro_f1": 0.991818878263891,
+      "lr": 0.0005936906572928624
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.8804458977225048,
+      "val_accuracy": 0.9967177242888403,
+      "val_macro_f1": 0.9953071083505866,
+      "lr": 0.0005313952597646568
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.8733123122277807,
+      "val_accuracy": 0.9901531728665208,
+      "val_macro_f1": 0.9882104827757,
+      "lr": 0.00046860474023534336
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.8731040960061746,
+      "val_accuracy": 0.9945295404814004,
+      "val_macro_f1": 0.9924758011714533,
+      "lr": 0.0004063093427071377
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.869841698141046,
+      "val_accuracy": 0.9934354485776805,
+      "val_macro_f1": 0.9935316109229153,
+      "lr": 0.00034549150281252644
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.8608917696879861,
+      "val_accuracy": 0.9956236323851203,
+      "val_macro_f1": 0.9943161508378899,
+      "lr": 0.00028711035421746366
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.8544571699861621,
+      "val_accuracy": 0.9945295404814004,
+      "val_macro_f1": 0.9938320715814323,
+      "lr": 0.00023208660251050156
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.8553552401000685,
+      "val_accuracy": 0.9956236323851203,
+      "val_macro_f1": 0.9943161508378899,
+      "lr": 0.00018128800512565513
+    }
+  ],
+  "epochs_run": 18,
+  "best_epoch": 12,
+  "train_seconds": 55.55447196960449,
+  "num_params": 11247306,
+  "most_confused": [
+    {
+      "true": "Vowel A/Ga",
+      "predicted": "Vowel A/Nra",
+      "count": 1,
+      "rate": 0.05555555555555555
+    },
+    {
+      "true": "Vowel E/Ge",
+      "predicted": "Vowel I/Gi",
+      "count": 1,
+      "rate": 0.2
+    },
+    {
+      "true": "Vowel U/Wu",
+      "predicted": "Vowel A/A",
+      "count": 1,
+      "rate": 0.2
+    },
+    {
+      "true": "Vowel \u00c9/E'",
+      "predicted": "Vowel E/E",
+      "count": 1,
+      "rate": 0.25
+    }
+  ],
+  "train_config": {
+    "epochs": 25,
+    "batch_size": 128,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "optimizer": "adamw",
+    "scheduler": "cosine",
+    "label_smoothing": 0.1,
+    "early_stopping_patience": 6,
+    "mixed_precision": true,
+    "num_workers": 4,
+    "grad_clip": 1.0,
+    "preload": "auto",
+    "preload_max_gb": 2.0
+  },
+  "environment": {
+    "torch": "2.11.0+cu128",
+    "device": "cuda",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "python": "3.12.13"
+  }
+}

@@ -1,0 +1,465 @@
+{
+  "experiment": {
+    "model": "resnet18",
+    "task": "script_id",
+    "image_size": 64,
+    "augmentation": "medium",
+    "pretrained": true,
+    "seed": 0,
+    "script_filter": null
+  },
+  "run_id": "resnet18__script_id__sz64__aug-medium__pt__s0",
+  "num_classes": 13,
+  "class_names": [
+    "Bali",
+    "Batak",
+    "Bima",
+    "Dunging-Iban",
+    "Jawa",
+    "Jawi",
+    "Kawi",
+    "Lampung",
+    "Lontara",
+    "Minangkabau",
+    "Ogan",
+    "Pallawa",
+    "Sunda"
+  ],
+  "n_train": 69552,
+  "n_val": 13911,
+  "n_test": 13911,
+  "test_metrics": {
+    "accuracy": 0.9990654877435123,
+    "balanced_accuracy": 0.9991275749639079,
+    "macro_f1": 0.9990741759666809,
+    "weighted_f1": 0.9990654962689399,
+    "cohen_kappa": 0.9989085533326258,
+    "top5_accuracy": 1.0,
+    "per_class": {
+      "Bali": {
+        "precision": 0.9984415584415585,
+        "recall": 0.999479979199168,
+        "f1": 0.998960498960499,
+        "support": 1923
+      },
+      "Batak": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 505
+      },
+      "Bima": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 308
+      },
+      "Dunging-Iban": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 842
+      },
+      "Jawa": {
+        "precision": 0.9994706193753309,
+        "recall": 0.9973586899101955,
+        "f1": 0.9984135378106822,
+        "support": 1893
+      },
+      "Jawi": {
+        "precision": 0.9956427015250545,
+        "recall": 0.9978165938864629,
+        "f1": 0.9967284623773174,
+        "support": 458
+      },
+      "Kawi": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 892
+      },
+      "Lampung": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 714
+      },
+      "Lontara": {
+        "precision": 0.9978165938864629,
+        "recall": 1.0,
+        "f1": 0.9989071038251366,
+        "support": 914
+      },
+      "Minangkabau": {
+        "precision": 0.9968944099378882,
+        "recall": 0.9968944099378882,
+        "f1": 0.9968944099378882,
+        "support": 322
+      },
+      "Ogan": {
+        "precision": 1.0,
+        "recall": 0.9980952380952381,
+        "f1": 0.9990467111534795,
+        "support": 525
+      },
+      "Pallawa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 560
+      },
+      "Sunda": {
+        "precision": 0.9990135635018496,
+        "recall": 0.9990135635018496,
+        "f1": 0.9990135635018496,
+        "support": 4055
+      }
+    }
+  },
+  "best_val_metrics": {
+    "accuracy": 0.9991373733017037,
+    "balanced_accuracy": 0.9993552774845009,
+    "macro_f1": 0.9989894049533282,
+    "weighted_f1": 0.9991380854488533,
+    "cohen_kappa": 0.998992511516482,
+    "top5_accuracy": 0.9999281144418086,
+    "per_class": {
+      "Bali": {
+        "precision": 0.998959958398336,
+        "recall": 0.998959958398336,
+        "f1": 0.998959958398336,
+        "support": 1923
+      },
+      "Batak": {
+        "precision": 1.0,
+        "recall": 0.996039603960396,
+        "f1": 0.998015873015873,
+        "support": 505
+      },
+      "Bima": {
+        "precision": 0.9967532467532467,
+        "recall": 1.0,
+        "f1": 0.9983739837398374,
+        "support": 307
+      },
+      "Dunging-Iban": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 843
+      },
+      "Jawa": {
+        "precision": 1.0,
+        "recall": 0.9973586899101955,
+        "f1": 0.9986775985189104,
+        "support": 1893
+      },
+      "Jawi": {
+        "precision": 0.9892008639308856,
+        "recall": 1.0,
+        "f1": 0.99457111834962,
+        "support": 458
+      },
+      "Kawi": {
+        "precision": 0.9977628635346756,
+        "recall": 1.0,
+        "f1": 0.9988801791713325,
+        "support": 892
+      },
+      "Lampung": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 714
+      },
+      "Lontara": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 914
+      },
+      "Minangkabau": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 322
+      },
+      "Ogan": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 525
+      },
+      "Pallawa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 559
+      },
+      "Sunda": {
+        "precision": 0.9995067817509248,
+        "recall": 0.9992603550295858,
+        "f1": 0.9993835531993589,
+        "support": 4056
+      }
+    }
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.7387311404426536,
+      "val_accuracy": 0.9786499892171663,
+      "val_macro_f1": 0.9746163387547979,
+      "lr": 0.000996057350657239
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5801645334435519,
+      "val_accuracy": 0.9954712098339443,
+      "val_macro_f1": 0.9937624976403113,
+      "lr": 0.0009842915805643156
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5654584878144221,
+      "val_accuracy": 0.9956868665085185,
+      "val_macro_f1": 0.9946369632063466,
+      "lr": 0.0009648882429441258
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.5599396279249241,
+      "val_accuracy": 0.9950398964847962,
+      "val_macro_f1": 0.9941436223724368,
+      "lr": 0.0009381533400219318
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.5571365323674413,
+      "val_accuracy": 0.9959744087412838,
+      "val_macro_f1": 0.9957559813608093,
+      "lr": 0.0009045084971874737
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5540937469667584,
+      "val_accuracy": 0.9963338365322407,
+      "val_macro_f1": 0.9958764031728442,
+      "lr": 0.0008644843137107057
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.5517485858874676,
+      "val_accuracy": 0.9972683487887284,
+      "val_macro_f1": 0.9965570704341076,
+      "lr": 0.0008187119948743448
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.5497409427799465,
+      "val_accuracy": 0.9969808065559629,
+      "val_macro_f1": 0.9957281242770475,
+      "lr": 0.0007679133974894982
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.5481166580997446,
+      "val_accuracy": 0.9964776076486234,
+      "val_macro_f1": 0.9957048379554447,
+      "lr": 0.0007128896457825362
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.5473417095104689,
+      "val_accuracy": 0.9975558910214938,
+      "val_macro_f1": 0.9968548777107819,
+      "lr": 0.0006545084971874736
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.5459850509330709,
+      "val_accuracy": 0.996190065415858,
+      "val_macro_f1": 0.9946996480003221,
+      "lr": 0.0005936906572928624
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.5440696559474472,
+      "val_accuracy": 0.9976996621378765,
+      "val_macro_f1": 0.9972933190689576,
+      "lr": 0.0005313952597646568
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.5435427758428786,
+      "val_accuracy": 0.996405722090432,
+      "val_macro_f1": 0.9945599510606488,
+      "lr": 0.00046860474023534336
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.5424588662826085,
+      "val_accuracy": 0.997196463230537,
+      "val_macro_f1": 0.9956978199458036,
+      "lr": 0.0004063093427071377
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.5420065349838172,
+      "val_accuracy": 0.9979153188124505,
+      "val_macro_f1": 0.996909155661987,
+      "lr": 0.00034549150281252644
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.5408504298151787,
+      "val_accuracy": 0.9988498310689382,
+      "val_macro_f1": 0.9988367973772051,
+      "lr": 0.00028711035421746366
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.54045902881947,
+      "val_accuracy": 0.998202861045216,
+      "val_macro_f1": 0.9976848345934546,
+      "lr": 0.00023208660251050156
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.5398079004401801,
+      "val_accuracy": 0.998993602185321,
+      "val_macro_f1": 0.9987857357578455,
+      "lr": 0.00018128800512565513
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.5395332311305996,
+      "val_accuracy": 0.9985622888361728,
+      "val_macro_f1": 0.9979999966878783,
+      "lr": 0.00013551568628929433
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.5394954630663292,
+      "val_accuracy": 0.998993602185321,
+      "val_macro_f1": 0.9988655655415185,
+      "lr": 9.549150281252634e-05
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.5386989711206864,
+      "val_accuracy": 0.9988498310689382,
+      "val_macro_f1": 0.9987521990888703,
+      "lr": 6.184665997806823e-05
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.5388867302080228,
+      "val_accuracy": 0.9991373733017037,
+      "val_macro_f1": 0.9989073867213111,
+      "lr": 3.511175705587433e-05
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.5384611762581898,
+      "val_accuracy": 0.9991373733017037,
+      "val_macro_f1": 0.9989641194311325,
+      "lr": 1.570841943568452e-05
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.5384085674737825,
+      "val_accuracy": 0.9991373733017037,
+      "val_macro_f1": 0.9989894049533282,
+      "lr": 3.942649342761118e-06
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.5383710033295208,
+      "val_accuracy": 0.9991373733017037,
+      "val_macro_f1": 0.9989641194311325,
+      "lr": 0.0
+    }
+  ],
+  "epochs_run": 25,
+  "best_epoch": 24,
+  "train_seconds": 490.54395937919617,
+  "num_params": 11183181,
+  "most_confused": [
+    {
+      "true": "Jawa",
+      "predicted": "Sunda",
+      "count": 3,
+      "rate": 0.001584786053882726
+    },
+    {
+      "true": "Jawa",
+      "predicted": "Bali",
+      "count": 2,
+      "rate": 0.0010565240359218173
+    },
+    {
+      "true": "Sunda",
+      "predicted": "Jawi",
+      "count": 2,
+      "rate": 0.0004932182490752158
+    },
+    {
+      "true": "Bali",
+      "predicted": "Jawa",
+      "count": 1,
+      "rate": 0.0005200208008320333
+    },
+    {
+      "true": "Jawi",
+      "predicted": "Sunda",
+      "count": 1,
+      "rate": 0.002183406113537118
+    },
+    {
+      "true": "Minangkabau",
+      "predicted": "Lontara",
+      "count": 1,
+      "rate": 0.003105590062111801
+    },
+    {
+      "true": "Ogan",
+      "predicted": "Minangkabau",
+      "count": 1,
+      "rate": 0.0019047619047619048
+    },
+    {
+      "true": "Sunda",
+      "predicted": "Bali",
+      "count": 1,
+      "rate": 0.0002466091245376079
+    },
+    {
+      "true": "Sunda",
+      "predicted": "Lontara",
+      "count": 1,
+      "rate": 0.0002466091245376079
+    }
+  ],
+  "train_config": {
+    "epochs": 25,
+    "batch_size": 128,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "optimizer": "adamw",
+    "scheduler": "cosine",
+    "label_smoothing": 0.1,
+    "early_stopping_patience": 6,
+    "mixed_precision": true,
+    "num_workers": 4,
+    "grad_clip": 1.0,
+    "preload": "auto",
+    "preload_max_gb": 2.0
+  },
+  "environment": {
+    "torch": "2.11.0+cu128",
+    "device": "cuda",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "python": "3.12.13"
+  }
+}

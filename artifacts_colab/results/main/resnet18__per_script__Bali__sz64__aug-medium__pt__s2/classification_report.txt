@@ -1,0 +1,143 @@
+                    precision    recall  f1-score   support
+
+  Letter/Vowel A/a     1.0000    1.0000    1.0000         3
+ Letter/Vowel A/ba     1.0000    0.9744    0.9870        39
+ Letter/Vowel A/ca     1.0000    0.9737    0.9867        38
+ Letter/Vowel A/da     1.0000    1.0000    1.0000        38
+ Letter/Vowel A/ga     0.9744    1.0000    0.9870        38
+ Letter/Vowel A/ha     1.0000    1.0000    1.0000        36
+ Letter/Vowel A/ja     1.0000    1.0000    1.0000        39
+ Letter/Vowel A/ka     1.0000    1.0000    1.0000        38
+ Letter/Vowel A/la     0.9750    1.0000    0.9873        39
+ Letter/Vowel A/ma     1.0000    1.0000    1.0000        38
+ Letter/Vowel A/na     0.9750    1.0000    0.9873        39
+Letter/Vowel A/nga     1.0000    1.0000    1.0000        39
+Letter/Vowel A/nya     0.9750    1.0000    0.9873        39
+ Letter/Vowel A/pa     1.0000    1.0000    1.0000        38
+ Letter/Vowel A/ra     1.0000    1.0000    1.0000        39
+ Letter/Vowel A/sa     1.0000    0.9737    0.9867        38
+ Letter/Vowel A/ta     1.0000    0.9744    0.9870        39
+ Letter/Vowel A/wa     1.0000    1.0000    1.0000        38
+ Letter/Vowel A/ya     1.0000    1.0000    1.0000        39
+ Letter/Vowel E/be     1.0000    1.0000    1.0000         8
+ Letter/Vowel E/ce     1.0000    1.0000    1.0000         9
+ Letter/Vowel E/de     1.0000    0.8750    0.9333         8
+  Letter/Vowel E/e     1.0000    1.0000    1.0000         9
+ Letter/Vowel E/ge     1.0000    1.0000    1.0000         9
+ Letter/Vowel E/je     1.0000    1.0000    1.0000         8
+ Letter/Vowel E/ke     1.0000    1.0000    1.0000         9
+ Letter/Vowel E/le     1.0000    1.0000    1.0000         8
+ Letter/Vowel E/me     1.0000    1.0000    1.0000         9
+ Letter/Vowel E/ne     0.8889    1.0000    0.9412         8
+Letter/Vowel E/nge     1.0000    1.0000    1.0000         9
+Letter/Vowel E/nye     1.0000    1.0000    1.0000         9
+ Letter/Vowel E/pe     1.0000    1.0000    1.0000         8
+ Letter/Vowel E/re     1.0000    1.0000    1.0000         9
+ Letter/Vowel E/se     1.0000    1.0000    1.0000         8
+ Letter/Vowel E/te     1.0000    1.0000    1.0000         9
+ Letter/Vowel E/we     1.0000    1.0000    1.0000         8
+ Letter/Vowel E/ye     1.0000    1.0000    1.0000         9
+ Letter/Vowel I/bi     1.0000    1.0000    1.0000         9
+ Letter/Vowel I/ci     1.0000    1.0000    1.0000         8
+ Letter/Vowel I/di     0.9000    1.0000    0.9474         9
+ Letter/Vowel I/gi     1.0000    1.0000    1.0000         8
+  Letter/Vowel I/i     1.0000    1.0000    1.0000         9
+ Letter/Vowel I/ji     1.0000    1.0000    1.0000         8
+ Letter/Vowel I/ki     1.0000    1.0000    1.0000         9
+ Letter/Vowel I/li     1.0000    1.0000    1.0000         9
+ Letter/Vowel I/mi     1.0000    1.0000    1.0000         8
+Letter/Vowel I/ngi     1.0000    1.0000    1.0000         9
+ Letter/Vowel I/ni     1.0000    0.8750    0.9333         8
+Letter/Vowel I/nyi     1.0000    1.0000    1.0000         9
+ Letter/Vowel I/pi     1.0000    1.0000    1.0000         8
+ Letter/Vowel I/ri     1.0000    1.0000    1.0000         9
+ Letter/Vowel I/si     1.0000    1.0000    1.0000         9
+ Letter/Vowel I/ti     1.0000    1.0000    1.0000         8
+ Letter/Vowel I/wi     1.0000    1.0000    1.0000         9
+ Letter/Vowel I/yi     1.0000    1.0000    1.0000         8
+ Letter/Vowel O/bo     1.0000    1.0000    1.0000         9
+ Letter/Vowel O/co     1.0000    1.0000    1.0000         8
+ Letter/Vowel O/do     1.0000    0.8889    0.9412         9
+ Letter/Vowel O/go     1.0000    1.0000    1.0000         8
+ Letter/Vowel O/jo     1.0000    1.0000    1.0000         9
+ Letter/Vowel O/ko     1.0000    1.0000    1.0000         9
+ Letter/Vowel O/lo     1.0000    1.0000    1.0000         8
+ Letter/Vowel O/mo     1.0000    1.0000    1.0000         9
+Letter/Vowel O/ngo     1.0000    0.8750    0.9333         8
+ Letter/Vowel O/no     0.9000    1.0000    0.9474         9
+Letter/Vowel O/nyo     0.8889    1.0000    0.9412         8
+  Letter/Vowel O/o     1.0000    1.0000    1.0000         9
+ Letter/Vowel O/po     1.0000    1.0000    1.0000         9
+ Letter/Vowel O/ro     1.0000    1.0000    1.0000         8
+ Letter/Vowel O/so     1.0000    1.0000    1.0000         9
+ Letter/Vowel O/to     1.0000    1.0000    1.0000         8
+ Letter/Vowel O/wo     1.0000    1.0000    1.0000         9
+ Letter/Vowel O/yo     1.0000    1.0000    1.0000         8
+ Letter/Vowel U/bu     1.0000    1.0000    1.0000         9
+ Letter/Vowel U/cu     1.0000    1.0000    1.0000         9
+ Letter/Vowel U/du     1.0000    1.0000    1.0000         8
+ Letter/Vowel U/gu     1.0000    1.0000    1.0000         9
+ Letter/Vowel U/ju     1.0000    1.0000    1.0000         8
+ Letter/Vowel U/ku     1.0000    1.0000    1.0000         9
+ Letter/Vowel U/lu     1.0000    1.0000    1.0000         8
+ Letter/Vowel U/mu     1.0000    1.0000    1.0000         9
+Letter/Vowel U/ngu     1.0000    1.0000    1.0000         9
+ Letter/Vowel U/nu     1.0000    1.0000    1.0000         8
+Letter/Vowel U/nyu     1.0000    1.0000    1.0000         9
+ Letter/Vowel U/pu     1.0000    1.0000    1.0000         8
+ Letter/Vowel U/ru     1.0000    1.0000    1.0000         9
+ Letter/Vowel U/su     1.0000    1.0000    1.0000         8
+ Letter/Vowel U/tu     1.0000    1.0000    1.0000         9
+  Letter/Vowel U/u     1.0000    1.0000    1.0000         9
+ Letter/Vowel U/wu     1.0000    1.0000    1.0000         8
+ Letter/Vowel U/yu     1.0000    1.0000    1.0000         9
+ Letter/Vowel É/bé     1.0000    1.0000    1.0000         8
+ Letter/Vowel É/cé     1.0000    1.0000    1.0000         9
+ Letter/Vowel É/dé     1.0000    1.0000    1.0000         8
+ Letter/Vowel É/gé     1.0000    1.0000    1.0000         9
+ Letter/Vowel É/jé     1.0000    1.0000    1.0000         9
+ Letter/Vowel É/ké     1.0000    1.0000    1.0000         8
+ Letter/Vowel É/lé     1.0000    1.0000    1.0000         9
+ Letter/Vowel É/mé     1.0000    1.0000    1.0000         8
+Letter/Vowel É/ngé     1.0000    1.0000    1.0000         9
+Letter/Vowel É/nyé     1.0000    1.0000    1.0000         8
+ Letter/Vowel É/né     1.0000    1.0000    1.0000         9
+ Letter/Vowel É/pé     0.9000    1.0000    0.9474         9
+ Letter/Vowel É/ré     1.0000    1.0000    1.0000         8
+ Letter/Vowel É/sé     1.0000    1.0000    1.0000         9
+ Letter/Vowel É/té     1.0000    1.0000    1.0000         8
+ Letter/Vowel É/wé     1.0000    0.8889    0.9412         9
+ Letter/Vowel É/yé     1.0000    1.0000    1.0000         8
+  Letter/Vowel É/é     1.0000    1.0000    1.0000         9
+ Letter/Vowel Ā/bā     1.0000    1.0000    1.0000         6
+ Letter/Vowel Ā/cā     1.0000    1.0000    1.0000         5
+ Letter/Vowel Ā/dā     1.0000    1.0000    1.0000         6
+ Letter/Vowel Ā/gā     1.0000    1.0000    1.0000         6
+ Letter/Vowel Ā/jā     1.0000    1.0000    1.0000         6
+ Letter/Vowel Ā/kā     1.0000    1.0000    1.0000         5
+ Letter/Vowel Ā/lā     1.0000    1.0000    1.0000         6
+ Letter/Vowel Ā/mā     1.0000    1.0000    1.0000         6
+Letter/Vowel Ā/ngā     1.0000    1.0000    1.0000         5
+Letter/Vowel Ā/nyā     1.0000    1.0000    1.0000         6
+ Letter/Vowel Ā/nā     1.0000    1.0000    1.0000         6
+ Letter/Vowel Ā/pā     1.0000    1.0000    1.0000         6
+ Letter/Vowel Ā/rā     1.0000    1.0000    1.0000         5
+ Letter/Vowel Ā/sā     1.0000    1.0000    1.0000         6
+ Letter/Vowel Ā/tā     1.0000    1.0000    1.0000         6
+ Letter/Vowel Ā/wā     1.0000    1.0000    1.0000         5
+ Letter/Vowel Ā/yā     1.0000    1.0000    1.0000         6
+  Letter/Vowel Ā/ā     1.0000    1.0000    1.0000         6
+      Number/eight     1.0000    1.0000    1.0000        35
+       Number/five     1.0000    1.0000    1.0000        36
+       Number/four     1.0000    1.0000    1.0000        35
+       Number/nine     1.0000    1.0000    1.0000        35
+        Number/one     1.0000    1.0000    1.0000        36
+      Number/seven     1.0000    1.0000    1.0000        35
+        Number/six     1.0000    1.0000    1.0000        36
+      Number/three     1.0000    0.9722    0.9859        36
+        Number/two     0.9730    1.0000    0.9863        36
+       Number/zero     1.0000    1.0000    1.0000        35
+
+          accuracy                         0.9948      1923
+         macro avg     0.9953    0.9947    0.9947      1923
+      weighted avg     0.9951    0.9948    0.9948      1923

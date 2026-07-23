@@ -1,0 +1,317 @@
+[
+  {
+    "stage1_script_accuracy": 0.9990654877435123,
+    "stage2_accuracy_given_correct_routing": 0.9861850625989351,
+    "end_to_end_accuracy": 0.9852634605707713,
+    "error_from_routing": 0.013802027172741038,
+    "n_test_images": 13911,
+    "scripts_covered_by_stage2": [
+      "Bali",
+      "Batak",
+      "Bima",
+      "Dunging-Iban",
+      "Jawa",
+      "Jawi",
+      "Kawi",
+      "Lampung",
+      "Lontara",
+      "Minangkabau",
+      "Ogan",
+      "Pallawa",
+      "Sunda"
+    ],
+    "images_missing_stage2": 0,
+    "per_script": [
+      {
+        "true_script": "Jawi",
+        "n": 458,
+        "script_acc": 0.9978165938864629,
+        "end_to_end": 0.9475982532751092
+      },
+      {
+        "true_script": "Jawa",
+        "n": 1893,
+        "script_acc": 0.9973586899101955,
+        "end_to_end": 0.9513998943475964
+      },
+      {
+        "true_script": "Bima",
+        "n": 308,
+        "script_acc": 1.0,
+        "end_to_end": 0.9837662337662337
+      },
+      {
+        "true_script": "Sunda",
+        "n": 4055,
+        "script_acc": 0.9990135635018496,
+        "end_to_end": 0.9854500616522811
+      },
+      {
+        "true_script": "Minangkabau",
+        "n": 322,
+        "script_acc": 0.9968944099378882,
+        "end_to_end": 0.9937888198757764
+      },
+      {
+        "true_script": "Bali",
+        "n": 1923,
+        "script_acc": 0.999479979199168,
+        "end_to_end": 0.9942797711908476
+      },
+      {
+        "true_script": "Pallawa",
+        "n": 560,
+        "script_acc": 1.0,
+        "end_to_end": 0.9946428571428572
+      },
+      {
+        "true_script": "Lontara",
+        "n": 914,
+        "script_acc": 1.0,
+        "end_to_end": 0.9956236323851203
+      },
+      {
+        "true_script": "Ogan",
+        "n": 525,
+        "script_acc": 0.9980952380952381,
+        "end_to_end": 0.9961904761904762
+      },
+      {
+        "true_script": "Dunging-Iban",
+        "n": 842,
+        "script_acc": 1.0,
+        "end_to_end": 0.997624703087886
+      },
+      {
+        "true_script": "Batak",
+        "n": 505,
+        "script_acc": 1.0,
+        "end_to_end": 0.998019801980198
+      },
+      {
+        "true_script": "Kawi",
+        "n": 892,
+        "script_acc": 1.0,
+        "end_to_end": 1.0
+      },
+      {
+        "true_script": "Lampung",
+        "n": 714,
+        "script_acc": 1.0,
+        "end_to_end": 1.0
+      }
+    ],
+    "seed": 0,
+    "stage1_model": "resnet18"
+  },
+  {
+    "stage1_script_accuracy": 0.9992811444180864,
+    "stage2_accuracy_given_correct_routing": 0.9852528595065103,
+    "end_to_end_accuracy": 0.9845446049888578,
+    "error_from_routing": 0.01473653942922859,
+    "n_test_images": 13911,
+    "scripts_covered_by_stage2": [
+      "Bali",
+      "Batak",
+      "Bima",
+      "Dunging-Iban",
+      "Jawa",
+      "Jawi",
+      "Kawi",
+      "Lampung",
+      "Lontara",
+      "Minangkabau",
+      "Ogan",
+      "Pallawa",
+      "Sunda"
+    ],
+    "images_missing_stage2": 0,
+    "per_script": [
+      {
+        "true_script": "Jawi",
+        "n": 458,
+        "script_acc": 0.9978165938864629,
+        "end_to_end": 0.9519650655021834
+      },
+      {
+        "true_script": "Bima",
+        "n": 308,
+        "script_acc": 0.9967532467532467,
+        "end_to_end": 0.9577922077922078
+      },
+      {
+        "true_script": "Jawa",
+        "n": 1893,
+        "script_acc": 0.9989434759640782,
+        "end_to_end": 0.9582673005810882
+      },
+      {
+        "true_script": "Sunda",
+        "n": 4055,
+        "script_acc": 0.9995067817509248,
+        "end_to_end": 0.9822441430332922
+      },
+      {
+        "true_script": "Minangkabau",
+        "n": 322,
+        "script_acc": 1.0,
+        "end_to_end": 0.9906832298136646
+      },
+      {
+        "true_script": "Pallawa",
+        "n": 560,
+        "script_acc": 1.0,
+        "end_to_end": 0.9928571428571429
+      },
+      {
+        "true_script": "Ogan",
+        "n": 525,
+        "script_acc": 0.9961904761904762,
+        "end_to_end": 0.9942857142857143
+      },
+      {
+        "true_script": "Bali",
+        "n": 1923,
+        "script_acc": 1.0,
+        "end_to_end": 0.9947997919916797
+      },
+      {
+        "true_script": "Lontara",
+        "n": 914,
+        "script_acc": 0.9989059080962801,
+        "end_to_end": 0.9956236323851203
+      },
+      {
+        "true_script": "Dunging-Iban",
+        "n": 842,
+        "script_acc": 0.998812351543943,
+        "end_to_end": 0.996437054631829
+      },
+      {
+        "true_script": "Batak",
+        "n": 505,
+        "script_acc": 1.0,
+        "end_to_end": 0.998019801980198
+      },
+      {
+        "true_script": "Kawi",
+        "n": 892,
+        "script_acc": 1.0,
+        "end_to_end": 0.9988789237668162
+      },
+      {
+        "true_script": "Lampung",
+        "n": 714,
+        "script_acc": 1.0,
+        "end_to_end": 1.0
+      }
+    ],
+    "seed": 1,
+    "stage1_model": "resnet18"
+  },
+  {
+    "stage1_script_accuracy": 0.9990654877435123,
+    "stage2_accuracy_given_correct_routing": 0.985681393006188,
+    "end_to_end_accuracy": 0.9847602616634318,
+    "error_from_routing": 0.014305226080080558,
+    "n_test_images": 13911,
+    "scripts_covered_by_stage2": [
+      "Bali",
+      "Batak",
+      "Bima",
+      "Dunging-Iban",
+      "Jawa",
+      "Jawi",
+      "Kawi",
+      "Lampung",
+      "Lontara",
+      "Minangkabau",
+      "Ogan",
+      "Pallawa",
+      "Sunda"
+    ],
+    "images_missing_stage2": 0,
+    "per_script": [
+      {
+        "true_script": "Jawa",
+        "n": 1893,
+        "script_acc": 0.9973586899101955,
+        "end_to_end": 0.9503433703116746
+      },
+      {
+        "true_script": "Jawi",
+        "n": 458,
+        "script_acc": 0.9956331877729258,
+        "end_to_end": 0.9541484716157205
+      },
+      {
+        "true_script": "Bima",
+        "n": 308,
+        "script_acc": 1.0,
+        "end_to_end": 0.9772727272727273
+      },
+      {
+        "true_script": "Sunda",
+        "n": 4055,
+        "script_acc": 0.9995067817509248,
+        "end_to_end": 0.9854500616522811
+      },
+      {
+        "true_script": "Lontara",
+        "n": 914,
+        "script_acc": 1.0,
+        "end_to_end": 0.9923413566739606
+      },
+      {
+        "true_script": "Bali",
+        "n": 1923,
+        "script_acc": 0.998959958398336,
+        "end_to_end": 0.9937597503900156
+      },
+      {
+        "true_script": "Dunging-Iban",
+        "n": 842,
+        "script_acc": 1.0,
+        "end_to_end": 0.994061757719715
+      },
+      {
+        "true_script": "Lampung",
+        "n": 714,
+        "script_acc": 0.9985994397759104,
+        "end_to_end": 0.9971988795518207
+      },
+      {
+        "true_script": "Kawi",
+        "n": 892,
+        "script_acc": 0.9988789237668162,
+        "end_to_end": 0.9977578475336323
+      },
+      {
+        "true_script": "Batak",
+        "n": 505,
+        "script_acc": 1.0,
+        "end_to_end": 0.998019801980198
+      },
+      {
+        "true_script": "Ogan",
+        "n": 525,
+        "script_acc": 1.0,
+        "end_to_end": 0.9980952380952381
+      },
+      {
+        "true_script": "Pallawa",
+        "n": 560,
+        "script_acc": 1.0,
+        "end_to_end": 0.9982142857142857
+      },
+      {
+        "true_script": "Minangkabau",
+        "n": 322,
+        "script_acc": 1.0,
+        "end_to_end": 1.0
+      }
+    ],
+    "seed": 2,
+    "stage1_model": "resnet18"
+  }
+]

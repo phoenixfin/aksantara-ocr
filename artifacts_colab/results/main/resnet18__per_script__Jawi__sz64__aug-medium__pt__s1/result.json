@@ -1,0 +1,765 @@
+{
+  "experiment": {
+    "model": "resnet18",
+    "task": "per_script",
+    "image_size": 64,
+    "augmentation": "medium",
+    "pretrained": true,
+    "seed": 1,
+    "script_filter": "Jawi"
+  },
+  "run_id": "resnet18__per_script__Jawi__sz64__aug-medium__pt__s1",
+  "num_classes": 34,
+  "class_names": [
+    "A (alif)",
+    "B (ba)",
+    "C (ca)",
+    "D (Dhod)",
+    "D (dal)",
+    "F (fa)",
+    "G (ga)",
+    "GH (gain)",
+    "H (H Kecil)",
+    "H (Ha Besar)",
+    "J (jim)",
+    "K (kaf)",
+    "KH (kha)",
+    "L (lam)",
+    "M (mim)",
+    "N (nun)",
+    "NG (nga)",
+    "NY (nya)",
+    "P (pa)",
+    "R (ra,rO)",
+    "S (sAD [sOD])",
+    "S (sin)",
+    "S, th (tsa) [tha]",
+    "SY (syin)",
+    "T (Ta Marbutoh)",
+    "T (ta)",
+    "T,H (ta marbutah)",
+    "V (va)",
+    "W, U, O (wau)",
+    "Y akhir (ye)",
+    "Y,I,E (ya)",
+    "Z (Dza)",
+    "Z (dh) [dhal]",
+    "Z (zai)"
+  ],
+  "n_train": 2285,
+  "n_val": 458,
+  "n_test": 458,
+  "test_metrics": {
+    "accuracy": 0.9519650655021834,
+    "balanced_accuracy": 0.9501400560224089,
+    "macro_f1": 0.9507718751624561,
+    "weighted_f1": 0.9522436264776796,
+    "cohen_kappa": 0.9504606822226811,
+    "top5_accuracy": 0.9912663755458515,
+    "per_class": {
+      "A (alif)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "B (ba)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "C (ca)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "D (Dhod)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "D (dal)": {
+        "precision": 0.7368421052631579,
+        "recall": 1.0,
+        "f1": 0.8484848484848485,
+        "support": 14
+      },
+      "F (fa)": {
+        "precision": 1.0,
+        "recall": 0.9285714285714286,
+        "f1": 0.9629629629629629,
+        "support": 14
+      },
+      "G (ga)": {
+        "precision": 1.0,
+        "recall": 0.9285714285714286,
+        "f1": 0.9629629629629629,
+        "support": 14
+      },
+      "GH (gain)": {
+        "precision": 0.8823529411764706,
+        "recall": 1.0,
+        "f1": 0.9375,
+        "support": 15
+      },
+      "H (H Kecil)": {
+        "precision": 0.9230769230769231,
+        "recall": 0.8571428571428571,
+        "f1": 0.8888888888888888,
+        "support": 14
+      },
+      "H (Ha Besar)": {
+        "precision": 0.9285714285714286,
+        "recall": 0.9285714285714286,
+        "f1": 0.9285714285714286,
+        "support": 14
+      },
+      "J (jim)": {
+        "precision": 0.9375,
+        "recall": 1.0,
+        "f1": 0.967741935483871,
+        "support": 15
+      },
+      "K (kaf)": {
+        "precision": 1.0,
+        "recall": 0.9285714285714286,
+        "f1": 0.9629629629629629,
+        "support": 14
+      },
+      "KH (kha)": {
+        "precision": 1.0,
+        "recall": 0.7857142857142857,
+        "f1": 0.88,
+        "support": 14
+      },
+      "L (lam)": {
+        "precision": 1.0,
+        "recall": 0.7857142857142857,
+        "f1": 0.88,
+        "support": 14
+      },
+      "M (mim)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "N (nun)": {
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1": 0.9333333333333333,
+        "support": 14
+      },
+      "NG (nga)": {
+        "precision": 1.0,
+        "recall": 0.9285714285714286,
+        "f1": 0.9629629629629629,
+        "support": 14
+      },
+      "NY (nya)": {
+        "precision": 0.9285714285714286,
+        "recall": 0.8666666666666667,
+        "f1": 0.896551724137931,
+        "support": 15
+      },
+      "P (pa)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "R (ra,rO)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "S (sAD [sOD])": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "S (sin)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "S, th (tsa) [tha]": {
+        "precision": 0.8571428571428571,
+        "recall": 0.8571428571428571,
+        "f1": 0.8571428571428571,
+        "support": 14
+      },
+      "SY (syin)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "T (Ta Marbutoh)": {
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "f1": 0.9230769230769231,
+        "support": 7
+      },
+      "T (ta)": {
+        "precision": 0.8125,
+        "recall": 0.8666666666666667,
+        "f1": 0.8387096774193549,
+        "support": 15
+      },
+      "T,H (ta marbutah)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 7
+      },
+      "V (va)": {
+        "precision": 0.9285714285714286,
+        "recall": 0.9285714285714286,
+        "f1": 0.9285714285714286,
+        "support": 14
+      },
+      "W, U, O (wau)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "Y akhir (ye)": {
+        "precision": 0.9375,
+        "recall": 1.0,
+        "f1": 0.967741935483871,
+        "support": 15
+      },
+      "Y,I,E (ya)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "Z (Dza)": {
+        "precision": 0.7777777777777778,
+        "recall": 1.0,
+        "f1": 0.875,
+        "support": 7
+      },
+      "Z (dh) [dhal]": {
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "f1": 0.9230769230769231,
+        "support": 7
+      },
+      "Z (zai)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      }
+    }
+  },
+  "best_val_metrics": {
+    "accuracy": 0.9672489082969432,
+    "balanced_accuracy": 0.9672268907563025,
+    "macro_f1": 0.9681042893137213,
+    "weighted_f1": 0.9672173739624048,
+    "cohen_kappa": 0.9662228602894902,
+    "top5_accuracy": 0.9978165938864629,
+    "per_class": {
+      "A (alif)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "B (ba)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "C (ca)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "D (Dhod)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "D (dal)": {
+        "precision": 0.9333333333333333,
+        "recall": 0.9333333333333333,
+        "f1": 0.9333333333333333,
+        "support": 15
+      },
+      "F (fa)": {
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1": 0.9333333333333333,
+        "support": 14
+      },
+      "G (ga)": {
+        "precision": 0.9285714285714286,
+        "recall": 0.9285714285714286,
+        "f1": 0.9285714285714286,
+        "support": 14
+      },
+      "GH (gain)": {
+        "precision": 0.8571428571428571,
+        "recall": 0.8,
+        "f1": 0.8275862068965517,
+        "support": 15
+      },
+      "H (H Kecil)": {
+        "precision": 1.0,
+        "recall": 0.9285714285714286,
+        "f1": 0.9629629629629629,
+        "support": 14
+      },
+      "H (Ha Besar)": {
+        "precision": 1.0,
+        "recall": 0.9285714285714286,
+        "f1": 0.9629629629629629,
+        "support": 14
+      },
+      "J (jim)": {
+        "precision": 1.0,
+        "recall": 0.9285714285714286,
+        "f1": 0.9629629629629629,
+        "support": 14
+      },
+      "K (kaf)": {
+        "precision": 0.8823529411764706,
+        "recall": 1.0,
+        "f1": 0.9375,
+        "support": 15
+      },
+      "KH (kha)": {
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1": 0.9333333333333333,
+        "support": 14
+      },
+      "L (lam)": {
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1": 0.9333333333333333,
+        "support": 14
+      },
+      "M (mim)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "N (nun)": {
+        "precision": 0.9333333333333333,
+        "recall": 1.0,
+        "f1": 0.9655172413793104,
+        "support": 14
+      },
+      "NG (nga)": {
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "f1": 0.9230769230769231,
+        "support": 14
+      },
+      "NY (nya)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "P (pa)": {
+        "precision": 1.0,
+        "recall": 0.9333333333333333,
+        "f1": 0.9655172413793104,
+        "support": 15
+      },
+      "R (ra,rO)": {
+        "precision": 1.0,
+        "recall": 0.9285714285714286,
+        "f1": 0.9629629629629629,
+        "support": 14
+      },
+      "S (sAD [sOD])": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "S (sin)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "S, th (tsa) [tha]": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "SY (syin)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 14
+      },
+      "T (Ta Marbutoh)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 7
+      },
+      "T (ta)": {
+        "precision": 1.0,
+        "recall": 0.9333333333333333,
+        "f1": 0.9655172413793104,
+        "support": 15
+      },
+      "T,H (ta marbutah)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 7
+      },
+      "V (va)": {
+        "precision": 1.0,
+        "recall": 0.9285714285714286,
+        "f1": 0.9629629629629629,
+        "support": 14
+      },
+      "W, U, O (wau)": {
+        "precision": 0.9333333333333333,
+        "recall": 1.0,
+        "f1": 0.9655172413793104,
+        "support": 14
+      },
+      "Y akhir (ye)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "Y,I,E (ya)": {
+        "precision": 0.9333333333333333,
+        "recall": 1.0,
+        "f1": 0.9655172413793104,
+        "support": 14
+      },
+      "Z (Dza)": {
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "f1": 0.9230769230769231,
+        "support": 7
+      },
+      "Z (dh) [dhal]": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 7
+      },
+      "Z (zai)": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      }
+    }
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 3.434697722553946,
+      "val_accuracy": 0.13755458515283842,
+      "val_macro_f1": 0.09672295296273743,
+      "lr": 0.000996057350657239
+    },
+    {
+      "epoch": 2,
+      "train_loss": 2.8357632519118896,
+      "val_accuracy": 0.3078602620087336,
+      "val_macro_f1": 0.25996695257198377,
+      "lr": 0.0009842915805643156
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.9687249754398606,
+      "val_accuracy": 0.6724890829694323,
+      "val_macro_f1": 0.6601250869966807,
+      "lr": 0.0009648882429441258
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.3884807110876172,
+      "val_accuracy": 0.7707423580786026,
+      "val_macro_f1": 0.7683298879119609,
+      "lr": 0.0009381533400219318
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.1148603742962593,
+      "val_accuracy": 0.8406113537117904,
+      "val_macro_f1": 0.8328125866434274,
+      "lr": 0.0009045084971874737
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.002000611042298,
+      "val_accuracy": 0.8646288209606987,
+      "val_macro_f1": 0.8580734354126038,
+      "lr": 0.0008644843137107057
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.9312268297051445,
+      "val_accuracy": 0.9126637554585153,
+      "val_macro_f1": 0.915379285724147,
+      "lr": 0.0008187119948743448
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.8664796446293136,
+      "val_accuracy": 0.9192139737991266,
+      "val_macro_f1": 0.9197127629060169,
+      "lr": 0.0007679133974894982
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.8499513776349291,
+      "val_accuracy": 0.9279475982532751,
+      "val_macro_f1": 0.9294954153424348,
+      "lr": 0.0007128896457825362
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.8139420889138653,
+      "val_accuracy": 0.9519650655021834,
+      "val_macro_f1": 0.9530094252032026,
+      "lr": 0.0006545084971874736
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.7939182072290967,
+      "val_accuracy": 0.9213973799126638,
+      "val_macro_f1": 0.9199974530832346,
+      "lr": 0.0005936906572928624
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.7778376117837769,
+      "val_accuracy": 0.9432314410480349,
+      "val_macro_f1": 0.9452778076044124,
+      "lr": 0.0005313952597646568
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.7737642059701798,
+      "val_accuracy": 0.8951965065502183,
+      "val_macro_f1": 0.8931780994355298,
+      "lr": 0.00046860474023534336
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.7680584166451669,
+      "val_accuracy": 0.9563318777292577,
+      "val_macro_f1": 0.9561648231542885,
+      "lr": 0.0004063093427071377
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.7553197808808257,
+      "val_accuracy": 0.9497816593886463,
+      "val_macro_f1": 0.9519179711092294,
+      "lr": 0.00034549150281252644
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.7471004490518466,
+      "val_accuracy": 0.9672489082969432,
+      "val_macro_f1": 0.9681042893137213,
+      "lr": 0.00028711035421746366
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.7396336533047699,
+      "val_accuracy": 0.9497816593886463,
+      "val_macro_f1": 0.9529009078508522,
+      "lr": 0.00023208660251050156
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.7300034098343463,
+      "val_accuracy": 0.9606986899563319,
+      "val_macro_f1": 0.962497250690014,
+      "lr": 0.00018128800512565513
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.7340725661889208,
+      "val_accuracy": 0.962882096069869,
+      "val_macro_f1": 0.9638942197340418,
+      "lr": 0.00013551568628929433
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.7358757127818185,
+      "val_accuracy": 0.9563318777292577,
+      "val_macro_f1": 0.9578674699298922,
+      "lr": 9.549150281252634e-05
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.7281766376557965,
+      "val_accuracy": 0.9606986899563319,
+      "val_macro_f1": 0.9617820279666776,
+      "lr": 6.184665997806823e-05
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.712294641860987,
+      "val_accuracy": 0.9585152838427947,
+      "val_macro_f1": 0.9598168468874482,
+      "lr": 3.511175705587433e-05
+    }
+  ],
+  "epochs_run": 22,
+  "best_epoch": 16,
+  "train_seconds": 27.871474266052246,
+  "num_params": 11193954,
+  "most_confused": [
+    {
+      "true": "L (lam)",
+      "predicted": "D (dal)",
+      "count": 3,
+      "rate": 0.21428571428571427
+    },
+    {
+      "true": "H (H Kecil)",
+      "predicted": "D (dal)",
+      "count": 2,
+      "rate": 0.14285714285714285
+    },
+    {
+      "true": "NY (nya)",
+      "predicted": "S, th (tsa) [tha]",
+      "count": 2,
+      "rate": 0.13333333333333333
+    },
+    {
+      "true": "S, th (tsa) [tha]",
+      "predicted": "T (ta)",
+      "count": 2,
+      "rate": 0.14285714285714285
+    },
+    {
+      "true": "F (fa)",
+      "predicted": "V (va)",
+      "count": 1,
+      "rate": 0.07142857142857142
+    },
+    {
+      "true": "G (ga)",
+      "predicted": "Z (Dza)",
+      "count": 1,
+      "rate": 0.07142857142857142
+    },
+    {
+      "true": "H (Ha Besar)",
+      "predicted": "Z (Dza)",
+      "count": 1,
+      "rate": 0.07142857142857142
+    },
+    {
+      "true": "K (kaf)",
+      "predicted": "Y akhir (ye)",
+      "count": 1,
+      "rate": 0.07142857142857142
+    },
+    {
+      "true": "KH (kha)",
+      "predicted": "GH (gain)",
+      "count": 1,
+      "rate": 0.07142857142857142
+    },
+    {
+      "true": "KH (kha)",
+      "predicted": "H (H Kecil)",
+      "count": 1,
+      "rate": 0.07142857142857142
+    },
+    {
+      "true": "KH (kha)",
+      "predicted": "J (jim)",
+      "count": 1,
+      "rate": 0.07142857142857142
+    },
+    {
+      "true": "NG (nga)",
+      "predicted": "GH (gain)",
+      "count": 1,
+      "rate": 0.07142857142857142
+    },
+    {
+      "true": "T (Ta Marbutoh)",
+      "predicted": "H (Ha Besar)",
+      "count": 1,
+      "rate": 0.14285714285714285
+    },
+    {
+      "true": "T (ta)",
+      "predicted": "N (nun)",
+      "count": 1,
+      "rate": 0.06666666666666667
+    },
+    {
+      "true": "T (ta)",
+      "predicted": "NY (nya)",
+      "count": 1,
+      "rate": 0.06666666666666667
+    },
+    {
+      "true": "V (va)",
+      "predicted": "N (nun)",
+      "count": 1,
+      "rate": 0.07142857142857142
+    },
+    {
+      "true": "Z (dh) [dhal]",
+      "predicted": "T (ta)",
+      "count": 1,
+      "rate": 0.14285714285714285
+    }
+  ],
+  "train_config": {
+    "epochs": 25,
+    "batch_size": 128,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "optimizer": "adamw",
+    "scheduler": "cosine",
+    "label_smoothing": 0.1,
+    "early_stopping_patience": 6,
+    "mixed_precision": true,
+    "num_workers": 4,
+    "grad_clip": 1.0,
+    "preload": "auto",
+    "preload_max_gb": 2.0
+  },
+  "environment": {
+    "torch": "2.11.0+cu128",
+    "device": "cuda",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "python": "3.12.13"
+  }
+}

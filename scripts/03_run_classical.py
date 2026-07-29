@@ -20,17 +20,26 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from aksara.data.dataset import load_split_frame  # noqa: E402
 from aksara.engine import metrics as metrics_mod  # noqa: E402
-from aksara.models.classical import build_classical, extract_features  # noqa: E402
+from aksara.models.classical import DEFAULT_MODELS, build_classical, extract_features  # noqa: E402
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--artifacts", type=Path, default=Path("artifacts"))
     parser.add_argument("--task", choices=["unified", "script_id"], default="unified")
-    parser.add_argument("--features", nargs="+", default=["hog", "pixels"])
-    parser.add_argument("--models", nargs="+", default=["svm_rbf", "knn", "random_forest", "logreg"])
+    # HOG only by default: it is the meaningful representation, and adding raw
+    # pixels doubles the (already hours-long) runtime for a weaker number.
+    parser.add_argument("--features", nargs="+", default=["hog"])
+    parser.add_argument("--models", nargs="+", default=DEFAULT_MODELS)
     parser.add_argument("--image-size", type=int, default=64)
     parser.add_argument("--seeds", nargs="+", type=int, default=[0])
+    parser.add_argument(
+        "--max-train",
+        type=int,
+        default=None,
+        help="Cap training samples (stratified subsample). Use to bound runtime "
+             "on a CPU; results are reported with the actual n used.",
+    )
     args = parser.parse_args()
 
     frame = load_split_frame(args.artifacts / "splits.csv", args.artifacts / "manifest.csv")
@@ -55,6 +64,15 @@ def main() -> int:
 
         x_train, y_train = cache["train"]
         x_test, y_test = cache["test"]
+
+        if args.max_train and len(x_train) > args.max_train:
+            # Stratified subsample so every class stays represented.
+            from sklearn.model_selection import train_test_split
+            x_train, _, y_train, _ = train_test_split(
+                x_train, y_train, train_size=args.max_train, stratify=y_train, random_state=42
+            )
+            print(f"  (subsampled train to {len(x_train)} for tractability)")
+
         print(f"{feature}: train={x_train.shape} test={x_test.shape}")
 
         for model_name in args.models:

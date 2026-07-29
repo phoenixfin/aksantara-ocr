@@ -11,11 +11,11 @@ import numpy as np
 from PIL import Image
 from skimage.feature import hog
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
+from sklearn.kernel_approximation import Nystroem
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
-from sklearn.svm import SVC
+from sklearn.svm import LinearSVC
 from tqdm.auto import tqdm
 
 
@@ -44,13 +44,35 @@ def extract_features(paths, image_size: int = 64, feature: str = "hog") -> np.nd
     return np.stack(vectors)
 
 
+# Chosen to actually finish at ~70k samples x 1764 HOG dims x 889 classes on a
+# CPU. The original exact-kernel SVC is O(n^2)-O(n^3) in libsvm and would run for
+# days; even RF-300 and saga-logistic are hours at this scale. These are the
+# leaner, scale-appropriate substitutes:
+#   svm_linear     -> LinearSVC (liblinear), linear in n
+#   svm_rbf_approx -> Nystroem RBF feature map + LinearSVC (scalable RBF)
+#   random_forest  -> 150 trees, depth-capped, fully parallel
+# knn has a trivial fit but a heavy predict; it stays because it is the canonical
+# non-parametric baseline and its cost is bounded by the test-set size.
 CLASSIFIERS = {
-    "svm_rbf": lambda: make_pipeline(StandardScaler(), SVC(kernel="rbf", C=10, gamma="scale")),
-    "svm_linear": lambda: make_pipeline(StandardScaler(), SVC(kernel="linear", C=1)),
-    "knn": lambda: make_pipeline(StandardScaler(), KNeighborsClassifier(n_neighbors=5)),
-    "random_forest": lambda: RandomForestClassifier(n_estimators=300, n_jobs=-1),
-    "logreg": lambda: make_pipeline(StandardScaler(), LogisticRegression(max_iter=2000, n_jobs=-1)),
+    "svm_linear": lambda: make_pipeline(
+        StandardScaler(), LinearSVC(C=1, dual="auto", max_iter=2000)
+    ),
+    "svm_rbf_approx": lambda: make_pipeline(
+        StandardScaler(),
+        # gamma=None -> Nystroem uses 1/n_features (it rejects the "scale"
+        # string that SVC accepts). n_components trades accuracy for speed.
+        Nystroem(kernel="rbf", gamma=None, n_components=300, random_state=42),
+        LinearSVC(C=10, dual="auto", max_iter=2000),
+    ),
+    "knn": lambda: make_pipeline(StandardScaler(), KNeighborsClassifier(n_neighbors=5, n_jobs=-1)),
+    "random_forest": lambda: RandomForestClassifier(
+        n_estimators=150, max_depth=40, n_jobs=-1, random_state=42
+    ),
 }
+
+# Default lean set for the run script: one non-parametric, one linear SVM, one
+# ensemble. Enough to characterize non-deep performance without an all-day run.
+DEFAULT_MODELS = ["knn", "svm_linear", "random_forest"]
 
 
 def build_classical(name: str, seed: int = 42):

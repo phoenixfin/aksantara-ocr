@@ -1,0 +1,5344 @@
+{
+  "accuracy": 0.49374640598044855,
+  "balanced_accuracy": 0.31744920657073517,
+  "macro_f1": 0.31694477089460155,
+  "weighted_f1": 0.4664081328050026,
+  "cohen_kappa": 0.4921077201166917,
+  "top5_accuracy": 0.4969091431857389,
+  "per_class": {
+    "Bali/Letter/Vowel A/a": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Bali/Letter/Vowel A/ba": {
+      "precision": 0.3333333333333333,
+      "recall": 0.20512820512820512,
+      "f1": 0.25396825396825395,
+      "support": 39
+    },
+    "Bali/Letter/Vowel A/ca": {
+      "precision": 0.34615384615384615,
+      "recall": 0.47368421052631576,
+      "f1": 0.4,
+      "support": 38
+    },
+    "Bali/Letter/Vowel A/da": {
+      "precision": 0.5142857142857142,
+      "recall": 0.47368421052631576,
+      "f1": 0.4931506849315068,
+      "support": 38
+    },
+    "Bali/Letter/Vowel A/ga": {
+      "precision": 0.8181818181818182,
+      "recall": 0.47368421052631576,
+      "f1": 0.6,
+      "support": 38
+    },
+    "Bali/Letter/Vowel A/ha": {
+      "precision": 0.41025641025641024,
+      "recall": 0.4444444444444444,
+      "f1": 0.4266666666666667,
+      "support": 36
+    },
+    "Bali/Letter/Vowel A/ja": {
+      "precision": 0.5833333333333334,
+      "recall": 0.5384615384615384,
+      "f1": 0.56,
+      "support": 39
+    },
+    "Bali/Letter/Vowel A/ka": {
+      "precision": 0.46153846153846156,
+      "recall": 0.3157894736842105,
+      "f1": 0.375,
+      "support": 38
+    },
+    "Bali/Letter/Vowel A/la": {
+      "precision": 0.4482758620689655,
+      "recall": 0.6666666666666666,
+      "f1": 0.5360824742268041,
+      "support": 39
+    },
+    "Bali/Letter/Vowel A/ma": {
+      "precision": 0.6388888888888888,
+      "recall": 0.6052631578947368,
+      "f1": 0.6216216216216216,
+      "support": 38
+    },
+    "Bali/Letter/Vowel A/na": {
+      "precision": 0.34210526315789475,
+      "recall": 0.3333333333333333,
+      "f1": 0.33766233766233766,
+      "support": 39
+    },
+    "Bali/Letter/Vowel A/nga": {
+      "precision": 0.48484848484848486,
+      "recall": 0.41025641025641024,
+      "f1": 0.4444444444444444,
+      "support": 39
+    },
+    "Bali/Letter/Vowel A/nya": {
+      "precision": 0.5434782608695652,
+      "recall": 0.6410256410256411,
+      "f1": 0.5882352941176471,
+      "support": 39
+    },
+    "Bali/Letter/Vowel A/pa": {
+      "precision": 0.35135135135135137,
+      "recall": 0.34210526315789475,
+      "f1": 0.3466666666666667,
+      "support": 38
+    },
+    "Bali/Letter/Vowel A/ra": {
+      "precision": 0.75,
+      "recall": 0.6923076923076923,
+      "f1": 0.72,
+      "support": 39
+    },
+    "Bali/Letter/Vowel A/sa": {
+      "precision": 0.2976190476190476,
+      "recall": 0.6578947368421053,
+      "f1": 0.4098360655737705,
+      "support": 38
+    },
+    "Bali/Letter/Vowel A/ta": {
+      "precision": 0.23529411764705882,
+      "recall": 0.41025641025641024,
+      "f1": 0.29906542056074764,
+      "support": 39
+    },
+    "Bali/Letter/Vowel A/wa": {
+      "precision": 0.26865671641791045,
+      "recall": 0.47368421052631576,
+      "f1": 0.34285714285714286,
+      "support": 38
+    },
+    "Bali/Letter/Vowel A/ya": {
+      "precision": 0.65,
+      "recall": 0.3333333333333333,
+      "f1": 0.4406779661016949,
+      "support": 39
+    },
+    "Bali/Letter/Vowel E/be": {
+      "precision": 0.25,
+      "recall": 0.375,
+      "f1": 0.3,
+      "support": 8
+    },
+    "Bali/Letter/Vowel E/ce": {
+      "precision": 0.5,
+      "recall": 0.1111111111111111,
+      "f1": 0.18181818181818182,
+      "support": 9
+    },
+    "Bali/Letter/Vowel E/de": {
+      "precision": 0.5,
+      "recall": 0.125,
+      "f1": 0.2,
+      "support": 8
+    },
+    "Bali/Letter/Vowel E/e": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel E/ge": {
+      "precision": 0.125,
+      "recall": 0.1111111111111111,
+      "f1": 0.11764705882352941,
+      "support": 9
+    },
+    "Bali/Letter/Vowel E/je": {
+      "precision": 0.6666666666666666,
+      "recall": 0.25,
+      "f1": 0.36363636363636365,
+      "support": 8
+    },
+    "Bali/Letter/Vowel E/ke": {
+      "precision": 0.3333333333333333,
+      "recall": 0.2222222222222222,
+      "f1": 0.26666666666666666,
+      "support": 9
+    },
+    "Bali/Letter/Vowel E/le": {
+      "precision": 0.6,
+      "recall": 0.375,
+      "f1": 0.46153846153846156,
+      "support": 8
+    },
+    "Bali/Letter/Vowel E/me": {
+      "precision": 1.0,
+      "recall": 0.1111111111111111,
+      "f1": 0.2,
+      "support": 9
+    },
+    "Bali/Letter/Vowel E/ne": {
+      "precision": 0.5,
+      "recall": 0.125,
+      "f1": 0.2,
+      "support": 8
+    },
+    "Bali/Letter/Vowel E/nge": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel E/nye": {
+      "precision": 0.5,
+      "recall": 0.4444444444444444,
+      "f1": 0.47058823529411764,
+      "support": 9
+    },
+    "Bali/Letter/Vowel E/pe": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Bali/Letter/Vowel E/re": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel E/se": {
+      "precision": 0.6,
+      "recall": 0.375,
+      "f1": 0.46153846153846156,
+      "support": 8
+    },
+    "Bali/Letter/Vowel E/te": {
+      "precision": 0.5,
+      "recall": 0.1111111111111111,
+      "f1": 0.18181818181818182,
+      "support": 9
+    },
+    "Bali/Letter/Vowel E/we": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Bali/Letter/Vowel E/ye": {
+      "precision": 0.6666666666666666,
+      "recall": 0.2222222222222222,
+      "f1": 0.3333333333333333,
+      "support": 9
+    },
+    "Bali/Letter/Vowel I/bi": {
+      "precision": 0.25,
+      "recall": 0.1111111111111111,
+      "f1": 0.15384615384615385,
+      "support": 9
+    },
+    "Bali/Letter/Vowel I/ci": {
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222222222222222,
+      "support": 8
+    },
+    "Bali/Letter/Vowel I/di": {
+      "precision": 0.1111111111111111,
+      "recall": 0.1111111111111111,
+      "f1": 0.1111111111111111,
+      "support": 9
+    },
+    "Bali/Letter/Vowel I/gi": {
+      "precision": 0.36363636363636365,
+      "recall": 0.5,
+      "f1": 0.42105263157894735,
+      "support": 8
+    },
+    "Bali/Letter/Vowel I/i": {
+      "precision": 0.5714285714285714,
+      "recall": 0.4444444444444444,
+      "f1": 0.5,
+      "support": 9
+    },
+    "Bali/Letter/Vowel I/ji": {
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333333333333333,
+      "support": 8
+    },
+    "Bali/Letter/Vowel I/ki": {
+      "precision": 0.043478260869565216,
+      "recall": 0.1111111111111111,
+      "f1": 0.0625,
+      "support": 9
+    },
+    "Bali/Letter/Vowel I/li": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel I/mi": {
+      "precision": 0.25,
+      "recall": 0.125,
+      "f1": 0.16666666666666666,
+      "support": 8
+    },
+    "Bali/Letter/Vowel I/ngi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel I/ni": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Bali/Letter/Vowel I/nyi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel I/pi": {
+      "precision": 0.14285714285714285,
+      "recall": 0.125,
+      "f1": 0.13333333333333333,
+      "support": 8
+    },
+    "Bali/Letter/Vowel I/ri": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel I/si": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel I/ti": {
+      "precision": 0.08333333333333333,
+      "recall": 0.125,
+      "f1": 0.1,
+      "support": 8
+    },
+    "Bali/Letter/Vowel I/wi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel I/yi": {
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222222222222222,
+      "support": 8
+    },
+    "Bali/Letter/Vowel O/bo": {
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111,
+      "f1": 0.16666666666666666,
+      "support": 9
+    },
+    "Bali/Letter/Vowel O/co": {
+      "precision": 0.07407407407407407,
+      "recall": 0.25,
+      "f1": 0.11428571428571428,
+      "support": 8
+    },
+    "Bali/Letter/Vowel O/do": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel O/go": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Bali/Letter/Vowel O/jo": {
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111,
+      "f1": 0.16666666666666666,
+      "support": 9
+    },
+    "Bali/Letter/Vowel O/ko": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel O/lo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Bali/Letter/Vowel O/mo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel O/ngo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Bali/Letter/Vowel O/no": {
+      "precision": 0.125,
+      "recall": 0.1111111111111111,
+      "f1": 0.11764705882352941,
+      "support": 9
+    },
+    "Bali/Letter/Vowel O/nyo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Bali/Letter/Vowel O/o": {
+      "precision": 0.07692307692307693,
+      "recall": 0.1111111111111111,
+      "f1": 0.09090909090909091,
+      "support": 9
+    },
+    "Bali/Letter/Vowel O/po": {
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111,
+      "f1": 0.16666666666666666,
+      "support": 9
+    },
+    "Bali/Letter/Vowel O/ro": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Bali/Letter/Vowel O/so": {
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111,
+      "f1": 0.16666666666666666,
+      "support": 9
+    },
+    "Bali/Letter/Vowel O/to": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Bali/Letter/Vowel O/wo": {
+      "precision": 0.42857142857142855,
+      "recall": 0.3333333333333333,
+      "f1": 0.375,
+      "support": 9
+    },
+    "Bali/Letter/Vowel O/yo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Bali/Letter/Vowel U/bu": {
+      "precision": 0.16666666666666666,
+      "recall": 0.2222222222222222,
+      "f1": 0.19047619047619047,
+      "support": 9
+    },
+    "Bali/Letter/Vowel U/cu": {
+      "precision": 0.08333333333333333,
+      "recall": 0.1111111111111111,
+      "f1": 0.09523809523809523,
+      "support": 9
+    },
+    "Bali/Letter/Vowel U/du": {
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333333333333333,
+      "support": 8
+    },
+    "Bali/Letter/Vowel U/gu": {
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111,
+      "f1": 0.16666666666666666,
+      "support": 9
+    },
+    "Bali/Letter/Vowel U/ju": {
+      "precision": 0.75,
+      "recall": 0.375,
+      "f1": 0.5,
+      "support": 8
+    },
+    "Bali/Letter/Vowel U/ku": {
+      "precision": 0.5,
+      "recall": 0.2222222222222222,
+      "f1": 0.3076923076923077,
+      "support": 9
+    },
+    "Bali/Letter/Vowel U/lu": {
+      "precision": 0.6,
+      "recall": 0.375,
+      "f1": 0.46153846153846156,
+      "support": 8
+    },
+    "Bali/Letter/Vowel U/mu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel U/ngu": {
+      "precision": 0.16666666666666666,
+      "recall": 0.1111111111111111,
+      "f1": 0.13333333333333333,
+      "support": 9
+    },
+    "Bali/Letter/Vowel U/nu": {
+      "precision": 0.25,
+      "recall": 0.125,
+      "f1": 0.16666666666666666,
+      "support": 8
+    },
+    "Bali/Letter/Vowel U/nyu": {
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "support": 9
+    },
+    "Bali/Letter/Vowel U/pu": {
+      "precision": 0.25,
+      "recall": 0.125,
+      "f1": 0.16666666666666666,
+      "support": 8
+    },
+    "Bali/Letter/Vowel U/ru": {
+      "precision": 0.09090909090909091,
+      "recall": 0.1111111111111111,
+      "f1": 0.1,
+      "support": 9
+    },
+    "Bali/Letter/Vowel U/su": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Bali/Letter/Vowel U/tu": {
+      "precision": 0.2727272727272727,
+      "recall": 0.3333333333333333,
+      "f1": 0.3,
+      "support": 9
+    },
+    "Bali/Letter/Vowel U/u": {
+      "precision": 0.6666666666666666,
+      "recall": 0.2222222222222222,
+      "f1": 0.3333333333333333,
+      "support": 9
+    },
+    "Bali/Letter/Vowel U/wu": {
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333333333333333,
+      "support": 8
+    },
+    "Bali/Letter/Vowel U/yu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel \u00c9/b\u00e9": {
+      "precision": 0.2,
+      "recall": 0.125,
+      "f1": 0.15384615384615385,
+      "support": 8
+    },
+    "Bali/Letter/Vowel \u00c9/c\u00e9": {
+      "precision": 0.15789473684210525,
+      "recall": 0.3333333333333333,
+      "f1": 0.21428571428571427,
+      "support": 9
+    },
+    "Bali/Letter/Vowel \u00c9/d\u00e9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Bali/Letter/Vowel \u00c9/g\u00e9": {
+      "precision": 0.25,
+      "recall": 0.2222222222222222,
+      "f1": 0.23529411764705882,
+      "support": 9
+    },
+    "Bali/Letter/Vowel \u00c9/j\u00e9": {
+      "precision": 0.4,
+      "recall": 0.2222222222222222,
+      "f1": 0.2857142857142857,
+      "support": 9
+    },
+    "Bali/Letter/Vowel \u00c9/k\u00e9": {
+      "precision": 0.25,
+      "recall": 0.125,
+      "f1": 0.16666666666666666,
+      "support": 8
+    },
+    "Bali/Letter/Vowel \u00c9/l\u00e9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel \u00c9/m\u00e9": {
+      "precision": 0.15,
+      "recall": 0.375,
+      "f1": 0.21428571428571427,
+      "support": 8
+    },
+    "Bali/Letter/Vowel \u00c9/ng\u00e9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel \u00c9/ny\u00e9": {
+      "precision": 0.06451612903225806,
+      "recall": 0.25,
+      "f1": 0.10256410256410256,
+      "support": 8
+    },
+    "Bali/Letter/Vowel \u00c9/n\u00e9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel \u00c9/p\u00e9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Bali/Letter/Vowel \u00c9/r\u00e9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Bali/Letter/Vowel \u00c9/s\u00e9": {
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111,
+      "f1": 0.16666666666666666,
+      "support": 9
+    },
+    "Bali/Letter/Vowel \u00c9/t\u00e9": {
+      "precision": 0.5,
+      "recall": 0.125,
+      "f1": 0.2,
+      "support": 8
+    },
+    "Bali/Letter/Vowel \u00c9/w\u00e9": {
+      "precision": 0.23076923076923078,
+      "recall": 0.3333333333333333,
+      "f1": 0.2727272727272727,
+      "support": 9
+    },
+    "Bali/Letter/Vowel \u00c9/y\u00e9": {
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333333333333333,
+      "support": 8
+    },
+    "Bali/Letter/Vowel \u00c9/\u00e9": {
+      "precision": 0.25,
+      "recall": 0.1111111111111111,
+      "f1": 0.15384615384615385,
+      "support": 9
+    },
+    "Bali/Letter/Vowel \u0100/b\u0101": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 6
+    },
+    "Bali/Letter/Vowel \u0100/c\u0101": {
+      "precision": 0.5,
+      "recall": 0.2,
+      "f1": 0.2857142857142857,
+      "support": 5
+    },
+    "Bali/Letter/Vowel \u0100/d\u0101": {
+      "precision": 0.16666666666666666,
+      "recall": 0.16666666666666666,
+      "f1": 0.16666666666666666,
+      "support": 6
+    },
+    "Bali/Letter/Vowel \u0100/g\u0101": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 6
+    },
+    "Bali/Letter/Vowel \u0100/j\u0101": {
+      "precision": 0.5,
+      "recall": 0.16666666666666666,
+      "f1": 0.25,
+      "support": 6
+    },
+    "Bali/Letter/Vowel \u0100/k\u0101": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Bali/Letter/Vowel \u0100/l\u0101": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 6
+    },
+    "Bali/Letter/Vowel \u0100/m\u0101": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 6
+    },
+    "Bali/Letter/Vowel \u0100/ng\u0101": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Bali/Letter/Vowel \u0100/ny\u0101": {
+      "precision": 0.42857142857142855,
+      "recall": 0.5,
+      "f1": 0.46153846153846156,
+      "support": 6
+    },
+    "Bali/Letter/Vowel \u0100/n\u0101": {
+      "precision": 0.2857142857142857,
+      "recall": 0.3333333333333333,
+      "f1": 0.3076923076923077,
+      "support": 6
+    },
+    "Bali/Letter/Vowel \u0100/p\u0101": {
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "support": 6
+    },
+    "Bali/Letter/Vowel \u0100/r\u0101": {
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714285714285714,
+      "support": 5
+    },
+    "Bali/Letter/Vowel \u0100/s\u0101": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 6
+    },
+    "Bali/Letter/Vowel \u0100/t\u0101": {
+      "precision": 0.18181818181818182,
+      "recall": 0.3333333333333333,
+      "f1": 0.23529411764705882,
+      "support": 6
+    },
+    "Bali/Letter/Vowel \u0100/w\u0101": {
+      "precision": 0.14285714285714285,
+      "recall": 0.2,
+      "f1": 0.16666666666666666,
+      "support": 5
+    },
+    "Bali/Letter/Vowel \u0100/y\u0101": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 6
+    },
+    "Bali/Letter/Vowel \u0100/\u0101": {
+      "precision": 0.5,
+      "recall": 0.3333333333333333,
+      "f1": 0.4,
+      "support": 6
+    },
+    "Bali/Number/eight": {
+      "precision": 0.43859649122807015,
+      "recall": 0.7142857142857143,
+      "f1": 0.5434782608695652,
+      "support": 35
+    },
+    "Bali/Number/five": {
+      "precision": 0.8055555555555556,
+      "recall": 0.8055555555555556,
+      "f1": 0.8055555555555556,
+      "support": 36
+    },
+    "Bali/Number/four": {
+      "precision": 0.46875,
+      "recall": 0.8571428571428571,
+      "f1": 0.6060606060606061,
+      "support": 35
+    },
+    "Bali/Number/nine": {
+      "precision": 0.375,
+      "recall": 0.34285714285714286,
+      "f1": 0.3582089552238806,
+      "support": 35
+    },
+    "Bali/Number/one": {
+      "precision": 0.5384615384615384,
+      "recall": 0.19444444444444445,
+      "f1": 0.2857142857142857,
+      "support": 36
+    },
+    "Bali/Number/seven": {
+      "precision": 0.24299065420560748,
+      "recall": 0.7428571428571429,
+      "f1": 0.36619718309859156,
+      "support": 35
+    },
+    "Bali/Number/six": {
+      "precision": 0.7878787878787878,
+      "recall": 0.7222222222222222,
+      "f1": 0.7536231884057971,
+      "support": 36
+    },
+    "Bali/Number/three": {
+      "precision": 0.6666666666666666,
+      "recall": 0.8888888888888888,
+      "f1": 0.7619047619047619,
+      "support": 36
+    },
+    "Bali/Number/two": {
+      "precision": 0.5789473684210527,
+      "recall": 0.6111111111111112,
+      "f1": 0.5945945945945946,
+      "support": 36
+    },
+    "Bali/Number/zero": {
+      "precision": 0.6666666666666666,
+      "recall": 0.34285714285714286,
+      "f1": 0.4528301886792453,
+      "support": 35
+    },
+    "Batak/a": {
+      "precision": 1.0,
+      "recall": 0.8461538461538461,
+      "f1": 0.9166666666666666,
+      "support": 26
+    },
+    "Batak/ba": {
+      "precision": 0.6774193548387096,
+      "recall": 0.7777777777777778,
+      "f1": 0.7241379310344828,
+      "support": 27
+    },
+    "Batak/da": {
+      "precision": 0.4523809523809524,
+      "recall": 0.7307692307692307,
+      "f1": 0.5588235294117647,
+      "support": 26
+    },
+    "Batak/ga": {
+      "precision": 0.72,
+      "recall": 0.6923076923076923,
+      "f1": 0.7058823529411765,
+      "support": 26
+    },
+    "Batak/ha": {
+      "precision": 0.7,
+      "recall": 0.7777777777777778,
+      "f1": 0.7368421052631579,
+      "support": 27
+    },
+    "Batak/i": {
+      "precision": 0.8214285714285714,
+      "recall": 0.8846153846153846,
+      "f1": 0.8518518518518519,
+      "support": 26
+    },
+    "Batak/ja": {
+      "precision": 0.6470588235294118,
+      "recall": 0.4230769230769231,
+      "f1": 0.5116279069767442,
+      "support": 26
+    },
+    "Batak/la": {
+      "precision": 0.9523809523809523,
+      "recall": 0.7407407407407407,
+      "f1": 0.8333333333333334,
+      "support": 27
+    },
+    "Batak/ma": {
+      "precision": 0.88,
+      "recall": 0.8148148148148148,
+      "f1": 0.8461538461538461,
+      "support": 27
+    },
+    "Batak/na": {
+      "precision": 0.7931034482758621,
+      "recall": 0.92,
+      "f1": 0.8518518518518519,
+      "support": 25
+    },
+    "Batak/nga": {
+      "precision": 0.6521739130434783,
+      "recall": 0.5769230769230769,
+      "f1": 0.6122448979591837,
+      "support": 26
+    },
+    "Batak/nya": {
+      "precision": 0.85,
+      "recall": 0.6296296296296297,
+      "f1": 0.723404255319149,
+      "support": 27
+    },
+    "Batak/pa": {
+      "precision": 0.696969696969697,
+      "recall": 0.8846153846153846,
+      "f1": 0.7796610169491526,
+      "support": 26
+    },
+    "Batak/ra": {
+      "precision": 0.72,
+      "recall": 0.6666666666666666,
+      "f1": 0.6923076923076923,
+      "support": 27
+    },
+    "Batak/sa": {
+      "precision": 0.7105263157894737,
+      "recall": 0.9642857142857143,
+      "f1": 0.8181818181818182,
+      "support": 28
+    },
+    "Batak/ta": {
+      "precision": 0.7352941176470589,
+      "recall": 0.9259259259259259,
+      "f1": 0.819672131147541,
+      "support": 27
+    },
+    "Batak/u": {
+      "precision": 0.875,
+      "recall": 0.5384615384615384,
+      "f1": 0.6666666666666666,
+      "support": 26
+    },
+    "Batak/wa": {
+      "precision": 0.8214285714285714,
+      "recall": 0.8214285714285714,
+      "f1": 0.8214285714285714,
+      "support": 28
+    },
+    "Batak/ya": {
+      "precision": 0.88,
+      "recall": 0.8148148148148148,
+      "f1": 0.8461538461538461,
+      "support": 27
+    },
+    "Bima/a": {
+      "precision": 0.75,
+      "recall": 0.21428571428571427,
+      "f1": 0.3333333333333333,
+      "support": 14
+    },
+    "Bima/ba": {
+      "precision": 0.3333333333333333,
+      "recall": 0.6428571428571429,
+      "f1": 0.43902439024390244,
+      "support": 14
+    },
+    "Bima/ca": {
+      "precision": 0.17142857142857143,
+      "recall": 0.4,
+      "f1": 0.24,
+      "support": 15
+    },
+    "Bima/da": {
+      "precision": 0.42857142857142855,
+      "recall": 0.42857142857142855,
+      "f1": 0.42857142857142855,
+      "support": 14
+    },
+    "Bima/fa": {
+      "precision": 0.875,
+      "recall": 0.5,
+      "f1": 0.6363636363636364,
+      "support": 14
+    },
+    "Bima/ga": {
+      "precision": 0.1875,
+      "recall": 0.21428571428571427,
+      "f1": 0.2,
+      "support": 14
+    },
+    "Bima/ha": {
+      "precision": 0.45454545454545453,
+      "recall": 0.35714285714285715,
+      "f1": 0.4,
+      "support": 14
+    },
+    "Bima/ja": {
+      "precision": 0.6470588235294118,
+      "recall": 0.7857142857142857,
+      "f1": 0.7096774193548387,
+      "support": 14
+    },
+    "Bima/ka": {
+      "precision": 0.8888888888888888,
+      "recall": 0.6666666666666666,
+      "f1": 0.7619047619047619,
+      "support": 12
+    },
+    "Bima/la": {
+      "precision": 0.38461538461538464,
+      "recall": 0.38461538461538464,
+      "f1": 0.38461538461538464,
+      "support": 13
+    },
+    "Bima/ma": {
+      "precision": 0.6666666666666666,
+      "recall": 0.46153846153846156,
+      "f1": 0.5454545454545454,
+      "support": 13
+    },
+    "Bima/mpa": {
+      "precision": 0.3888888888888889,
+      "recall": 0.4666666666666667,
+      "f1": 0.42424242424242425,
+      "support": 15
+    },
+    "Bima/na": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14
+    },
+    "Bima/nca": {
+      "precision": 0.5714285714285714,
+      "recall": 0.2857142857142857,
+      "f1": 0.38095238095238093,
+      "support": 14
+    },
+    "Bima/nga": {
+      "precision": 0.46153846153846156,
+      "recall": 0.8571428571428571,
+      "f1": 0.6,
+      "support": 14
+    },
+    "Bima/nta": {
+      "precision": 0.6363636363636364,
+      "recall": 0.4666666666666667,
+      "f1": 0.5384615384615384,
+      "support": 15
+    },
+    "Bima/pa": {
+      "precision": 1.0,
+      "recall": 0.07142857142857142,
+      "f1": 0.13333333333333333,
+      "support": 14
+    },
+    "Bima/ra": {
+      "precision": 0.5,
+      "recall": 0.7142857142857143,
+      "f1": 0.5882352941176471,
+      "support": 14
+    },
+    "Bima/sa": {
+      "precision": 0.65,
+      "recall": 0.9285714285714286,
+      "f1": 0.7647058823529411,
+      "support": 14
+    },
+    "Bima/ta": {
+      "precision": 0.42857142857142855,
+      "recall": 0.6428571428571429,
+      "f1": 0.5142857142857142,
+      "support": 14
+    },
+    "Bima/wa": {
+      "precision": 0.2553191489361702,
+      "recall": 0.8571428571428571,
+      "f1": 0.39344262295081966,
+      "support": 14
+    },
+    "Bima/ya": {
+      "precision": 0.875,
+      "recall": 0.9333333333333333,
+      "f1": 0.9032258064516129,
+      "support": 15
+    },
+    "Dunging-Iban/A_capital": {
+      "precision": 0.8888888888888888,
+      "recall": 0.5714285714285714,
+      "f1": 0.6956521739130435,
+      "support": 14
+    },
+    "Dunging-Iban/E": {
+      "precision": 0.8888888888888888,
+      "recall": 0.5714285714285714,
+      "f1": 0.6956521739130435,
+      "support": 14
+    },
+    "Dunging-Iban/O": {
+      "precision": 1.0,
+      "recall": 0.8571428571428571,
+      "f1": 0.9230769230769231,
+      "support": 14
+    },
+    "Dunging-Iban/R": {
+      "precision": 0.9090909090909091,
+      "recall": 0.7142857142857143,
+      "f1": 0.8,
+      "support": 14
+    },
+    "Dunging-Iban/a_noncapital": {
+      "precision": 0.9285714285714286,
+      "recall": 0.9285714285714286,
+      "f1": 0.9285714285714286,
+      "support": 14
+    },
+    "Dunging-Iban/ah": {
+      "precision": 0.9166666666666666,
+      "recall": 0.7857142857142857,
+      "f1": 0.8461538461538461,
+      "support": 14
+    },
+    "Dunging-Iban/ak": {
+      "precision": 0.9166666666666666,
+      "recall": 0.7333333333333333,
+      "f1": 0.8148148148148148,
+      "support": 15
+    },
+    "Dunging-Iban/al": {
+      "precision": 1.0,
+      "recall": 0.6428571428571429,
+      "f1": 0.782608695652174,
+      "support": 14
+    },
+    "Dunging-Iban/am": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 14
+    },
+    "Dunging-Iban/an": {
+      "precision": 0.9230769230769231,
+      "recall": 0.8,
+      "f1": 0.8571428571428571,
+      "support": 15
+    },
+    "Dunging-Iban/ang": {
+      "precision": 0.9285714285714286,
+      "recall": 0.9285714285714286,
+      "f1": 0.9285714285714286,
+      "support": 14
+    },
+    "Dunging-Iban/ao": {
+      "precision": 0.9090909090909091,
+      "recall": 0.7142857142857143,
+      "f1": 0.8,
+      "support": 14
+    },
+    "Dunging-Iban/ap": {
+      "precision": 0.7777777777777778,
+      "recall": 1.0,
+      "f1": 0.875,
+      "support": 14
+    },
+    "Dunging-Iban/as": {
+      "precision": 0.8125,
+      "recall": 0.8666666666666667,
+      "f1": 0.8387096774193549,
+      "support": 15
+    },
+    "Dunging-Iban/at": {
+      "precision": 1.0,
+      "recall": 0.7857142857142857,
+      "f1": 0.88,
+      "support": 14
+    },
+    "Dunging-Iban/au": {
+      "precision": 0.9166666666666666,
+      "recall": 0.7857142857142857,
+      "f1": 0.8461538461538461,
+      "support": 14
+    },
+    "Dunging-Iban/ba": {
+      "precision": 0.9285714285714286,
+      "recall": 0.8666666666666667,
+      "f1": 0.896551724137931,
+      "support": 15
+    },
+    "Dunging-Iban/cha": {
+      "precision": 0.75,
+      "recall": 0.8571428571428571,
+      "f1": 0.8,
+      "support": 14
+    },
+    "Dunging-Iban/da": {
+      "precision": 0.8571428571428571,
+      "recall": 0.42857142857142855,
+      "f1": 0.5714285714285714,
+      "support": 14
+    },
+    "Dunging-Iban/eig": {
+      "precision": 1.0,
+      "recall": 0.7333333333333333,
+      "f1": 0.8461538461538461,
+      "support": 15
+    },
+    "Dunging-Iban/ein": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 14
+    },
+    "Dunging-Iban/eix": {
+      "precision": 0.8333333333333334,
+      "recall": 0.7142857142857143,
+      "f1": 0.7692307692307693,
+      "support": 14
+    },
+    "Dunging-Iban/ek": {
+      "precision": 1.0,
+      "recall": 0.9333333333333333,
+      "f1": 0.9655172413793104,
+      "support": 15
+    },
+    "Dunging-Iban/eng": {
+      "precision": 0.7058823529411765,
+      "recall": 0.8571428571428571,
+      "f1": 0.7741935483870968,
+      "support": 14
+    },
+    "Dunging-Iban/ga": {
+      "precision": 1.0,
+      "recall": 0.6428571428571429,
+      "f1": 0.782608695652174,
+      "support": 14
+    },
+    "Dunging-Iban/ieh": {
+      "precision": 0.6,
+      "recall": 0.6428571428571429,
+      "f1": 0.6206896551724138,
+      "support": 14
+    },
+    "Dunging-Iban/iem": {
+      "precision": 0.6666666666666666,
+      "recall": 0.5333333333333333,
+      "f1": 0.5925925925925926,
+      "support": 15
+    },
+    "Dunging-Iban/ieng": {
+      "precision": 1.0,
+      "recall": 0.6428571428571429,
+      "f1": 0.782608695652174,
+      "support": 14
+    },
+    "Dunging-Iban/il": {
+      "precision": 1.0,
+      "recall": 0.21428571428571427,
+      "f1": 0.35294117647058826,
+      "support": 14
+    },
+    "Dunging-Iban/ip": {
+      "precision": 0.9333333333333333,
+      "recall": 0.9333333333333333,
+      "f1": 0.9333333333333333,
+      "support": 15
+    },
+    "Dunging-Iban/ir": {
+      "precision": 0.6428571428571429,
+      "recall": 0.6428571428571429,
+      "f1": 0.6428571428571429,
+      "support": 14
+    },
+    "Dunging-Iban/is": {
+      "precision": 0.8125,
+      "recall": 0.9285714285714286,
+      "f1": 0.8666666666666667,
+      "support": 14
+    },
+    "Dunging-Iban/it": {
+      "precision": 0.7222222222222222,
+      "recall": 0.9285714285714286,
+      "f1": 0.8125,
+      "support": 14
+    },
+    "Dunging-Iban/ja": {
+      "precision": 1.0,
+      "recall": 0.26666666666666666,
+      "f1": 0.42105263157894735,
+      "support": 15
+    },
+    "Dunging-Iban/ka": {
+      "precision": 0.7368421052631579,
+      "recall": 1.0,
+      "f1": 0.8484848484848485,
+      "support": 14
+    },
+    "Dunging-Iban/l": {
+      "precision": 0.45454545454545453,
+      "recall": 0.7142857142857143,
+      "f1": 0.5555555555555556,
+      "support": 14
+    },
+    "Dunging-Iban/la": {
+      "precision": 0.9285714285714286,
+      "recall": 0.8666666666666667,
+      "f1": 0.896551724137931,
+      "support": 15
+    },
+    "Dunging-Iban/ma": {
+      "precision": 1.0,
+      "recall": 0.8571428571428571,
+      "f1": 0.9230769230769231,
+      "support": 14
+    },
+    "Dunging-Iban/na": {
+      "precision": 0.6875,
+      "recall": 0.7857142857142857,
+      "f1": 0.7333333333333333,
+      "support": 14
+    },
+    "Dunging-Iban/nga": {
+      "precision": 0.8461538461538461,
+      "recall": 0.7857142857142857,
+      "f1": 0.8148148148148148,
+      "support": 14
+    },
+    "Dunging-Iban/nya": {
+      "precision": 0.8461538461538461,
+      "recall": 0.7333333333333333,
+      "f1": 0.7857142857142857,
+      "support": 15
+    },
+    "Dunging-Iban/oh": {
+      "precision": 1.0,
+      "recall": 0.6428571428571429,
+      "f1": 0.782608695652174,
+      "support": 14
+    },
+    "Dunging-Iban/oi": {
+      "precision": 1.0,
+      "recall": 0.8666666666666667,
+      "f1": 0.9285714285714286,
+      "support": 15
+    },
+    "Dunging-Iban/ok": {
+      "precision": 0.8888888888888888,
+      "recall": 0.5714285714285714,
+      "f1": 0.6956521739130435,
+      "support": 14
+    },
+    "Dunging-Iban/om": {
+      "precision": 0.5555555555555556,
+      "recall": 0.7142857142857143,
+      "f1": 0.625,
+      "support": 14
+    },
+    "Dunging-Iban/ong": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "support": 14
+    },
+    "Dunging-Iban/op": {
+      "precision": 0.9166666666666666,
+      "recall": 0.7333333333333333,
+      "f1": 0.8148148148148148,
+      "support": 15
+    },
+    "Dunging-Iban/or": {
+      "precision": 0.8888888888888888,
+      "recall": 0.5714285714285714,
+      "f1": 0.6956521739130435,
+      "support": 14
+    },
+    "Dunging-Iban/oug": {
+      "precision": 0.7,
+      "recall": 0.5,
+      "f1": 0.5833333333333334,
+      "support": 14
+    },
+    "Dunging-Iban/pa": {
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75,
+      "support": 15
+    },
+    "Dunging-Iban/ra": {
+      "precision": 1.0,
+      "recall": 0.7857142857142857,
+      "f1": 0.88,
+      "support": 14
+    },
+    "Dunging-Iban/sa": {
+      "precision": 0.8888888888888888,
+      "recall": 0.5714285714285714,
+      "f1": 0.6956521739130435,
+      "support": 14
+    },
+    "Dunging-Iban/ta": {
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "support": 15
+    },
+    "Dunging-Iban/ul": {
+      "precision": 0.8666666666666667,
+      "recall": 0.9285714285714286,
+      "f1": 0.896551724137931,
+      "support": 14
+    },
+    "Dunging-Iban/un": {
+      "precision": 0.6190476190476191,
+      "recall": 0.9285714285714286,
+      "f1": 0.7428571428571429,
+      "support": 14
+    },
+    "Dunging-Iban/us": {
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.6666666666666666,
+      "support": 15
+    },
+    "Dunging-Iban/ut": {
+      "precision": 0.8333333333333334,
+      "recall": 0.7142857142857143,
+      "f1": 0.7692307692307693,
+      "support": 14
+    },
+    "Dunging-Iban/uw": {
+      "precision": 0.8571428571428571,
+      "recall": 0.8571428571428571,
+      "f1": 0.8571428571428571,
+      "support": 14
+    },
+    "Dunging-Iban/ya": {
+      "precision": 1.0,
+      "recall": 0.6428571428571429,
+      "f1": 0.782608695652174,
+      "support": 14
+    },
+    "Jawa/all_class/Vokal A/ba": {
+      "precision": 0.19469026548672566,
+      "recall": 0.3283582089552239,
+      "f1": 0.24444444444444444,
+      "support": 67
+    },
+    "Jawa/all_class/Vokal A/ca": {
+      "precision": 0.37209302325581395,
+      "recall": 0.37209302325581395,
+      "f1": 0.37209302325581395,
+      "support": 86
+    },
+    "Jawa/all_class/Vokal A/da": {
+      "precision": 0.3333333333333333,
+      "recall": 0.37209302325581395,
+      "f1": 0.3516483516483517,
+      "support": 86
+    },
+    "Jawa/all_class/Vokal A/dha": {
+      "precision": 0.32673267326732675,
+      "recall": 0.3793103448275862,
+      "f1": 0.35106382978723405,
+      "support": 87
+    },
+    "Jawa/all_class/Vokal A/ga": {
+      "precision": 0.4838709677419355,
+      "recall": 0.6521739130434783,
+      "f1": 0.5555555555555556,
+      "support": 69
+    },
+    "Jawa/all_class/Vokal A/ha": {
+      "precision": 0.18,
+      "recall": 0.14754098360655737,
+      "f1": 0.16216216216216217,
+      "support": 61
+    },
+    "Jawa/all_class/Vokal A/ja": {
+      "precision": 0.6095238095238096,
+      "recall": 0.735632183908046,
+      "f1": 0.6666666666666666,
+      "support": 87
+    },
+    "Jawa/all_class/Vokal A/ka": {
+      "precision": 0.2376237623762376,
+      "recall": 0.38095238095238093,
+      "f1": 0.2926829268292683,
+      "support": 63
+    },
+    "Jawa/all_class/Vokal A/la": {
+      "precision": 0.28440366972477066,
+      "recall": 0.5,
+      "f1": 0.36257309941520466,
+      "support": 62
+    },
+    "Jawa/all_class/Vokal A/ma": {
+      "precision": 0.4492753623188406,
+      "recall": 0.7126436781609196,
+      "f1": 0.5511111111111111,
+      "support": 87
+    },
+    "Jawa/all_class/Vokal A/na": {
+      "precision": 0.3625,
+      "recall": 0.3372093023255814,
+      "f1": 0.3493975903614458,
+      "support": 86
+    },
+    "Jawa/all_class/Vokal A/nga": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 15
+    },
+    "Jawa/all_class/Vokal A/nya": {
+      "precision": 0.35714285714285715,
+      "recall": 0.23076923076923078,
+      "f1": 0.2803738317757009,
+      "support": 65
+    },
+    "Jawa/all_class/Vokal A/pa": {
+      "precision": 0.2608695652173913,
+      "recall": 0.4044943820224719,
+      "f1": 0.31718061674008813,
+      "support": 89
+    },
+    "Jawa/all_class/Vokal A/ra": {
+      "precision": 0.40816326530612246,
+      "recall": 0.5970149253731343,
+      "f1": 0.48484848484848486,
+      "support": 67
+    },
+    "Jawa/all_class/Vokal A/sa": {
+      "precision": 0.33557046979865773,
+      "recall": 0.5681818181818182,
+      "f1": 0.4219409282700422,
+      "support": 88
+    },
+    "Jawa/all_class/Vokal A/ta": {
+      "precision": 0.4,
+      "recall": 0.4375,
+      "f1": 0.417910447761194,
+      "support": 64
+    },
+    "Jawa/all_class/Vokal A/tha": {
+      "precision": 0.25,
+      "recall": 0.06666666666666667,
+      "f1": 0.10526315789473684,
+      "support": 15
+    },
+    "Jawa/all_class/Vokal A/wa": {
+      "precision": 0.39622641509433965,
+      "recall": 0.24705882352941178,
+      "f1": 0.30434782608695654,
+      "support": 85
+    },
+    "Jawa/all_class/Vokal A/ya": {
+      "precision": 0.2946859903381642,
+      "recall": 0.6161616161616161,
+      "f1": 0.39869281045751637,
+      "support": 99
+    },
+    "Jawa/all_class/Vokal E/be": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/ce": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/de": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/dhe": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/ge": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/he": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal E/je": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/ke": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/le": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/me": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal E/ne": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/nge": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/nye": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/pe": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/re": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/se": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/te": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal E/the": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/we": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal E/ye": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/bi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/ci": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/dhi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/di": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal I/gi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/hi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/ji": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/ki": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/li": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/mi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/ngi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal I/ni": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/nyi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/pi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/ri": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/si": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/thi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/ti": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal I/wi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal I/yi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/bo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/co": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/dho": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/do": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/go": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal O/ho": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/jo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/ko": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/lo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/mo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/ngo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/no": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal O/nyo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/po": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/ro": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/so": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/tho": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/to": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal O/wo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal O/yo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/bu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/cu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/dhu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/du": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/gu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/hu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal U/ju": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/ku": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/lu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/mu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/ngu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/nu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/nyu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal U/pu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/ru": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/su": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/thu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/tu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/wu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal U/yu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal \u00c8/b\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/c\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/dh\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/d\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/g\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/h\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/j\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/k\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/l\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/m\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/ng\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal \u00c8/ny\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/n\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/p\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/r\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/s\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/th\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/t\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Jawa/all_class/Vokal \u00c8/w\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/all_class/Vokal \u00c8/y\u00e8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Jawa/variations/ba": {
+      "precision": 1.0,
+      "recall": 0.1111111111111111,
+      "f1": 0.2,
+      "support": 9
+    },
+    "Jawa/variations/ga": {
+      "precision": 0.25,
+      "recall": 0.05555555555555555,
+      "f1": 0.09090909090909091,
+      "support": 18
+    },
+    "Jawa/variations/ha": {
+      "precision": 1.0,
+      "recall": 0.058823529411764705,
+      "f1": 0.1111111111111111,
+      "support": 17
+    },
+    "Jawa/variations/ka": {
+      "precision": 0.3076923076923077,
+      "recall": 0.16,
+      "f1": 0.21052631578947367,
+      "support": 25
+    },
+    "Jawa/variations/la": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 19
+    },
+    "Jawa/variations/nya": {
+      "precision": 0.5,
+      "recall": 0.22727272727272727,
+      "f1": 0.3125,
+      "support": 22
+    },
+    "Jawa/variations/ra": {
+      "precision": 0.5555555555555556,
+      "recall": 0.22727272727272727,
+      "f1": 0.3225806451612903,
+      "support": 22
+    },
+    "Jawa/variations/ta": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 20
+    },
+    "Jawi/A (alif)": {
+      "precision": 0.6,
+      "recall": 0.21428571428571427,
+      "f1": 0.3157894736842105,
+      "support": 14
+    },
+    "Jawi/B (ba)": {
+      "precision": 0.3333333333333333,
+      "recall": 0.2,
+      "f1": 0.25,
+      "support": 15
+    },
+    "Jawi/C (ca)": {
+      "precision": 0.5,
+      "recall": 0.21428571428571427,
+      "f1": 0.3,
+      "support": 14
+    },
+    "Jawi/D (Dhod)": {
+      "precision": 0.21739130434782608,
+      "recall": 0.3333333333333333,
+      "f1": 0.2631578947368421,
+      "support": 15
+    },
+    "Jawi/D (dal)": {
+      "precision": 0.8,
+      "recall": 0.2857142857142857,
+      "f1": 0.42105263157894735,
+      "support": 14
+    },
+    "Jawi/F (fa)": {
+      "precision": 0.3333333333333333,
+      "recall": 0.07142857142857142,
+      "f1": 0.11764705882352941,
+      "support": 14
+    },
+    "Jawi/G (ga)": {
+      "precision": 0.2222222222222222,
+      "recall": 0.2857142857142857,
+      "f1": 0.25,
+      "support": 14
+    },
+    "Jawi/GH (gain)": {
+      "precision": 0.75,
+      "recall": 0.21428571428571427,
+      "f1": 0.3333333333333333,
+      "support": 14
+    },
+    "Jawi/H (H Kecil)": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 15
+    },
+    "Jawi/H (Ha Besar)": {
+      "precision": 0.14634146341463414,
+      "recall": 0.42857142857142855,
+      "f1": 0.21818181818181817,
+      "support": 14
+    },
+    "Jawi/J (jim)": {
+      "precision": 0.3,
+      "recall": 0.21428571428571427,
+      "f1": 0.25,
+      "support": 14
+    },
+    "Jawi/K (kaf)": {
+      "precision": 0.375,
+      "recall": 0.2,
+      "f1": 0.2608695652173913,
+      "support": 15
+    },
+    "Jawi/KH (kha)": {
+      "precision": 1.0,
+      "recall": 0.2857142857142857,
+      "f1": 0.4444444444444444,
+      "support": 14
+    },
+    "Jawi/L (lam)": {
+      "precision": 0.36363636363636365,
+      "recall": 0.2857142857142857,
+      "f1": 0.32,
+      "support": 14
+    },
+    "Jawi/M (mim)": {
+      "precision": 1.0,
+      "recall": 0.2857142857142857,
+      "f1": 0.4444444444444444,
+      "support": 14
+    },
+    "Jawi/N (nun)": {
+      "precision": 0.75,
+      "recall": 0.2,
+      "f1": 0.3157894736842105,
+      "support": 15
+    },
+    "Jawi/NG (nga)": {
+      "precision": 0.42857142857142855,
+      "recall": 0.42857142857142855,
+      "f1": 0.42857142857142855,
+      "support": 14
+    },
+    "Jawi/NY (nya)": {
+      "precision": 0.2727272727272727,
+      "recall": 0.21428571428571427,
+      "f1": 0.24,
+      "support": 14
+    },
+    "Jawi/P (pa)": {
+      "precision": 0.4166666666666667,
+      "recall": 0.3333333333333333,
+      "f1": 0.37037037037037035,
+      "support": 15
+    },
+    "Jawi/R (ra,rO)": {
+      "precision": 0.4,
+      "recall": 0.14285714285714285,
+      "f1": 0.21052631578947367,
+      "support": 14
+    },
+    "Jawi/S (sAD [sOD])": {
+      "precision": 0.3,
+      "recall": 0.21428571428571427,
+      "f1": 0.25,
+      "support": 14
+    },
+    "Jawi/S (sin)": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14
+    },
+    "Jawi/S, th (tsa) [tha]": {
+      "precision": 0.2857142857142857,
+      "recall": 0.26666666666666666,
+      "f1": 0.27586206896551724,
+      "support": 15
+    },
+    "Jawi/SY (syin)": {
+      "precision": 0.125,
+      "recall": 0.07142857142857142,
+      "f1": 0.09090909090909091,
+      "support": 14
+    },
+    "Jawi/T (Ta Marbutoh)": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 7
+    },
+    "Jawi/T (ta)": {
+      "precision": 0.5,
+      "recall": 0.07142857142857142,
+      "f1": 0.125,
+      "support": 14
+    },
+    "Jawi/T,H (ta marbutah)": {
+      "precision": 1.0,
+      "recall": 0.625,
+      "f1": 0.7692307692307693,
+      "support": 8
+    },
+    "Jawi/V (va)": {
+      "precision": 0.4166666666666667,
+      "recall": 0.35714285714285715,
+      "f1": 0.38461538461538464,
+      "support": 14
+    },
+    "Jawi/W, U, O (wau)": {
+      "precision": 0.8,
+      "recall": 0.2857142857142857,
+      "f1": 0.42105263157894735,
+      "support": 14
+    },
+    "Jawi/Y akhir (ye)": {
+      "precision": 0.4,
+      "recall": 0.4,
+      "f1": 0.4,
+      "support": 15
+    },
+    "Jawi/Y,I,E (ya)": {
+      "precision": 0.3333333333333333,
+      "recall": 0.14285714285714285,
+      "f1": 0.2,
+      "support": 14
+    },
+    "Jawi/Z (Dza)": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 7
+    },
+    "Jawi/Z (dh) [dhal]": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 7
+    },
+    "Jawi/Z (zai)": {
+      "precision": 0.18181818181818182,
+      "recall": 0.14285714285714285,
+      "f1": 0.16,
+      "support": 14
+    },
+    "Kawi/ba": {
+      "precision": 0.8888888888888888,
+      "recall": 0.8888888888888888,
+      "f1": 0.8888888888888888,
+      "support": 27
+    },
+    "Kawi/bha": {
+      "precision": 0.9444444444444444,
+      "recall": 1.0,
+      "f1": 0.9714285714285714,
+      "support": 17
+    },
+    "Kawi/ca": {
+      "precision": 0.9642857142857143,
+      "recall": 1.0,
+      "f1": 0.9818181818181818,
+      "support": 27
+    },
+    "Kawi/cha": {
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "f1": 0.9411764705882353,
+      "support": 18
+    },
+    "Kawi/da": {
+      "precision": 1.0,
+      "recall": 0.8148148148148148,
+      "f1": 0.8979591836734694,
+      "support": 27
+    },
+    "Kawi/dha": {
+      "precision": 0.9615384615384616,
+      "recall": 0.9615384615384616,
+      "f1": 0.9615384615384616,
+      "support": 26
+    },
+    "Kawi/ga": {
+      "precision": 0.64,
+      "recall": 0.8421052631578947,
+      "f1": 0.7272727272727273,
+      "support": 38
+    },
+    "Kawi/gha": {
+      "precision": 0.85,
+      "recall": 0.8717948717948718,
+      "f1": 0.8607594936708861,
+      "support": 39
+    },
+    "Kawi/ha": {
+      "precision": 0.9111111111111111,
+      "recall": 0.8913043478260869,
+      "f1": 0.9010989010989011,
+      "support": 46
+    },
+    "Kawi/ja": {
+      "precision": 0.875,
+      "recall": 0.9333333333333333,
+      "f1": 0.9032258064516129,
+      "support": 15
+    },
+    "Kawi/jha": {
+      "precision": 0.8870967741935484,
+      "recall": 0.9821428571428571,
+      "f1": 0.9322033898305084,
+      "support": 56
+    },
+    "Kawi/ka": {
+      "precision": 0.9,
+      "recall": 0.6,
+      "f1": 0.72,
+      "support": 15
+    },
+    "Kawi/kha": {
+      "precision": 0.88,
+      "recall": 0.8461538461538461,
+      "f1": 0.8627450980392157,
+      "support": 26
+    },
+    "Kawi/la": {
+      "precision": 1.0,
+      "recall": 0.52,
+      "f1": 0.6842105263157895,
+      "support": 25
+    },
+    "Kawi/ma": {
+      "precision": 1.0,
+      "recall": 0.9333333333333333,
+      "f1": 0.9655172413793104,
+      "support": 15
+    },
+    "Kawi/na": {
+      "precision": 0.918918918918919,
+      "recall": 1.0,
+      "f1": 0.9577464788732394,
+      "support": 34
+    },
+    "Kawi/pa": {
+      "precision": 0.875,
+      "recall": 0.8536585365853658,
+      "f1": 0.8641975308641975,
+      "support": 41
+    },
+    "Kawi/pha": {
+      "precision": 0.8529411764705882,
+      "recall": 0.8529411764705882,
+      "f1": 0.8529411764705882,
+      "support": 34
+    },
+    "Kawi/ra": {
+      "precision": 1.0,
+      "recall": 0.92,
+      "f1": 0.9583333333333334,
+      "support": 25
+    },
+    "Kawi/sa": {
+      "precision": 0.7931034482758621,
+      "recall": 0.92,
+      "f1": 0.8518518518518519,
+      "support": 25
+    },
+    "Kawi/ta": {
+      "precision": 0.92,
+      "recall": 0.8846153846153846,
+      "f1": 0.9019607843137255,
+      "support": 26
+    },
+    "Kawi/tha": {
+      "precision": 0.875,
+      "recall": 0.9333333333333333,
+      "f1": 0.9032258064516129,
+      "support": 15
+    },
+    "Kawi/wa": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    "Kawi/ya": {
+      "precision": 0.8947368421052632,
+      "recall": 0.7391304347826086,
+      "f1": 0.8095238095238095,
+      "support": 23
+    },
+    "Kawi/\u00f1a": {
+      "precision": 0.8863636363636364,
+      "recall": 0.9285714285714286,
+      "f1": 0.9069767441860465,
+      "support": 42
+    },
+    "Kawi/\u015ba": {
+      "precision": 0.851063829787234,
+      "recall": 0.975609756097561,
+      "f1": 0.9090909090909091,
+      "support": 41
+    },
+    "Kawi/\u1e0da": {
+      "precision": 0.75,
+      "recall": 0.9130434782608695,
+      "f1": 0.8235294117647058,
+      "support": 23
+    },
+    "Kawi/\u1e45a": {
+      "precision": 0.6388888888888888,
+      "recall": 0.8214285714285714,
+      "f1": 0.71875,
+      "support": 28
+    },
+    "Kawi/\u1e47a": {
+      "precision": 0.6666666666666666,
+      "recall": 0.8780487804878049,
+      "f1": 0.7578947368421053,
+      "support": 41
+    },
+    "Kawi/\u1e63a": {
+      "precision": 0.95,
+      "recall": 0.7916666666666666,
+      "f1": 0.8636363636363636,
+      "support": 24
+    },
+    "Kawi/\u1e6da": {
+      "precision": 0.9523809523809523,
+      "recall": 0.8333333333333334,
+      "f1": 0.8888888888888888,
+      "support": 24
+    },
+    "Lampung/a": {
+      "precision": 0.8125,
+      "recall": 0.3611111111111111,
+      "f1": 0.5,
+      "support": 36
+    },
+    "Lampung/ba": {
+      "precision": 0.32653061224489793,
+      "recall": 0.45714285714285713,
+      "f1": 0.38095238095238093,
+      "support": 35
+    },
+    "Lampung/ca": {
+      "precision": 0.4146341463414634,
+      "recall": 0.9444444444444444,
+      "f1": 0.576271186440678,
+      "support": 36
+    },
+    "Lampung/da": {
+      "precision": 0.6578947368421053,
+      "recall": 0.6944444444444444,
+      "f1": 0.6756756756756757,
+      "support": 36
+    },
+    "Lampung/ga": {
+      "precision": 0.5384615384615384,
+      "recall": 0.6,
+      "f1": 0.5675675675675675,
+      "support": 35
+    },
+    "Lampung/gha": {
+      "precision": 0.8235294117647058,
+      "recall": 0.3888888888888889,
+      "f1": 0.5283018867924528,
+      "support": 36
+    },
+    "Lampung/ha": {
+      "precision": 0.4222222222222222,
+      "recall": 0.5277777777777778,
+      "f1": 0.4691358024691358,
+      "support": 36
+    },
+    "Lampung/ja": {
+      "precision": 0.6333333333333333,
+      "recall": 0.5277777777777778,
+      "f1": 0.5757575757575758,
+      "support": 36
+    },
+    "Lampung/ka": {
+      "precision": 0.49122807017543857,
+      "recall": 0.8,
+      "f1": 0.6086956521739131,
+      "support": 35
+    },
+    "Lampung/la": {
+      "precision": 0.5666666666666667,
+      "recall": 0.4722222222222222,
+      "f1": 0.5151515151515151,
+      "support": 36
+    },
+    "Lampung/ma": {
+      "precision": 0.5777777777777777,
+      "recall": 0.7428571428571429,
+      "f1": 0.65,
+      "support": 35
+    },
+    "Lampung/na": {
+      "precision": 0.2894736842105263,
+      "recall": 0.6111111111111112,
+      "f1": 0.39285714285714285,
+      "support": 36
+    },
+    "Lampung/nga": {
+      "precision": 0.5,
+      "recall": 0.4,
+      "f1": 0.4444444444444444,
+      "support": 35
+    },
+    "Lampung/nya": {
+      "precision": 0.5217391304347826,
+      "recall": 0.6666666666666666,
+      "f1": 0.5853658536585366,
+      "support": 36
+    },
+    "Lampung/pa": {
+      "precision": 0.56,
+      "recall": 0.3888888888888889,
+      "f1": 0.45901639344262296,
+      "support": 36
+    },
+    "Lampung/ra": {
+      "precision": 0.6551724137931034,
+      "recall": 0.5428571428571428,
+      "f1": 0.59375,
+      "support": 35
+    },
+    "Lampung/sa": {
+      "precision": 0.5333333333333333,
+      "recall": 0.4444444444444444,
+      "f1": 0.48484848484848486,
+      "support": 36
+    },
+    "Lampung/ta": {
+      "precision": 0.65625,
+      "recall": 0.5833333333333334,
+      "f1": 0.6176470588235294,
+      "support": 36
+    },
+    "Lampung/wa": {
+      "precision": 0.3793103448275862,
+      "recall": 0.9166666666666666,
+      "f1": 0.5365853658536586,
+      "support": 36
+    },
+    "Lampung/ya": {
+      "precision": 0.3695652173913043,
+      "recall": 0.4857142857142857,
+      "f1": 0.41975308641975306,
+      "support": 35
+    },
+    "Lontara/Vowel A/A": {
+      "precision": 0.3333333333333333,
+      "recall": 0.6842105263157895,
+      "f1": 0.4482758620689655,
+      "support": 19
+    },
+    "Lontara/Vowel A/Ba": {
+      "precision": 0.6818181818181818,
+      "recall": 0.8333333333333334,
+      "f1": 0.75,
+      "support": 18
+    },
+    "Lontara/Vowel A/Ca": {
+      "precision": 0.4583333333333333,
+      "recall": 0.6111111111111112,
+      "f1": 0.5238095238095238,
+      "support": 18
+    },
+    "Lontara/Vowel A/Da": {
+      "precision": 0.6,
+      "recall": 0.631578947368421,
+      "f1": 0.6153846153846154,
+      "support": 19
+    },
+    "Lontara/Vowel A/Ga": {
+      "precision": 0.625,
+      "recall": 0.5555555555555556,
+      "f1": 0.5882352941176471,
+      "support": 18
+    },
+    "Lontara/Vowel A/Ha": {
+      "precision": 0.6842105263157895,
+      "recall": 0.7222222222222222,
+      "f1": 0.7027027027027027,
+      "support": 18
+    },
+    "Lontara/Vowel A/Ja": {
+      "precision": 0.3055555555555556,
+      "recall": 0.5789473684210527,
+      "f1": 0.4,
+      "support": 19
+    },
+    "Lontara/Vowel A/Ka": {
+      "precision": 0.875,
+      "recall": 0.3888888888888889,
+      "f1": 0.5384615384615384,
+      "support": 18
+    },
+    "Lontara/Vowel A/La": {
+      "precision": 0.5217391304347826,
+      "recall": 0.6666666666666666,
+      "f1": 0.5853658536585366,
+      "support": 18
+    },
+    "Lontara/Vowel A/Ma": {
+      "precision": 0.3888888888888889,
+      "recall": 0.3888888888888889,
+      "f1": 0.3888888888888889,
+      "support": 18
+    },
+    "Lontara/Vowel A/Mpa": {
+      "precision": 0.4074074074074074,
+      "recall": 0.5789473684210527,
+      "f1": 0.4782608695652174,
+      "support": 19
+    },
+    "Lontara/Vowel A/Na": {
+      "precision": 0.3888888888888889,
+      "recall": 0.3888888888888889,
+      "f1": 0.3888888888888889,
+      "support": 18
+    },
+    "Lontara/Vowel A/Nca": {
+      "precision": 0.8,
+      "recall": 0.4444444444444444,
+      "f1": 0.5714285714285714,
+      "support": 18
+    },
+    "Lontara/Vowel A/Nga": {
+      "precision": 0.3333333333333333,
+      "recall": 0.8421052631578947,
+      "f1": 0.47761194029850745,
+      "support": 19
+    },
+    "Lontara/Vowel A/Ngka": {
+      "precision": 0.25,
+      "recall": 0.16666666666666666,
+      "f1": 0.2,
+      "support": 18
+    },
+    "Lontara/Vowel A/Nra": {
+      "precision": 0.5,
+      "recall": 0.6842105263157895,
+      "f1": 0.5777777777777777,
+      "support": 19
+    },
+    "Lontara/Vowel A/Nya": {
+      "precision": 0.5833333333333334,
+      "recall": 0.3888888888888889,
+      "f1": 0.4666666666666667,
+      "support": 18
+    },
+    "Lontara/Vowel A/Pa": {
+      "precision": 0.8571428571428571,
+      "recall": 0.3157894736842105,
+      "f1": 0.46153846153846156,
+      "support": 19
+    },
+    "Lontara/Vowel A/Ra": {
+      "precision": 0.5333333333333333,
+      "recall": 0.4444444444444444,
+      "f1": 0.48484848484848486,
+      "support": 18
+    },
+    "Lontara/Vowel A/Sa": {
+      "precision": 0.5862068965517241,
+      "recall": 0.9444444444444444,
+      "f1": 0.723404255319149,
+      "support": 18
+    },
+    "Lontara/Vowel A/Ta": {
+      "precision": 0.3611111111111111,
+      "recall": 0.6842105263157895,
+      "f1": 0.4727272727272727,
+      "support": 19
+    },
+    "Lontara/Vowel A/Wa": {
+      "precision": 0.9,
+      "recall": 0.5,
+      "f1": 0.6428571428571429,
+      "support": 18
+    },
+    "Lontara/Vowel A/YA": {
+      "precision": 0.38461538461538464,
+      "recall": 0.5263157894736842,
+      "f1": 0.4444444444444444,
+      "support": 19
+    },
+    "Lontara/Vowel E/Be": {
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "support": 4
+    },
+    "Lontara/Vowel E/Ce": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel E/De": {
+      "precision": 0.3,
+      "recall": 0.6,
+      "f1": 0.4,
+      "support": 5
+    },
+    "Lontara/Vowel E/E": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel E/Ge": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel E/He": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel E/Je": {
+      "precision": 0.14285714285714285,
+      "recall": 0.25,
+      "f1": 0.18181818181818182,
+      "support": 4
+    },
+    "Lontara/Vowel E/Ke": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel E/Le": {
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333333333333333,
+      "support": 4
+    },
+    "Lontara/Vowel E/Me": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel E/Mpa": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel E/Nce": {
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333333333333333,
+      "support": 4
+    },
+    "Lontara/Vowel E/Ne": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel E/Nge": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Lontara/Vowel E/Ngke": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel E/Nre": {
+      "precision": 0.14285714285714285,
+      "recall": 0.25,
+      "f1": 0.18181818181818182,
+      "support": 4
+    },
+    "Lontara/Vowel E/Nye": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel E/Pe": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Lontara/Vowel E/Re": {
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333,
+      "support": 4
+    },
+    "Lontara/Vowel E/Se": {
+      "precision": 0.4,
+      "recall": 0.4,
+      "f1": 0.4,
+      "support": 5
+    },
+    "Lontara/Vowel E/Te": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel E/We": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Lontara/Vowel E/Ye": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel I/Bi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel I/Ci": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel I/Di": {
+      "precision": 0.6666666666666666,
+      "recall": 0.5,
+      "f1": 0.5714285714285714,
+      "support": 4
+    },
+    "Lontara/Vowel I/Gi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel I/Hi": {
+      "precision": 0.14285714285714285,
+      "recall": 0.25,
+      "f1": 0.18181818181818182,
+      "support": 4
+    },
+    "Lontara/Vowel I/I": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel I/Ji": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel I/Ki": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel I/Li": {
+      "precision": 0.16666666666666666,
+      "recall": 0.25,
+      "f1": 0.2,
+      "support": 4
+    },
+    "Lontara/Vowel I/Mi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel I/Mpi": {
+      "precision": 0.3,
+      "recall": 0.6,
+      "f1": 0.4,
+      "support": 5
+    },
+    "Lontara/Vowel I/Nci": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel I/Ngi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel I/Ngki": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel I/Ni": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel I/Nri": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel I/Nyi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel I/Pi": {
+      "precision": 0.4166666666666667,
+      "recall": 1.0,
+      "f1": 0.5882352941176471,
+      "support": 5
+    },
+    "Lontara/Vowel I/Ri": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel I/Si": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel I/Ti": {
+      "precision": 0.125,
+      "recall": 0.25,
+      "f1": 0.16666666666666666,
+      "support": 4
+    },
+    "Lontara/Vowel I/Wi": {
+      "precision": 0.14285714285714285,
+      "recall": 0.2,
+      "f1": 0.16666666666666666,
+      "support": 5
+    },
+    "Lontara/Vowel I/Yi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel O/Bo": {
+      "precision": 0.375,
+      "recall": 0.75,
+      "f1": 0.5,
+      "support": 4
+    },
+    "Lontara/Vowel O/Co": {
+      "precision": 0.42857142857142855,
+      "recall": 0.6,
+      "f1": 0.5,
+      "support": 5
+    },
+    "Lontara/Vowel O/Do": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel O/Go": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Lontara/Vowel O/Ho": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel O/Jo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel O/Ko": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel O/Lo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel O/Mo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel O/Mpo": {
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "support": 4
+    },
+    "Lontara/Vowel O/Nco": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel O/Ngko": {
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Lontara/Vowel O/Ngo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel O/No": {
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333333333333333,
+      "support": 4
+    },
+    "Lontara/Vowel O/Nro": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel O/Nyo": {
+      "precision": 0.23076923076923078,
+      "recall": 0.6,
+      "f1": 0.3333333333333333,
+      "support": 5
+    },
+    "Lontara/Vowel O/O": {
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333333333333333,
+      "support": 4
+    },
+    "Lontara/Vowel O/Po": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "support": 4
+    },
+    "Lontara/Vowel O/Ro": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel O/So": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel O/To": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel O/Wo": {
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.2222222222222222,
+      "support": 4
+    },
+    "Lontara/Vowel O/Yo": {
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.3333333333333333,
+      "support": 5
+    },
+    "Lontara/Vowel U/Bu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel U/Cu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel U/Du": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel U/Gu": {
+      "precision": 0.5,
+      "recall": 0.2,
+      "f1": 0.2857142857142857,
+      "support": 5
+    },
+    "Lontara/Vowel U/Hu": {
+      "precision": 0.1,
+      "recall": 0.25,
+      "f1": 0.14285714285714285,
+      "support": 4
+    },
+    "Lontara/Vowel U/Ju": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel U/Ku": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel U/Lu": {
+      "precision": 0.16666666666666666,
+      "recall": 0.25,
+      "f1": 0.2,
+      "support": 4
+    },
+    "Lontara/Vowel U/Mpu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel U/Mu": {
+      "precision": 0.23076923076923078,
+      "recall": 0.75,
+      "f1": 0.35294117647058826,
+      "support": 4
+    },
+    "Lontara/Vowel U/Ncu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel U/Ngku": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "support": 4
+    },
+    "Lontara/Vowel U/Ngu": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Lontara/Vowel U/Nru": {
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.6666666666666666,
+      "support": 5
+    },
+    "Lontara/Vowel U/Nu": {
+      "precision": 0.16666666666666666,
+      "recall": 0.25,
+      "f1": 0.2,
+      "support": 4
+    },
+    "Lontara/Vowel U/Nyu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel U/Pu": {
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444444444444444,
+      "support": 4
+    },
+    "Lontara/Vowel U/Ru": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel U/Su": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel U/Tu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel U/U": {
+      "precision": 0.25,
+      "recall": 0.4,
+      "f1": 0.3076923076923077,
+      "support": 5
+    },
+    "Lontara/Vowel U/Wu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel U/Yu": {
+      "precision": 0.1111111111111111,
+      "recall": 0.25,
+      "f1": 0.15384615384615385,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Be'": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Ce'": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel \u00c9/De'": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/E'": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Ge'": {
+      "precision": 0.5,
+      "recall": 0.2,
+      "f1": 0.2857142857142857,
+      "support": 5
+    },
+    "Lontara/Vowel \u00c9/He'": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Je'": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Ke'": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Le'": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Lontara/Vowel \u00c9/Me'": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Mpe'": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Nce'": {
+      "precision": 0.25,
+      "recall": 0.2,
+      "f1": 0.2222222222222222,
+      "support": 5
+    },
+    "Lontara/Vowel \u00c9/Ne'": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Nge'": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Ngke'": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Nre'": {
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.3333333333333333,
+      "support": 5
+    },
+    "Lontara/Vowel \u00c9/Nye'": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Pe'": {
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444444444444444,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Re'": {
+      "precision": 0.5,
+      "recall": 0.4,
+      "f1": 0.4444444444444444,
+      "support": 5
+    },
+    "Lontara/Vowel \u00c9/Se'": {
+      "precision": 0.375,
+      "recall": 0.75,
+      "f1": 0.5,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Te'": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/We'": {
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333333333333333,
+      "support": 4
+    },
+    "Lontara/Vowel \u00c9/Ye'": {
+      "precision": 0.4,
+      "recall": 0.4,
+      "f1": 0.4,
+      "support": 5
+    },
+    "Minangkabau/Vowel A/a": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel A/ba": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel A/da": {
+      "precision": 0.3333333333333333,
+      "recall": 0.2,
+      "f1": 0.25,
+      "support": 5
+    },
+    "Minangkabau/Vowel A/ga": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel A/ha": {
+      "precision": 0.3333333333333333,
+      "recall": 0.25,
+      "f1": 0.2857142857142857,
+      "support": 4
+    },
+    "Minangkabau/Vowel A/ka": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel A/la": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel A/ma": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel A/na": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel A/nga": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel A/pa": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "support": 4
+    },
+    "Minangkabau/Vowel A/ra": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel A/sa": {
+      "precision": 0.2222222222222222,
+      "recall": 0.5,
+      "f1": 0.3076923076923077,
+      "support": 4
+    },
+    "Minangkabau/Vowel A/ta": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel A/wa": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Minangkabau/Vowel E/be": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel E/de": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel E/e": {
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "support": 4
+    },
+    "Minangkabau/Vowel E/ge": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel E/he": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Minangkabau/Vowel E/ke": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel E/le": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "support": 4
+    },
+    "Minangkabau/Vowel E/me": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Minangkabau/Vowel E/ne": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel E/nge": {
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1": 0.5714285714285714,
+      "support": 4
+    },
+    "Minangkabau/Vowel E/pe": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel E/re": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Minangkabau/Vowel E/se": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel E/te": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel E/we": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel I/bi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel I/di": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel I/gi": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "support": 4
+    },
+    "Minangkabau/Vowel I/hi": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Minangkabau/Vowel I/i": {
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75,
+      "support": 5
+    },
+    "Minangkabau/Vowel I/ki": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel I/li": {
+      "precision": 0.6666666666666666,
+      "recall": 0.5,
+      "f1": 0.5714285714285714,
+      "support": 4
+    },
+    "Minangkabau/Vowel I/mi": {
+      "precision": 0.25,
+      "recall": 0.2,
+      "f1": 0.2222222222222222,
+      "support": 5
+    },
+    "Minangkabau/Vowel I/ngi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel I/ni": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel I/pi": {
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "support": 4
+    },
+    "Minangkabau/Vowel I/ri": {
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.3333333333333333,
+      "support": 5
+    },
+    "Minangkabau/Vowel I/si": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "support": 4
+    },
+    "Minangkabau/Vowel I/ti": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel I/wi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel O/bo": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "support": 4
+    },
+    "Minangkabau/Vowel O/do": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel O/go": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel O/ho": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel O/ko": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel O/lo": {
+      "precision": 0.6666666666666666,
+      "recall": 0.5,
+      "f1": 0.5714285714285714,
+      "support": 4
+    },
+    "Minangkabau/Vowel O/mo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel O/ngo": {
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6666666666666666,
+      "support": 4
+    },
+    "Minangkabau/Vowel O/no": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel O/o": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Minangkabau/Vowel O/po": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel O/ro": {
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333,
+      "support": 4
+    },
+    "Minangkabau/Vowel O/so": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel O/to": {
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.3333333333333333,
+      "support": 5
+    },
+    "Minangkabau/Vowel O/wo": {
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6666666666666666,
+      "support": 4
+    },
+    "Minangkabau/Vowel U/bu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel U/du": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel U/gu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel U/hu": {
+      "precision": 0.3333333333333333,
+      "recall": 0.75,
+      "f1": 0.46153846153846156,
+      "support": 4
+    },
+    "Minangkabau/Vowel U/ku": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel U/lu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel U/mu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel U/ngu": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 4
+    },
+    "Minangkabau/Vowel U/nu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel U/pu": {
+      "precision": 0.4,
+      "recall": 0.4,
+      "f1": 0.4,
+      "support": 5
+    },
+    "Minangkabau/Vowel U/ru": {
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333,
+      "support": 4
+    },
+    "Minangkabau/Vowel U/su": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Minangkabau/Vowel U/tu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "Minangkabau/Vowel U/u": {
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1": 0.6666666666666666,
+      "support": 4
+    },
+    "Minangkabau/Vowel U/wu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "Ogan/Be": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6956521739130435,
+      "f1": 0.6808510638297872,
+      "support": 23
+    },
+    "Ogan/Ce": {
+      "precision": 0.4666666666666667,
+      "recall": 0.6086956521739131,
+      "f1": 0.5283018867924528,
+      "support": 23
+    },
+    "Ogan/De": {
+      "precision": 0.9090909090909091,
+      "recall": 0.8695652173913043,
+      "f1": 0.8888888888888888,
+      "support": 23
+    },
+    "Ogan/E": {
+      "precision": 0.875,
+      "recall": 0.6086956521739131,
+      "f1": 0.717948717948718,
+      "support": 23
+    },
+    "Ogan/Embe": {
+      "precision": 0.42857142857142855,
+      "recall": 0.6818181818181818,
+      "f1": 0.5263157894736842,
+      "support": 22
+    },
+    "Ogan/Empe": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6086956521739131,
+      "f1": 0.6363636363636364,
+      "support": 23
+    },
+    "Ogan/Ence": {
+      "precision": 0.40816326530612246,
+      "recall": 0.8695652173913043,
+      "f1": 0.5555555555555556,
+      "support": 23
+    },
+    "Ogan/Ende": {
+      "precision": 0.3877551020408163,
+      "recall": 0.8260869565217391,
+      "f1": 0.5277777777777778,
+      "support": 23
+    },
+    "Ogan/Ge": {
+      "precision": 0.6785714285714286,
+      "recall": 0.8260869565217391,
+      "f1": 0.7450980392156863,
+      "support": 23
+    },
+    "Ogan/He": {
+      "precision": 0.5588235294117647,
+      "recall": 0.8260869565217391,
+      "f1": 0.6666666666666666,
+      "support": 23
+    },
+    "Ogan/Je": {
+      "precision": 0.7894736842105263,
+      "recall": 0.6521739130434783,
+      "f1": 0.7142857142857143,
+      "support": 23
+    },
+    "Ogan/Ke": {
+      "precision": 0.4722222222222222,
+      "recall": 0.7727272727272727,
+      "f1": 0.5862068965517241,
+      "support": 22
+    },
+    "Ogan/Le": {
+      "precision": 0.8636363636363636,
+      "recall": 0.8260869565217391,
+      "f1": 0.8444444444444444,
+      "support": 23
+    },
+    "Ogan/Me": {
+      "precision": 0.85,
+      "recall": 0.7391304347826086,
+      "f1": 0.7906976744186046,
+      "support": 23
+    },
+    "Ogan/Ne": {
+      "precision": 0.7666666666666667,
+      "recall": 1.0,
+      "f1": 0.8679245283018868,
+      "support": 23
+    },
+    "Ogan/Nge": {
+      "precision": 1.0,
+      "recall": 0.30434782608695654,
+      "f1": 0.4666666666666667,
+      "support": 23
+    },
+    "Ogan/Nye": {
+      "precision": 0.3898305084745763,
+      "recall": 1.0,
+      "f1": 0.5609756097560976,
+      "support": 23
+    },
+    "Ogan/Pe": {
+      "precision": 0.85,
+      "recall": 0.7727272727272727,
+      "f1": 0.8095238095238095,
+      "support": 22
+    },
+    "Ogan/Re": {
+      "precision": 0.8260869565217391,
+      "recall": 0.8260869565217391,
+      "f1": 0.8260869565217391,
+      "support": 23
+    },
+    "Ogan/Se": {
+      "precision": 0.47368421052631576,
+      "recall": 0.391304347826087,
+      "f1": 0.42857142857142855,
+      "support": 23
+    },
+    "Ogan/Te": {
+      "precision": 0.8333333333333334,
+      "recall": 0.6521739130434783,
+      "f1": 0.7317073170731707,
+      "support": 23
+    },
+    "Ogan/We": {
+      "precision": 0.7692307692307693,
+      "recall": 0.8695652173913043,
+      "f1": 0.8163265306122449,
+      "support": 23
+    },
+    "Ogan/Ye": {
+      "precision": 0.5675675675675675,
+      "recall": 0.9130434782608695,
+      "f1": 0.7,
+      "support": 23
+    },
+    "Pallawa/ba": {
+      "precision": 0.9411764705882353,
+      "recall": 1.0,
+      "f1": 0.9696969696969697,
+      "support": 16
+    },
+    "Pallawa/bha": {
+      "precision": 1.0,
+      "recall": 0.8235294117647058,
+      "f1": 0.9032258064516129,
+      "support": 17
+    },
+    "Pallawa/ca": {
+      "precision": 0.9333333333333333,
+      "recall": 0.8235294117647058,
+      "f1": 0.875,
+      "support": 17
+    },
+    "Pallawa/cha": {
+      "precision": 0.7142857142857143,
+      "recall": 0.9375,
+      "f1": 0.8108108108108109,
+      "support": 16
+    },
+    "Pallawa/da": {
+      "precision": 1.0,
+      "recall": 0.7222222222222222,
+      "f1": 0.8387096774193549,
+      "support": 18
+    },
+    "Pallawa/dha": {
+      "precision": 0.8823529411764706,
+      "recall": 0.8823529411764706,
+      "f1": 0.8823529411764706,
+      "support": 17
+    },
+    "Pallawa/ga": {
+      "precision": 1.0,
+      "recall": 0.9411764705882353,
+      "f1": 0.9696969696969697,
+      "support": 17
+    },
+    "Pallawa/gha": {
+      "precision": 1.0,
+      "recall": 0.9411764705882353,
+      "f1": 0.9696969696969697,
+      "support": 17
+    },
+    "Pallawa/ha": {
+      "precision": 1.0,
+      "recall": 0.5882352941176471,
+      "f1": 0.7407407407407407,
+      "support": 17
+    },
+    "Pallawa/ja": {
+      "precision": 0.9411764705882353,
+      "recall": 0.9411764705882353,
+      "f1": 0.9411764705882353,
+      "support": 17
+    },
+    "Pallawa/jha": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 17
+    },
+    "Pallawa/ka": {
+      "precision": 0.85,
+      "recall": 1.0,
+      "f1": 0.918918918918919,
+      "support": 17
+    },
+    "Pallawa/kha": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 17
+    },
+    "Pallawa/la": {
+      "precision": 1.0,
+      "recall": 0.9375,
+      "f1": 0.967741935483871,
+      "support": 16
+    },
+    "Pallawa/ma": {
+      "precision": 1.0,
+      "recall": 0.9411764705882353,
+      "f1": 0.9696969696969697,
+      "support": 17
+    },
+    "Pallawa/na": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 17
+    },
+    "Pallawa/pa": {
+      "precision": 0.8823529411764706,
+      "recall": 0.8823529411764706,
+      "f1": 0.8823529411764706,
+      "support": 17
+    },
+    "Pallawa/pha": {
+      "precision": 1.0,
+      "recall": 0.6470588235294118,
+      "f1": 0.7857142857142857,
+      "support": 17
+    },
+    "Pallawa/ra": {
+      "precision": 1.0,
+      "recall": 0.6470588235294118,
+      "f1": 0.7857142857142857,
+      "support": 17
+    },
+    "Pallawa/sa": {
+      "precision": 1.0,
+      "recall": 0.9411764705882353,
+      "f1": 0.9696969696969697,
+      "support": 17
+    },
+    "Pallawa/ta": {
+      "precision": 1.0,
+      "recall": 0.8235294117647058,
+      "f1": 0.9032258064516129,
+      "support": 17
+    },
+    "Pallawa/tha": {
+      "precision": 0.8333333333333334,
+      "recall": 0.8823529411764706,
+      "f1": 0.8571428571428571,
+      "support": 17
+    },
+    "Pallawa/va": {
+      "precision": 1.0,
+      "recall": 0.8235294117647058,
+      "f1": 0.9032258064516129,
+      "support": 17
+    },
+    "Pallawa/ya": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 17
+    },
+    "Pallawa/\u00f1a": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 17
+    },
+    "Pallawa/\u015ba": {
+      "precision": 0.9,
+      "recall": 1.0,
+      "f1": 0.9473684210526315,
+      "support": 18
+    },
+    "Pallawa/\u1e0da": {
+      "precision": 0.9230769230769231,
+      "recall": 0.75,
+      "f1": 0.8275862068965517,
+      "support": 16
+    },
+    "Pallawa/\u1e0dha": {
+      "precision": 0.8947368421052632,
+      "recall": 0.9444444444444444,
+      "f1": 0.918918918918919,
+      "support": 18
+    },
+    "Pallawa/\u1e45a": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 16
+    },
+    "Pallawa/\u1e47a": {
+      "precision": 0.9444444444444444,
+      "recall": 1.0,
+      "f1": 0.9714285714285714,
+      "support": 17
+    },
+    "Pallawa/\u1e63a": {
+      "precision": 1.0,
+      "recall": 0.8823529411764706,
+      "f1": 0.9375,
+      "support": 17
+    },
+    "Pallawa/\u1e6da": {
+      "precision": 0.7777777777777778,
+      "recall": 0.8235294117647058,
+      "f1": 0.8,
+      "support": 17
+    },
+    "Pallawa/\u1e6dha": {
+      "precision": 0.8888888888888888,
+      "recall": 0.9411764705882353,
+      "f1": 0.9142857142857143,
+      "support": 17
+    },
+    "Sunda/Vowel A/Ca": {
+      "precision": 0.55,
+      "recall": 0.8148148148148148,
+      "f1": 0.6567164179104478,
+      "support": 81
+    },
+    "Sunda/Vowel A/Da": {
+      "precision": 0.4180327868852459,
+      "recall": 0.6375,
+      "f1": 0.504950495049505,
+      "support": 80
+    },
+    "Sunda/Vowel A/Ga": {
+      "precision": 0.3235294117647059,
+      "recall": 0.4074074074074074,
+      "f1": 0.36065573770491804,
+      "support": 81
+    },
+    "Sunda/Vowel A/Ha": {
+      "precision": 0.45217391304347826,
+      "recall": 0.6582278481012658,
+      "f1": 0.5360824742268041,
+      "support": 79
+    },
+    "Sunda/Vowel A/Ja": {
+      "precision": 0.5,
+      "recall": 0.4074074074074074,
+      "f1": 0.4489795918367347,
+      "support": 81
+    },
+    "Sunda/Vowel A/Ka": {
+      "precision": 0.4074074074074074,
+      "recall": 0.55,
+      "f1": 0.46808510638297873,
+      "support": 80
+    },
+    "Sunda/Vowel A/La": {
+      "precision": 0.5495495495495496,
+      "recall": 0.7530864197530864,
+      "f1": 0.6354166666666666,
+      "support": 81
+    },
+    "Sunda/Vowel A/Ma": {
+      "precision": 0.4195804195804196,
+      "recall": 0.75,
+      "f1": 0.5381165919282511,
+      "support": 80
+    },
+    "Sunda/Vowel A/Na": {
+      "precision": 0.48,
+      "recall": 0.75,
+      "f1": 0.5853658536585366,
+      "support": 80
+    },
+    "Sunda/Vowel A/Nga": {
+      "precision": 0.3548387096774194,
+      "recall": 0.55,
+      "f1": 0.43137254901960786,
+      "support": 80
+    },
+    "Sunda/Vowel A/Pa": {
+      "precision": 0.2808219178082192,
+      "recall": 0.5189873417721519,
+      "f1": 0.36444444444444446,
+      "support": 79
+    },
+    "Sunda/Vowel A/Ra": {
+      "precision": 0.48739495798319327,
+      "recall": 0.725,
+      "f1": 0.5829145728643216,
+      "support": 80
+    },
+    "Sunda/Vowel A/Ta": {
+      "precision": 0.3227848101265823,
+      "recall": 0.6375,
+      "f1": 0.42857142857142855,
+      "support": 80
+    },
+    "Sunda/Vowel A/Wa": {
+      "precision": 0.5698924731182796,
+      "recall": 0.6625,
+      "f1": 0.6127167630057804,
+      "support": 80
+    },
+    "Sunda/Vowel A/Ya": {
+      "precision": 0.46987951807228917,
+      "recall": 0.4875,
+      "f1": 0.4785276073619632,
+      "support": 80
+    },
+    "Sunda/Vowel A/a": {
+      "precision": 0.32967032967032966,
+      "recall": 0.38461538461538464,
+      "f1": 0.35502958579881655,
+      "support": 78
+    },
+    "Sunda/Vowel A/ba": {
+      "precision": 0.5227272727272727,
+      "recall": 0.5974025974025974,
+      "f1": 0.5575757575757576,
+      "support": 77
+    },
+    "Sunda/Vowel A/fa": {
+      "precision": 0.3118279569892473,
+      "recall": 0.3717948717948718,
+      "f1": 0.3391812865497076,
+      "support": 78
+    },
+    "Sunda/Vowel A/kha": {
+      "precision": 0.6363636363636364,
+      "recall": 0.7272727272727273,
+      "f1": 0.6787878787878788,
+      "support": 77
+    },
+    "Sunda/Vowel A/nya": {
+      "precision": 0.3900709219858156,
+      "recall": 0.7142857142857143,
+      "f1": 0.5045871559633027,
+      "support": 77
+    },
+    "Sunda/Vowel A/qa": {
+      "precision": 0.5888888888888889,
+      "recall": 0.6794871794871795,
+      "f1": 0.6309523809523809,
+      "support": 78
+    },
+    "Sunda/Vowel A/sa": {
+      "precision": 0.43564356435643564,
+      "recall": 0.5432098765432098,
+      "f1": 0.4835164835164835,
+      "support": 81
+    },
+    "Sunda/Vowel A/sya": {
+      "precision": 0.8947368421052632,
+      "recall": 0.8831168831168831,
+      "f1": 0.8888888888888888,
+      "support": 77
+    },
+    "Sunda/Vowel A/va": {
+      "precision": 0.6136363636363636,
+      "recall": 0.7012987012987013,
+      "f1": 0.6545454545454545,
+      "support": 77
+    },
+    "Sunda/Vowel A/xa": {
+      "precision": 0.4727272727272727,
+      "recall": 0.6666666666666666,
+      "f1": 0.5531914893617021,
+      "support": 78
+    },
+    "Sunda/Vowel A/za": {
+      "precision": 0.47560975609756095,
+      "recall": 0.5064935064935064,
+      "f1": 0.49056603773584906,
+      "support": 77
+    },
+    "Sunda/Vowel E/Be": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Sunda/Vowel E/Ce": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 12
+    },
+    "Sunda/Vowel E/De": {
+      "precision": 0.2777777777777778,
+      "recall": 0.35714285714285715,
+      "f1": 0.3125,
+      "support": 14
+    },
+    "Sunda/Vowel E/Ge": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14
+    },
+    "Sunda/Vowel E/He": {
+      "precision": 0.3333333333333333,
+      "recall": 0.14285714285714285,
+      "f1": 0.2,
+      "support": 14
+    },
+    "Sunda/Vowel E/Je": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 12
+    },
+    "Sunda/Vowel E/Ke": {
+      "precision": 0.5,
+      "recall": 0.21428571428571427,
+      "f1": 0.3,
+      "support": 14
+    },
+    "Sunda/Vowel E/Le": {
+      "precision": 0.2222222222222222,
+      "recall": 0.14285714285714285,
+      "f1": 0.17391304347826086,
+      "support": 14
+    },
+    "Sunda/Vowel E/Me": {
+      "precision": 0.5,
+      "recall": 0.13333333333333333,
+      "f1": 0.21052631578947367,
+      "support": 15
+    },
+    "Sunda/Vowel E/Ne": {
+      "precision": 0.25,
+      "recall": 0.14285714285714285,
+      "f1": 0.18181818181818182,
+      "support": 14
+    },
+    "Sunda/Vowel E/Nge": {
+      "precision": 0.1111111111111111,
+      "recall": 0.07142857142857142,
+      "f1": 0.08695652173913043,
+      "support": 14
+    },
+    "Sunda/Vowel E/Nye": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Sunda/Vowel E/Pe": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14
+    },
+    "Sunda/Vowel E/Re": {
+      "precision": 1.0,
+      "recall": 0.07142857142857142,
+      "f1": 0.13333333333333333,
+      "support": 14
+    },
+    "Sunda/Vowel E/Se": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14
+    },
+    "Sunda/Vowel E/Te": {
+      "precision": 0.2631578947368421,
+      "recall": 0.3333333333333333,
+      "f1": 0.29411764705882354,
+      "support": 15
+    },
+    "Sunda/Vowel E/We": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14
+    },
+    "Sunda/Vowel E/Ye": {
+      "precision": 0.3333333333333333,
+      "recall": 0.18181818181818182,
+      "f1": 0.23529411764705882,
+      "support": 11
+    },
+    "Sunda/Vowel E/e": {
+      "precision": 0.3372093023255814,
+      "recall": 0.7435897435897436,
+      "f1": 0.464,
+      "support": 78
+    },
+    "Sunda/Vowel E/fe": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel E/qe": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel E/ve": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel E/xe": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel E/ze": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel Eu/Beu": {
+      "precision": 0.2,
+      "recall": 0.1111111111111111,
+      "f1": 0.14285714285714285,
+      "support": 9
+    },
+    "Sunda/Vowel Eu/Ceu": {
+      "precision": 0.25,
+      "recall": 0.2727272727272727,
+      "f1": 0.2608695652173913,
+      "support": 11
+    },
+    "Sunda/Vowel Eu/Deu": {
+      "precision": 0.125,
+      "recall": 0.07142857142857142,
+      "f1": 0.09090909090909091,
+      "support": 14
+    },
+    "Sunda/Vowel Eu/Geu": {
+      "precision": 0.18181818181818182,
+      "recall": 0.14285714285714285,
+      "f1": 0.16,
+      "support": 14
+    },
+    "Sunda/Vowel Eu/Heu": {
+      "precision": 0.2,
+      "recall": 0.2857142857142857,
+      "f1": 0.23529411764705882,
+      "support": 14
+    },
+    "Sunda/Vowel Eu/Jeu": {
+      "precision": 0.3333333333333333,
+      "recall": 0.08333333333333333,
+      "f1": 0.13333333333333333,
+      "support": 12
+    },
+    "Sunda/Vowel Eu/Keu": {
+      "precision": 0.2857142857142857,
+      "recall": 0.14285714285714285,
+      "f1": 0.19047619047619047,
+      "support": 14
+    },
+    "Sunda/Vowel Eu/Leu": {
+      "precision": 0.5,
+      "recall": 0.2857142857142857,
+      "f1": 0.36363636363636365,
+      "support": 14
+    },
+    "Sunda/Vowel Eu/Meu": {
+      "precision": 0.08333333333333333,
+      "recall": 0.06666666666666667,
+      "f1": 0.07407407407407407,
+      "support": 15
+    },
+    "Sunda/Vowel Eu/Neu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14
+    },
+    "Sunda/Vowel Eu/Ngeu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14
+    },
+    "Sunda/Vowel Eu/Nyeu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Sunda/Vowel Eu/Peu": {
+      "precision": 0.3333333333333333,
+      "recall": 0.14285714285714285,
+      "f1": 0.2,
+      "support": 14
+    },
+    "Sunda/Vowel Eu/Reu": {
+      "precision": 0.2,
+      "recall": 0.14285714285714285,
+      "f1": 0.16666666666666666,
+      "support": 14
+    },
+    "Sunda/Vowel Eu/Seu": {
+      "precision": 0.17647058823529413,
+      "recall": 0.21428571428571427,
+      "f1": 0.1935483870967742,
+      "support": 14
+    },
+    "Sunda/Vowel Eu/Teu": {
+      "precision": 0.14285714285714285,
+      "recall": 0.06666666666666667,
+      "f1": 0.09090909090909091,
+      "support": 15
+    },
+    "Sunda/Vowel Eu/Weu": {
+      "precision": 0.2222222222222222,
+      "recall": 0.13333333333333333,
+      "f1": 0.16666666666666666,
+      "support": 15
+    },
+    "Sunda/Vowel Eu/Yeu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 11
+    },
+    "Sunda/Vowel Eu/eu": {
+      "precision": 0.41836734693877553,
+      "recall": 0.5324675324675324,
+      "f1": 0.4685714285714286,
+      "support": 77
+    },
+    "Sunda/Vowel Eu/feu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel Eu/qeu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel Eu/veu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    },
+    "Sunda/Vowel Eu/xeu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel Eu/zeu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel I/Bi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Sunda/Vowel I/Ci": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 12
+    },
+    "Sunda/Vowel I/Di": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14
+    },
+    "Sunda/Vowel I/Gi": {
+      "precision": 0.08333333333333333,
+      "recall": 0.21428571428571427,
+      "f1": 0.12,
+      "support": 14
+    },
+    "Sunda/Vowel I/Hi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14
+    },
+    "Sunda/Vowel I/Ji": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "support": 12
+    },
+    "Sunda/Vowel I/Ki": {
+      "precision": 0.16666666666666666,
+      "recall": 0.14285714285714285,
+      "f1": 0.15384615384615385,
+      "support": 14
+    },
+    "Sunda/Vowel I/Li": {
+      "precision": 0.36363636363636365,
+      "recall": 0.2857142857142857,
+      "f1": 0.32,
+      "support": 14
+    },
+    "Sunda/Vowel I/Mi": {
+      "precision": 0.3333333333333333,
+      "recall": 0.13333333333333333,
+      "f1": 0.19047619047619047,
+      "support": 15
+    },
+    "Sunda/Vowel I/Ngi": {
+      "precision": 0.3333333333333333,
+      "recall": 0.2857142857142857,
+      "f1": 0.3076923076923077,
+      "support": 14
+    },
+    "Sunda/Vowel I/Ni": {
+      "precision": 0.05555555555555555,
+      "recall": 0.07142857142857142,
+      "f1": 0.0625,
+      "support": 14
+    },
+    "Sunda/Vowel I/Nyi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Sunda/Vowel I/Pi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14
+    },
+    "Sunda/Vowel I/Ri": {
+      "precision": 0.25,
+      "recall": 0.07142857142857142,
+      "f1": 0.1111111111111111,
+      "support": 14
+    },
+    "Sunda/Vowel I/Si": {
+      "precision": 0.14285714285714285,
+      "recall": 0.06666666666666667,
+      "f1": 0.09090909090909091,
+      "support": 15
+    },
+    "Sunda/Vowel I/Ti": {
+      "precision": 0.25,
+      "recall": 0.21428571428571427,
+      "f1": 0.23076923076923078,
+      "support": 14
+    },
+    "Sunda/Vowel I/Wi": {
+      "precision": 0.26666666666666666,
+      "recall": 0.2857142857142857,
+      "f1": 0.27586206896551724,
+      "support": 14
+    },
+    "Sunda/Vowel I/Yi": {
+      "precision": 0.4,
+      "recall": 0.18181818181818182,
+      "f1": 0.25,
+      "support": 11
+    },
+    "Sunda/Vowel I/fi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel I/i": {
+      "precision": 0.37254901960784315,
+      "recall": 0.7402597402597403,
+      "f1": 0.4956521739130435,
+      "support": 77
+    },
+    "Sunda/Vowel I/qi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel I/vi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel I/xi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel I/zi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel O/Bo": {
+      "precision": 0.3333333333333333,
+      "recall": 0.125,
+      "f1": 0.18181818181818182,
+      "support": 8
+    },
+    "Sunda/Vowel O/Co": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 12
+    },
+    "Sunda/Vowel O/Do": {
+      "precision": 0.14285714285714285,
+      "recall": 0.07142857142857142,
+      "f1": 0.09523809523809523,
+      "support": 14
+    },
+    "Sunda/Vowel O/Go": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14
+    },
+    "Sunda/Vowel O/Ho": {
+      "precision": 0.25,
+      "recall": 0.06666666666666667,
+      "f1": 0.10526315789473684,
+      "support": 15
+    },
+    "Sunda/Vowel O/Jo": {
+      "precision": 1.0,
+      "recall": 0.09090909090909091,
+      "f1": 0.16666666666666666,
+      "support": 11
+    },
+    "Sunda/Vowel O/Ko": {
+      "precision": 0.24,
+      "recall": 0.42857142857142855,
+      "f1": 0.3076923076923077,
+      "support": 14
+    },
+    "Sunda/Vowel O/Lo": {
+      "precision": 0.5,
+      "recall": 0.13333333333333333,
+      "f1": 0.21052631578947367,
+      "support": 15
+    },
+    "Sunda/Vowel O/Mo": {
+      "precision": 0.7142857142857143,
+      "recall": 0.35714285714285715,
+      "f1": 0.47619047619047616,
+      "support": 14
+    },
+    "Sunda/Vowel O/Ngo": {
+      "precision": 0.3333333333333333,
+      "recall": 0.14285714285714285,
+      "f1": 0.2,
+      "support": 14
+    },
+    "Sunda/Vowel O/No": {
+      "precision": 0.05,
+      "recall": 0.07142857142857142,
+      "f1": 0.058823529411764705,
+      "support": 14
+    },
+    "Sunda/Vowel O/Nyo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Sunda/Vowel O/Po": {
+      "precision": 0.6666666666666666,
+      "recall": 0.4,
+      "f1": 0.5,
+      "support": 15
+    },
+    "Sunda/Vowel O/Ro": {
+      "precision": 0.5,
+      "recall": 0.3333333333333333,
+      "f1": 0.4,
+      "support": 15
+    },
+    "Sunda/Vowel O/So": {
+      "precision": 0.5,
+      "recall": 0.42857142857142855,
+      "f1": 0.46153846153846156,
+      "support": 14
+    },
+    "Sunda/Vowel O/To": {
+      "precision": 0.42857142857142855,
+      "recall": 0.21428571428571427,
+      "f1": 0.2857142857142857,
+      "support": 14
+    },
+    "Sunda/Vowel O/Wo": {
+      "precision": 1.0,
+      "recall": 0.07142857142857142,
+      "f1": 0.13333333333333333,
+      "support": 14
+    },
+    "Sunda/Vowel O/Yo": {
+      "precision": 0.25,
+      "recall": 0.08333333333333333,
+      "f1": 0.125,
+      "support": 12
+    },
+    "Sunda/Vowel O/fo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel O/o": {
+      "precision": 0.5409836065573771,
+      "recall": 0.7252747252747253,
+      "f1": 0.6197183098591549,
+      "support": 91
+    },
+    "Sunda/Vowel O/qo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    },
+    "Sunda/Vowel O/vo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel O/xo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel O/zo": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel U/Bu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "Sunda/Vowel U/Cu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 12
+    },
+    "Sunda/Vowel U/Du": {
+      "precision": 0.6666666666666666,
+      "recall": 0.14285714285714285,
+      "f1": 0.23529411764705882,
+      "support": 14
+    },
+    "Sunda/Vowel U/Gu": {
+      "precision": 0.2,
+      "recall": 0.14285714285714285,
+      "f1": 0.16666666666666666,
+      "support": 14
+    },
+    "Sunda/Vowel U/Hu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14
+    },
+    "Sunda/Vowel U/Ju": {
+      "precision": 0.3333333333333333,
+      "recall": 0.08333333333333333,
+      "f1": 0.13333333333333333,
+      "support": 12
+    },
+    "Sunda/Vowel U/Ku": {
+      "precision": 0.10714285714285714,
+      "recall": 0.21428571428571427,
+      "f1": 0.14285714285714285,
+      "support": 14
+    },
+    "Sunda/Vowel U/Lu": {
+      "precision": 0.16666666666666666,
+      "recall": 0.35714285714285715,
+      "f1": 0.22727272727272727,
+      "support": 14
+    },
+    "Sunda/Vowel U/Mu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 15
+    },
+    "Sunda/Vowel U/Ngu": {
+      "precision": 0.4,
+      "recall": 0.14285714285714285,
+      "f1": 0.21052631578947367,
+      "support": 14
+    },
+    "Sunda/Vowel U/Nu": {
+      "precision": 0.6666666666666666,
+      "recall": 0.14285714285714285,
+      "f1": 0.23529411764705882,
+      "support": 14
+    },
+    "Sunda/Vowel U/Nyu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Sunda/Vowel U/Pu": {
+      "precision": 0.4166666666666667,
+      "recall": 0.35714285714285715,
+      "f1": 0.38461538461538464,
+      "support": 14
+    },
+    "Sunda/Vowel U/Ru": {
+      "precision": 0.5,
+      "recall": 0.42857142857142855,
+      "f1": 0.46153846153846156,
+      "support": 14
+    },
+    "Sunda/Vowel U/Su": {
+      "precision": 0.6,
+      "recall": 0.21428571428571427,
+      "f1": 0.3157894736842105,
+      "support": 14
+    },
+    "Sunda/Vowel U/Tu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 15
+    },
+    "Sunda/Vowel U/Wu": {
+      "precision": 0.03225806451612903,
+      "recall": 0.07142857142857142,
+      "f1": 0.044444444444444446,
+      "support": 14
+    },
+    "Sunda/Vowel U/Yu": {
+      "precision": 0.3333333333333333,
+      "recall": 0.08333333333333333,
+      "f1": 0.13333333333333333,
+      "support": 12
+    },
+    "Sunda/Vowel U/fu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel U/qu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel U/u": {
+      "precision": 0.45390070921985815,
+      "recall": 0.7032967032967034,
+      "f1": 0.5517241379310345,
+      "support": 91
+    },
+    "Sunda/Vowel U/vu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel U/xu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel U/zu": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    },
+    "Sunda/Vowel \u00c9/B\u00e9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 9
+    },
+    "Sunda/Vowel \u00c9/C\u00e9": {
+      "precision": 0.6,
+      "recall": 0.2727272727272727,
+      "f1": 0.375,
+      "support": 11
+    },
+    "Sunda/Vowel \u00c9/D\u00e9": {
+      "precision": 1.0,
+      "recall": 0.06666666666666667,
+      "f1": 0.125,
+      "support": 15
+    },
+    "Sunda/Vowel \u00c9/G\u00e9": {
+      "precision": 1.0,
+      "recall": 0.21428571428571427,
+      "f1": 0.35294117647058826,
+      "support": 14
+    },
+    "Sunda/Vowel \u00c9/H\u00e9": {
+      "precision": 0.07142857142857142,
+      "recall": 0.07142857142857142,
+      "f1": 0.07142857142857142,
+      "support": 14
+    },
+    "Sunda/Vowel \u00c9/J\u00e9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 12
+    },
+    "Sunda/Vowel \u00c9/K\u00e9": {
+      "precision": 0.0851063829787234,
+      "recall": 0.2857142857142857,
+      "f1": 0.13114754098360656,
+      "support": 14
+    },
+    "Sunda/Vowel \u00c9/L\u00e9": {
+      "precision": 0.4,
+      "recall": 0.2857142857142857,
+      "f1": 0.3333333333333333,
+      "support": 14
+    },
+    "Sunda/Vowel \u00c9/M\u00e9": {
+      "precision": 0.3333333333333333,
+      "recall": 0.06666666666666667,
+      "f1": 0.1111111111111111,
+      "support": 15
+    },
+    "Sunda/Vowel \u00c9/Ng\u00e9": {
+      "precision": 0.3333333333333333,
+      "recall": 0.14285714285714285,
+      "f1": 0.2,
+      "support": 14
+    },
+    "Sunda/Vowel \u00c9/Ny\u00e9": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "support": 8
+    },
+    "Sunda/Vowel \u00c9/N\u00e9": {
+      "precision": 0.25,
+      "recall": 0.26666666666666666,
+      "f1": 0.25806451612903225,
+      "support": 15
+    },
+    "Sunda/Vowel \u00c9/P\u00e9": {
+      "precision": 0.18181818181818182,
+      "recall": 0.14285714285714285,
+      "f1": 0.16,
+      "support": 14
+    },
+    "Sunda/Vowel \u00c9/R\u00e9": {
+      "precision": 0.6666666666666666,
+      "recall": 0.2857142857142857,
+      "f1": 0.4,
+      "support": 14
+    },
+    "Sunda/Vowel \u00c9/S\u00e9": {
+      "precision": 0.25,
+      "recall": 0.2857142857142857,
+      "f1": 0.26666666666666666,
+      "support": 14
+    },
+    "Sunda/Vowel \u00c9/T\u00e9": {
+      "precision": 0.09090909090909091,
+      "recall": 0.06666666666666667,
+      "f1": 0.07692307692307693,
+      "support": 15
+    },
+    "Sunda/Vowel \u00c9/W\u00e9": {
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.3333333333333333,
+      "support": 15
+    },
+    "Sunda/Vowel \u00c9/Y\u00e9": {
+      "precision": 1.0,
+      "recall": 0.09090909090909091,
+      "f1": 0.16666666666666666,
+      "support": 11
+    },
+    "Sunda/Vowel \u00c9/f\u00e9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel \u00c9/q\u00e9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel \u00c9/v\u00e9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    },
+    "Sunda/Vowel \u00c9/x\u00e9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel \u00c9/z\u00e9": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "Sunda/Vowel \u00c9/\u00e9": {
+      "precision": 0.39344262295081966,
+      "recall": 0.631578947368421,
+      "f1": 0.48484848484848486,
+      "support": 76
+    }
+  }
+}

@@ -1,0 +1,32 @@
+# Backbone comparison — transformer family, unified 895-class task at 224px.
+#
+# Transformers have fixed 224px positional embeddings, so — unlike the CNNs —
+# they cannot run at 64px. Each run is ~85 min, so this is the expensive half:
+# 2 models x 3 seeds = 6 runs, ~8-9 h, roughly one Kaggle session.
+#
+# For a same-resolution bridge to the CNN group, resnet18's 224px numbers come
+# from the size ablation (already committed). Report the CNN-vs-transformer
+# comparison with the resolution difference stated, using resnet18@224 as the
+# common reference point.
+
+matrix:
+  models:
+    - vit_tiny
+    - swin_tiny
+  tasks: [unified]
+  image_sizes: [224]
+  augmentations: [medium]
+  pretrained: [true]
+  seeds: [0, 1, 2]
+
+train:
+  epochs: 40
+  batch_size: 64
+  lr: 0.0005          # transformers prefer a gentler LR than CNNs
+  weight_decay: 0.05
+  optimizer: adamw
+  scheduler: cosine
+  label_smoothing: 0.1
+  early_stopping_patience: 8
+  mixed_precision: true
+  num_workers: 4

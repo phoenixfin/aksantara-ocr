@@ -1,0 +1,38 @@
+# Backbone comparison — CNN family, unified 895-class task at 64px.
+#
+# 64px because the size ablation showed CNNs are near their accuracy ceiling
+# there at a fraction of the 224px cost (~25 min/run vs ~85). resnet18 already
+# has these exact runs from the size ablation, so with git-based resume it is
+# restored and skipped — only the other backbones actually train.
+#
+# Transformers require 224px (fixed positional embeddings) and are in
+# backbone_transformer.yaml; resnet18 appears in both groups at both sizes, so
+# it bridges the CNN-at-64 and transformer-at-224 numbers in the paper.
+
+matrix:
+  # Pretrained CNNs only. A from-scratch lower bound is already covered by the
+  # augmentation ablation's scratch runs, and mixing pretrained:[true,false]
+  # here would double the matrix. resnet18 is restored from the size ablation.
+  models:
+    - resnet18
+    - efficientnet_b0
+    - mobilenetv3_small
+    - convnext_tiny
+    - densenet121
+  tasks: [unified]
+  image_sizes: [64]
+  augmentations: [medium]
+  pretrained: [true]
+  seeds: [0, 1, 2]
+
+train:
+  epochs: 40
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 0.0001
+  optimizer: adamw
+  scheduler: cosine
+  label_smoothing: 0.1
+  early_stopping_patience: 8
+  mixed_precision: true
+  num_workers: 4

@@ -1,0 +1,27 @@
+# ConvNeXt-Tiny alone, at a lower LR.
+#
+# In backbone_cnn.yaml (lr 1e-3) ConvNeXt diverged — macro-F1 0.00 across all
+# seeds while the other four CNNs trained fine. ConvNeXt's LayerScale + GELU
+# design is well known to need a smaller learning rate and warmup than ResNet-
+# style nets. 1e-4 is the usual fine-tuning LR for it. Everything else matches
+# backbone_cnn.yaml so the result drops straight into that table.
+
+matrix:
+  models: [convnext_tiny]
+  tasks: [unified]
+  image_sizes: [64]
+  augmentations: [medium]
+  pretrained: [true]
+  seeds: [0, 1, 2]
+
+train:
+  epochs: 40
+  batch_size: 128
+  lr: 0.0001          # 10x lower than the CNN default that diverged
+  weight_decay: 0.0001
+  optimizer: adamw
+  scheduler: cosine
+  label_smoothing: 0.1
+  early_stopping_patience: 8
+  mixed_precision: true
+  num_workers: 4

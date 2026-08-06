@@ -1,0 +1,3 @@
+model,feature,classifier,task,image_size,seed,accuracy,macro_f1,balanced_accuracy,top5_accuracy
+hog_knn,hog,knn,unified,64,0,0.6421794134560092,0.4627051861118525,0.46597211540909955,0.8412880966072456
+hog_random_forest,hog,random_forest,unified,64,0,0.6354945370902818,0.45442006741464674,0.4541650978851483,0.8031196089706728

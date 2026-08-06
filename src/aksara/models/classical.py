@@ -12,10 +12,10 @@ from PIL import Image
 from skimage.feature import hog
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.kernel_approximation import Nystroem
+from sklearn.linear_model import SGDClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
-from sklearn.svm import LinearSVC
 from tqdm.auto import tqdm
 
 
@@ -45,28 +45,32 @@ def extract_features(paths, image_size: int = 64, feature: str = "hog") -> np.nd
 
 
 # Chosen to actually finish at ~70k samples x 1764 HOG dims x 889 classes on a
-# CPU. The original exact-kernel SVC is O(n^2)-O(n^3) in libsvm and would run for
-# days; even RF-300 and saga-logistic are hours at this scale. These are the
-# leaner, scale-appropriate substitutes:
-#   svm_linear     -> LinearSVC (liblinear), linear in n
-#   svm_rbf_approx -> Nystroem RBF feature map + LinearSVC (scalable RBF)
-#   random_forest  -> 150 trees, depth-capped, fully parallel
-# knn has a trivial fit but a heavy predict; it stays because it is the canonical
+# CPU. Two traps at this scale, both hit the hard way:
+#   - Exact-kernel SVC (libsvm) is O(n^2)-O(n^3): days.
+#   - LinearSVC (liblinear) trains one-vs-rest, so 889 classes means 889 binary
+#     solves; at 70k samples that ran for 7h without finishing.
+# The linear models below use SGDClassifier instead — stochastic gradient is
+# linear per epoch and shrugs off both the sample count and the class count:
+#   svm_linear     -> SGD with hinge loss (linear SVM)
+#   svm_rbf_approx -> Nystroem RBF feature map + SGD hinge (scalable RBF)
+#   random_forest  -> 100 trees, depth-capped, fully parallel
+# knn has a trivial fit but a heavy predict; it stays as the canonical
 # non-parametric baseline and its cost is bounded by the test-set size.
+_SGD = dict(max_iter=30, tol=1e-3, random_state=42, early_stopping=True, n_iter_no_change=3)
 CLASSIFIERS = {
     "svm_linear": lambda: make_pipeline(
-        StandardScaler(), LinearSVC(C=1, dual="auto", max_iter=2000)
+        StandardScaler(), SGDClassifier(loss="hinge", alpha=1e-4, **_SGD)
     ),
     "svm_rbf_approx": lambda: make_pipeline(
         StandardScaler(),
         # gamma=None -> Nystroem uses 1/n_features (it rejects the "scale"
         # string that SVC accepts). n_components trades accuracy for speed.
         Nystroem(kernel="rbf", gamma=None, n_components=300, random_state=42),
-        LinearSVC(C=10, dual="auto", max_iter=2000),
+        SGDClassifier(loss="hinge", alpha=1e-5, **_SGD),
     ),
     "knn": lambda: make_pipeline(StandardScaler(), KNeighborsClassifier(n_neighbors=5, n_jobs=-1)),
     "random_forest": lambda: RandomForestClassifier(
-        n_estimators=150, max_depth=40, n_jobs=-1, random_state=42
+        n_estimators=100, max_depth=30, n_jobs=-1, random_state=42
     ),
 }
 

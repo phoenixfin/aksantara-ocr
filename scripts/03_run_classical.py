@@ -50,29 +50,41 @@ def main() -> int:
     out_dir = args.artifacts / "results" / "classical"
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    # Subsample the TRAIN split up front, before extraction, so a cap actually
+    # saves the (expensive) feature extraction rather than only the fit. One-vs-
+    # rest linear models train one classifier per class, so at 889 classes the
+    # full 70k train set is intractable on a CPU; a stratified cap keeps every
+    # class present and is a standard, reportable choice for a reference baseline.
+    split_frames = {"test": frame[frame["split"] == "test"]}
+    train_frame = frame[frame["split"] == "train"]
+    if args.max_train and len(train_frame) > args.max_train:
+        from sklearn.model_selection import train_test_split
+        train_frame, _ = train_test_split(
+            train_frame, train_size=args.max_train,
+            stratify=train_frame[label_column], random_state=42
+        )
+        print(f"train subsampled to {len(train_frame)} (stratified) for tractability")
+    split_frames["train"] = train_frame
+
     rows = []
     for feature in args.features:
-        # Feature extraction is the expensive part and is model-independent,
-        # so it happens once per feature type rather than once per (feature, model).
+        # Extraction is the expensive part (~15 min for HOG over 83k images) and
+        # is model-independent. Cache to disk keyed by (feature, size, split, n)
+        # so re-runs and each model reuse it instead of re-extracting.
         cache = {}
-        for split in ("train", "test"):
-            subset = frame[frame["split"] == split]
-            cache[split] = (
-                extract_features(subset["path"].tolist(), args.image_size, feature),
-                np.array([class_to_idx[v] for v in subset[label_column]]),
-            )
+        for split, subset in split_frames.items():
+            y = np.array([class_to_idx[v] for v in subset[label_column]])
+            cache_file = out_dir / f"_feat_{feature}_{args.image_size}_{split}_{len(subset)}.npy"
+            if cache_file.exists():
+                print(f"  reusing cached {feature} features for {split}: {cache_file.name}")
+                x = np.load(cache_file)
+            else:
+                x = extract_features(subset["path"].tolist(), args.image_size, feature)
+                np.save(cache_file, x)
+            cache[split] = (x, y)
 
         x_train, y_train = cache["train"]
         x_test, y_test = cache["test"]
-
-        if args.max_train and len(x_train) > args.max_train:
-            # Stratified subsample so every class stays represented.
-            from sklearn.model_selection import train_test_split
-            x_train, _, y_train, _ = train_test_split(
-                x_train, y_train, train_size=args.max_train, stratify=y_train, random_state=42
-            )
-            print(f"  (subsampled train to {len(x_train)} for tractability)")
-
         print(f"{feature}: train={x_train.shape} test={x_test.shape}")
 
         for model_name in args.models:

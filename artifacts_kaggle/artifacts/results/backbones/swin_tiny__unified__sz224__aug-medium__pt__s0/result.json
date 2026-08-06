@@ -1,0 +1,31 @@
+{
+  "experiment": {
+    "model": "swin_tiny",
+    "task": "unified",
+    "image_size": 224,
+    "augmentation": "medium",
+    "pretrained": true,
+    "seed": 0,
+    "script_filter": null
+  },
+  "run_id": "swin_tiny__unified__sz224__aug-medium__pt__s0",
+  "num_classes": 889,
+  "n_train": 69552,
+  "n_val": 13911,
+  "n_test": 13911,
+  "test_metrics": {
+    "accuracy": 0.9941053842283085,
+    "balanced_accuracy": 0.993452392411468,
+    "macro_f1": 0.9934967020407791,
+    "weighted_f1": 0.9940827602553013,
+    "top5_accuracy": 0.9996405722090432,
+    "cohen_kappa": 0.9940898831297292
+  },
+  "best_val_metrics": {
+    "macro_f1": 0.9949832690346211
+  },
+  "num_params": 28202995,
+  "epochs_run": 40,
+  "train_seconds": 19630.24224972725,
+  "_note": "reconstructed from results CSV to enable git-based resume (skip seed 0)"
+}

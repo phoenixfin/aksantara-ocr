@@ -1,0 +1,31 @@
+{
+  "experiment": {
+    "model": "vit_tiny",
+    "task": "unified",
+    "image_size": 224,
+    "augmentation": "medium",
+    "pretrained": true,
+    "seed": 0,
+    "script_filter": null
+  },
+  "run_id": "vit_tiny__unified__sz224__aug-medium__pt__s0",
+  "num_classes": 889,
+  "n_train": 69552,
+  "n_val": 13911,
+  "n_test": 13911,
+  "test_metrics": {
+    "accuracy": 0.9929552152972467,
+    "balanced_accuracy": 0.9893651050244849,
+    "macro_f1": 0.9892851177645261,
+    "weighted_f1": 0.9929164737587308,
+    "top5_accuracy": 0.9989217166271296,
+    "cohen_kappa": 0.99293670540345
+  },
+  "best_val_metrics": {
+    "macro_f1": 0.9913120432597567
+  },
+  "num_params": 5695993,
+  "epochs_run": 40,
+  "train_seconds": 5515.304629087448,
+  "_note": "reconstructed from results CSV to enable git-based resume (skip seed 0)"
+}

@@ -44,6 +44,12 @@ def main() -> int:
     parser.add_argument("--rerun", action="store_true", help="Re-run even if results exist.")
     parser.add_argument("--device", default=None)
     parser.add_argument(
+        "--save-checkpoints",
+        action="store_true",
+        help="Save each run's best weights to <run_dir>/model.pth (e.g. to make a "
+             "fine-tuned embedder for the leakage audit). Off by default.",
+    )
+    parser.add_argument(
         "--num-workers",
         type=int,
         default=None,
@@ -85,6 +91,8 @@ def main() -> int:
     train_cfg = TrainConfig(**_filter_kwargs(TrainConfig, config.get("train", {})))
     if args.num_workers is not None:
         train_cfg.num_workers = args.num_workers
+    if args.save_checkpoints:
+        train_cfg.save_checkpoint = True
 
     experiments = expand(spec)
     print(f"\nMatrix expands to {len(experiments)} experiments -> {results_dir}")

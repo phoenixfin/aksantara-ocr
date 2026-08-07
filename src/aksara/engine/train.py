@@ -39,6 +39,10 @@ class TrainConfig:
     # (~4.9 GB). "always"/"never" override the decision.
     preload: str = "auto"
     preload_max_gb: float = 2.0
+    # Save the best model weights to <run_dir>/model.pth. Off by default — a full
+    # matrix would write dozens of checkpoints. Enable to produce a fine-tuned
+    # embedder (e.g. for 07_leakage_audit.py --checkpoint).
+    save_checkpoint: bool = False
 
 
 @dataclass

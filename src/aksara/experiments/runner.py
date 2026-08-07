@@ -226,6 +226,12 @@ def run_one(
     run_dir = results_dir / exp.run_id
     run_dir.mkdir(parents=True, exist_ok=True)
 
+    if train_cfg.save_checkpoint:
+        # train_model loads the best (val-selected) weights back into `model`
+        # before returning, so this saves the selected checkpoint, not the last.
+        torch.save({"state_dict": model.state_dict(), "class_names": class_names,
+                    "experiment": asdict(exp)}, run_dir / "model.pth")
+
     cm = metrics_mod.confusion(test_logits, test_targets, len(class_names))
     np.save(run_dir / "confusion_matrix.npy", cm)
 

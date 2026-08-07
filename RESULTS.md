@@ -226,13 +226,54 @@ All in `figures_preview/` (PNG + PDF, 300 dpi):
 
 ---
 
+## 7a. Near-duplicate leakage audit
+
+Byte-hash dedup only removes *identical* files. A sheared/rescaled/re-saved
+sibling of the same glyph has a different hash but is effectively the same
+sample; if it straddles the split it leaks the test item into training. We
+audit this (`scripts/07_leakage_audit.py`): embed every image, then for each
+test image find its highest cosine similarity to a **same-class** train image
+(augmentation preserves the label).
+
+**Prevalence.** With discriminative HOG features, same-class test→train max
+similarity has a normal body (median 0.75) plus a distinct high-similarity tail:
+
+| Threshold | Test images with a train twin | % of test |
+|---|---:|---:|
+| ≥ 0.95 | 1,089 | 7.83% |
+| ≥ 0.99 | 558 | 4.01% |
+
+The top pairs are visually near-identical (verified). **914 (6.6%)** are
+flagged by *both* HOG (≥0.95) and an ImageNet ResNet-18 embedding (≥0.99) — a
+high-confidence estimate.
+
+**Proof of contamination.** A 1-NN classifier scores **99.4%** on the leaked
+subset (100% at ≥0.99) versus **63.6%** on the clean subset — near-perfect on
+leaked images because their twin is in training.
+
+**Effect on the headline is small.** The deep models are near-ceiling on the
+*clean* subset as well, so removing the leaked ~8% moves end-to-end accuracy by
+only ~0.1 point (98.49 → ≈98.36 estimated). Near-duplicate leakage substantially
+inflates *weak* baselines (1-NN 99 vs 64) but the deep result is robust to it.
+We recommend reporting clean-subset metrics for transparency.
+
+**Caveat / next step.** HOG is not geometry-invariant, so it is a lower bound —
+it misses sheared/rotated siblings. The ImageNet-pretrained CNN is poorly
+calibrated on this narrow domain (generic features rate all simple strokes
+alike; its extra flags were false positives on visual inspection). The
+definitive audit needs the **fine-tuned penultimate layer** as the embedder
+(`--checkpoint`); those weights were not committed. This is also the strongest
+available substitute for the (unavailable) writer-disjoint split.
+
 ## 8. Limitations
 
-1. **Writer leakage.** Filenames carry no writer ID, so the split is stratified,
-   not writer-disjoint. Reported accuracy is therefore an **upper bound on
-   generalization to unseen handwriting** — the same person's samples may appear
-   in both train and test. This is the most important caveat and cannot be fixed
-   without writer metadata.
+1. **Writer / near-duplicate leakage.** Filenames carry no writer ID, so the
+   split is stratified, not writer-disjoint — reported accuracy is an **upper
+   bound on generalization to unseen handwriting**. The related, sharper
+   near-duplicate variant is audited in §7a: ~8% of test images have a
+   near-identical train twin, but the deep headline is robust to it (~0.1 pt).
+   A writer-disjoint split (or a fine-tuned-embedding near-dup-clean split)
+   would remove both; neither is possible without additional metadata/weights.
 2. **Single-seed transformers.** swin_tiny/vit_tiny report seed 0 only (compute
    cost); their ranking as top performers is stable, but they lack a variance
    estimate.

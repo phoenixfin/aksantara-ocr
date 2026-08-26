@@ -167,6 +167,23 @@ similar Arabic-derived letters:
 | dhal → ta | 10% |
 | kha → H Kecil | 7% |
 
+### 2.2b Jawa confusion structure — a second failure mode (Fig 9)
+
+Jawa is the hardest script (§2.1). Its errors (257 over 3 seeds) have a
+different structure from Jawi's minimal pairs:
+
+| Error type | Share |
+|---|---:|
+| Same vowel, **different consonant** | **69.3%** |
+| Same consonant, different vowel | **0.0%** |
+| Other | 30.7% |
+
+**Finding.** The vowel/diacritic is read correctly; the **base consonant** is
+confused (na↔da, tha→ba, do→no — visually similar Javanese aksara). This is the
+opposite of a diacritic-confusion mode and distinct from Jawi's minimal-pair
+letter confusion (§2.2). Two hardest scripts, two different failure modes:
+**Jawi confuses letter shapes, Jawa confuses consonant identity.**
+
 ### 2.4 Cross-script homograph confusion (novel — needs script-qualified labels)
 
 128 of 697 character names recur across scripts (e.g. `ha` appears in Jawa,
@@ -253,6 +270,23 @@ substitute for each other**: the ImageNet advantage is largest without
 augmentation (+1.28) and shrinks with it (+0.35 at medium). Both supply
 invariance; when one is present the other matters less.
 
+### 5.1 Confidence-based rejection (Fig 10)
+
+Ranking predictions by max-softmax confidence and abstaining on the least
+confident (flat model):
+
+| Coverage retained | Accuracy |
+|---:|---:|
+| 100% (no rejection) | 98.43% |
+| 95% | 99.58% |
+| 90% | 99.67% |
+| 80% | 99.74% |
+
+**Finding.** Rejecting the least-confident **5%** lifts accuracy to **99.58%**;
+the curve saturates near 99.7% by 90% coverage. Practical for deployment — a
+simple confidence threshold buys near-perfect accuracy on the retained
+predictions, and the softmax is well-calibrated for this.
+
 ---
 
 ## 6. Classical baselines (HOG features)
@@ -328,6 +362,8 @@ All in `figures_preview/` (PNG + PDF, 300 dpi):
 | fig6_backbones | Backbone comparison by family |
 | fig7_f1_vs_frequency | Per-class F1 vs class frequency (~30 threshold) |
 | fig8_perscript_classical | Per-script classical vs deep (concentrated gap) |
+| fig9_jawa_error_mode | Jawa failure mode (consonant, not vowel) |
+| fig10_rejection_curve | Confidence-based rejection curve |
 
 ---
 

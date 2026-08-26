@@ -270,6 +270,27 @@ substitute for each other**: the ImageNet advantage is largest without
 augmentation (+1.28) and shrinks with it (+0.35 at medium). Both supply
 invariance; when one is present the other matters less.
 
+### 5.2 Learning curve — how much data the task needs (Fig 11)
+
+ResNet-18 @64px trained on subsets of the training set (macro-F1 %):
+
+| Train | Images | Macro-F1 | Accuracy |
+|---|---:|---:|---:|
+| 5% | 3,570 | 60.14 | 77.25 |
+| 10% | 6,905 | 75.36 | 87.00 |
+| 25% | 17,442 | 91.12 | 95.82 |
+| 50% | 34,800 | 95.78 | 98.06 |
+| 75% | 52,110 | 97.36 | 98.55 |
+| 100% | 69,552 | 97.89 | 98.82 |
+
+**Findings.** Steep gains through 50% (95.8% macro-F1 at half the data), then
+diminishing returns — the last 25% adds only ~0.5 points, and the curve is still
+gently rising at 100%, so the corpus is appropriately sized (near, but not past,
+saturation). The accuracy-vs-macro-F1 gap is huge at low data (5%: 77 vs 60) and
+closes with scale, i.e. **the rare classes are what need the data** — a direct,
+usable statement for anyone collecting a new script: ~half this corpus reaches
+96%, the full corpus ~98%.
+
 ### 5.1 Confidence-based rejection (Fig 10)
 
 Ranking predictions by max-softmax confidence and abstaining on the least
@@ -364,6 +385,8 @@ All in `figures_preview/` (PNG + PDF, 300 dpi):
 | fig8_perscript_classical | Per-script classical vs deep (concentrated gap) |
 | fig9_jawa_error_mode | Jawa failure mode (consonant, not vowel) |
 | fig10_rejection_curve | Confidence-based rejection curve |
+| fig11_learning_curve | Macro-F1/accuracy vs training-set size |
+| fig12_transfer_gain | In-corpus pretraining gain, few-shot held-out script |
 
 ---
 
@@ -400,13 +423,52 @@ near-ceiling on clean data too. Near-duplicate leakage substantially inflates
 *weak* baselines (1-NN 99 vs 64) but the deep result is robust to it. Report
 clean-subset metrics for transparency.
 
-**Caveat / next step.** HOG is not geometry-invariant, so it is a lower bound —
-it misses sheared/rotated siblings. The ImageNet-pretrained CNN is poorly
-calibrated on this narrow domain (generic features rate all simple strokes
-alike; its extra flags were false positives on visual inspection). The
-definitive audit needs the **fine-tuned penultimate layer** as the embedder
-(`--checkpoint`); those weights were not committed. This is also the strongest
-available substitute for the (unavailable) writer-disjoint split.
+**Why HOG is the right tool — both CNN embedders were tried and are worse.**
+- *ImageNet-pretrained ResNet-18*: too generic on this narrow domain — median
+  same-class similarity 0.956, so ≥0.95 flags 59% of the test set; its extra
+  flags were false positives on visual inspection.
+- *Fine-tuned ResNet-18 penultimate layer* (the embedder a reviewer would
+  suggest, run via `--checkpoint`): **worse still** — median 0.974, ≥0.95 flags
+  **80%**. A classification-trained layer is *optimized* to pull same-class
+  samples together, which collapses intra-class variation and destroys the
+  discrimination needed to isolate near-duplicates.
+
+So neither learned embedder improves on HOG, for opposite reasons (pretrained
+too generic, fine-tuned too class-collapsed). **HOG — mid-level, discriminative,
+not class-optimized — is the reliable estimator** (~8% at ≥0.95, visually
+verified). Its one true limitation is geometry: it is a lower bound that misses
+sheared/rotated siblings. A writer-disjoint split remains the only way to fully
+remove leakage, and needs writer metadata the corpus lacks.
+
+## 7b. Value as a pretraining resource — leave-one-script-out transfer (Fig 12)
+
+The strongest "why this dataset matters" result: can a model pretrained on the
+12 in-corpus scripts learn a **held-out 13th** from few examples? For each
+held-out script we pretrain ResNet-18 on the other 12 (unified), then fine-tune
+on k examples/class of the held-out script, versus an ImageNet-initialized
+baseline. Macro-F1 %:
+
+| Held-out (type) | k | ImageNet | In-corpus | **Gain** |
+|---|---:|---:|---:|---:|
+| **Lampung** (20-class alphabet) | 10 | 55.95 | 97.34 | **+41.4** |
+| | 50 | 99.86 | 100.00 | +0.1 |
+| | 100 | 99.86 | 100.00 | +0.1 |
+| **Jawi** (34-class, hard) | 10 | 65.99 | 83.43 | **+17.4** |
+| | 50 | 93.55 | 94.68 | +1.1 |
+| | 100 | 96.07 | 94.72 | −1.4 |
+| **Lontara** (138-class syllabary) | 10 | 98.05 | 99.07 | +1.0 |
+| | 50 | 99.49 | 99.14 | −0.4 |
+| | 100 | 99.32 | 99.67 | +0.4 |
+
+**Findings.** In the **few-shot regime (k=10)**, in-corpus pretraining gives a
+large boost — **+41 points for Lampung, +17 for Jawi** — precisely where an
+ImageNet start struggles. As k grows both approach ceiling and the gain vanishes
+(sometimes slightly negative, within noise). Lontara gains little because
+ImageNet already reaches 98% at k=10. **The corpus is a strong pretraining
+resource for new Indonesian scripts under data scarcity** — the concrete,
+non-generic value claim: to bring a *new* script online with ~10 labelled
+examples per character, pretraining on this corpus roughly halves the error or
+better.
 
 ## 8. Limitations
 

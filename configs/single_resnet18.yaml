@@ -1,0 +1,22 @@
+# One ResNet-18 on the unified task @64px, single seed. Used by the learning
+# curve (item 8, varied via --train-fraction) and the checkpoint run (item 9).
+
+matrix:
+  models: [resnet18]
+  tasks: [unified]
+  image_sizes: [64]
+  augmentations: [medium]
+  pretrained: [true]
+  seeds: [0]
+
+train:
+  epochs: 40
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 0.0001
+  optimizer: adamw
+  scheduler: cosine
+  label_smoothing: 0.1
+  early_stopping_patience: 8
+  mixed_precision: true
+  num_workers: 4

@@ -44,6 +44,13 @@ def main() -> int:
     parser.add_argument("--rerun", action="store_true", help="Re-run even if results exist.")
     parser.add_argument("--device", default=None)
     parser.add_argument(
+        "--train-fraction",
+        type=float,
+        default=1.0,
+        help="Stratified fraction of the TRAIN split to keep (learning-curve "
+             "experiments). Keeps >=1 sample per class. Val/test unchanged.",
+    )
+    parser.add_argument(
         "--save-checkpoints",
         action="store_true",
         help="Save each run's best weights to <run_dir>/model.pth (e.g. to make a "
@@ -79,6 +86,19 @@ def main() -> int:
     frame = load_split_frame(args.artifacts / "splits.csv", args.artifacts / "manifest.csv")
     print(f"Loaded {len(frame)} images, {frame['label'].nunique()} classes, "
           f"{frame['script'].nunique()} scripts.")
+
+    if args.train_fraction < 1.0:
+        import pandas as pd
+        tr = frame[frame["split"] == "train"]
+        # Per-group sampling via concat (>=1 kept per class); avoids the
+        # groupby.apply(group_keys=False) column-drop across pandas versions.
+        kept = pd.concat([
+            g.sample(n=max(1, round(len(g) * args.train_fraction)), random_state=42)
+            for _, g in tr.groupby("label")
+        ]).reset_index(drop=True)
+        frame = pd.concat([kept, frame[frame["split"] != "train"]]).reset_index(drop=True)
+        print(f"train-fraction {args.train_fraction}: kept {len(kept)} train images "
+              f"({frame['label'].nunique()} classes retained)")
 
     matrix_cfg = dict(config.get("matrix", {}))
     if matrix_cfg.get("scripts") == "all":

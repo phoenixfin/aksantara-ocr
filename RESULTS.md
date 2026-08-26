@@ -93,6 +93,29 @@ points are lost to routing. The difficulty is entirely *intra-script*
 character recognition. This justifies the layered design and localizes the
 open problem.
 
+### 2.0 Layered vs flat classifier (matched metrics, @64px)
+
+The layered pipeline must be compared against a single flat 895-way classifier
+on the **same** metrics and resolution, or the design is argued but never tested.
+
+| Model @64px | Accuracy | Macro-F1 |
+|---|---:|---:|
+| Flat (single 895-way softmax) | **98.70 ± 0.33** | **97.85 ± 0.43** |
+| Layered (script → character) | 98.49 ± 0.04 | 96.58 ± 0.08 |
+| Δ (layered − flat) | −0.22 | **−1.27** |
+
+**Finding (important, and against the intuitive expectation).** The flat
+classifier is **as good or better on both metrics**. The layered design does not
+improve accuracy: its per-script stage-2 models each train on only their
+script's data and lose the rare-class tail (hence the larger macro-F1 gap),
+while the flat model pools all 70k images and shares features across scripts.
+
+**Implication for the paper.** The layered pipeline should be presented for its
+**interpretability** — exact routing/character error decomposition (§2.0, §2.3),
+per-script diagnostics, and the homograph test (§2.4) — not as an accuracy win.
+The flat model is the stronger predictor; the layered view is the stronger
+*analysis tool*. Report both.
+
 ### 2.1 Per-script end-to-end accuracy (mean, 3 seeds)
 
 | Script | End-to-end % | | Script | End-to-end % |
@@ -110,6 +133,27 @@ open problem.
 Arabic-derived) are hardest. Simple, geometrically distinct scripts (Lampung,
 Kawi, Batak) are nearly perfect.
 
+### 2.1a Stage-1 (script routing) error breakdown
+
+Script identification is 99.91% — **36 misroutings across 41,733 routing
+decisions (3 seeds), 0.086%**. They are not uniform; they cluster in the
+related Brahmic Javanese-family scripts:
+
+| True → Predicted | Count |
+|---|---:|
+| Jawa → Sunda | 6 |
+| Jawa → Bali | 3 |
+| Jawi → Sunda | 3 |
+| Sunda → Jawi | 3 |
+| Sunda → Bali | 3 |
+| Bali → Jawa | 2 |
+| Ogan → Minangkabau | 2 |
+
+**Finding.** Routing fails almost exclusively among Jawa/Sunda/Bali (and
+Jawi), scripts that share historical Brahmic ancestry and visual style. The
+"script ID is solved" claim is completed: where it fails, it fails on
+genuinely related scripts — not arbitrary pairs.
+
 ### 2.2 Confusion analysis (Jawi)
 
 The Jawi confusion matrix (Fig 5) surfaces linguistically real errors — visually
@@ -122,6 +166,26 @@ similar Arabic-derived letters:
 | tsa → ta | 10% |
 | dhal → ta | 10% |
 | kha → H Kecil | 7% |
+
+### 2.4 Cross-script homograph confusion (novel — needs script-qualified labels)
+
+128 of 697 character names recur across scripts (e.g. `ha` appears in Jawa,
+Bali, Batak…). Script-qualified labelling lets us ask a question impossible on a
+single-script corpus: **does the model confuse the same-named character across
+scripts?** On the flat model, over 6,322 test images whose romanized name recurs:
+
+| Outcome | Count | % |
+|---|---:|---:|
+| Correct | 6,274 | 99.2 |
+| **Homograph confusion** (right character, wrong script) | **0** | **0.0** |
+| Other error | 48 | 0.8 |
+
+**Finding.** **Zero** cross-script homograph confusions. Recurring names are
+*phonetic* (romanization), not visual — the glyphs are rendered completely
+differently across scripts — so the model never mistakes `ha`-in-Jawa for
+`ha`-in-Bali. This confirms the scripts are **visually well-separated even for
+phonetically-equivalent characters**, and validates treating them as distinct
+classes. (Flat model at 48px, the highest-resolution flat predictions stored.)
 
 ---
 
@@ -209,6 +273,45 @@ i.e. classical methods collapse on the long tail of rare classes. Together these
 show the fine-grained 889-way task genuinely **requires learned features** — HOG
 + a shallow classifier is not enough.
 
+### 6.1 Per-script classical vs deep — the gap is not uniform
+
+Within-script HOG 1-NN vs the deep per-script model (macro-F1 %, Fig 8):
+
+| Script | Classical | Deep | Gap | | Script | Classical | Deep | Gap |
+|---|---:|---:|---:|---|---|---:|---:|---:|
+| Pallawa | 99.30 | 99.54 | 0.2 | | Bima | 73.50 | 97.36 | 23.9 |
+| Lampung | 99.58 | 99.95 | 0.4 | | Jawi | 60.50 | 95.37 | 34.9 |
+| Kawi | 99.16 | 99.92 | 0.8 | | Bali | 61.81 | 99.47 | 37.7 |
+| Dunging-Iban | 96.20 | 99.64 | 3.5 | | Sunda | 43.91 | 97.73 | 53.8 |
+| Batak | 93.07 | 99.80 | 6.7 | | Jawa | 14.68 | 87.92 | 73.2 |
+| Ogan | 92.95 | 99.81 | 6.9 | | Lontara | 17.18 | 99.42 | 82.2 |
+| | | | | | Minangkabau | 15.17 | 99.57 | 84.4 |
+
+**Finding.** The 52-point gap is **entirely concentrated in high-cardinality
+syllabaries**. On simple, low-cardinality alphabets (Pallawa, Lampung, Kawi;
+19–33 classes) classical HOG nearly matches deep (gap <1 pt). On the large
+syllabaries (Minangkabau 75, Lontara 138, Jawa 128, Sunda 170 classes) classical
+collapses (15–44%) while deep stays ~99%. **Deep learning's advantage is
+specifically in fine-grained, many-class syllabary recognition** — a sharper and
+more useful statement than a single averaged gap.
+
+### 6.2 Per-class F1 vs class frequency
+
+Per-class test F1 against total images per class (19–694 range, Fig 7):
+
+| Class size | Classes | Mean F1 | Min F1 |
+|---|---:|---:|---:|
+| < 30 | 131 | 86.8 | 40.0 |
+| 30–60 | 213 | 99.5 | 85.7 |
+| 60–120 | 337 | 98.5 | 72.0 |
+| ≥ 120 | 208 | 99.3 | 77.4 |
+
+**Finding.** A clear **reliability threshold at ~30 images per class**: below it,
+per-class F1 drops sharply (mean 86.8, min 40) with high variance; above it, F1
+is uniformly ~99%. This directly substantiates the macro-F1 choice (accuracy
+hides the thin-class failures) and gives dataset users a usable rule of thumb —
+**collect ≥30 samples per character for reliable recognition.**
+
 ---
 
 ## 7. Figures
@@ -223,6 +326,8 @@ All in `figures_preview/` (PNG + PDF, 300 dpi):
 | fig4_classical_vs_deep | Classical vs deep macro-F1 (the gap) |
 | fig5_jawi_confusion | Jawi confusion heatmap (3 seeds pooled) |
 | fig6_backbones | Backbone comparison by family |
+| fig7_f1_vs_frequency | Per-class F1 vs class frequency (~30 threshold) |
+| fig8_perscript_classical | Per-script classical vs deep (concentrated gap) |
 
 ---
 
@@ -251,11 +356,13 @@ high-confidence estimate.
 subset (100% at ≥0.99) versus **63.6%** on the clean subset — near-perfect on
 leaked images because their twin is in training.
 
-**Effect on the headline is small.** The deep models are near-ceiling on the
-*clean* subset as well, so removing the leaked ~8% moves end-to-end accuracy by
-only ~0.1 point (98.49 → ≈98.36 estimated). Near-duplicate leakage substantially
-inflates *weak* baselines (1-NN 99 vs 64) but the deep result is robust to it.
-We recommend reporting clean-subset metrics for transparency.
+**Effect on the headline is small — now measured, not bounded.** On the images
+shared between the audited split and the stored predictions, the **layered
+model scores 98.37% on the clean subset vs 98.56% matched-full** (leaked subset:
+100.00%). Removing the leaked ~8% costs ~0.19 points — the deep model is
+near-ceiling on clean data too. Near-duplicate leakage substantially inflates
+*weak* baselines (1-NN 99 vs 64) but the deep result is robust to it. Report
+clean-subset metrics for transparency.
 
 **Caveat / next step.** HOG is not geometry-invariant, so it is a lower bound —
 it misses sheared/rotated siblings. The ImageNet-pretrained CNN is poorly

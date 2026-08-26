@@ -109,7 +109,14 @@ def train_model(
     scheduler = _build_scheduler(optimizer, cfg, len(train_loader))
 
     use_amp = cfg.mixed_precision and device.type == "cuda"
-    scaler = torch.amp.GradScaler(device.type, enabled=use_amp)
+    # torch >= ~2.4 exposes the unified torch.amp.GradScaler(device_type, ...);
+    # older torch (e.g. 2.0.0, which Kaggle sometimes provisions) only has
+    # torch.cuda.amp.GradScaler. Try the new API, fall back to the old one so a
+    # run does not silently crash on whatever torch the runtime happens to have.
+    try:
+        scaler = torch.amp.GradScaler(device.type, enabled=use_amp)
+    except (AttributeError, TypeError):
+        scaler = torch.cuda.amp.GradScaler(enabled=use_amp)
 
     best_f1 = -1.0
     best_state = None

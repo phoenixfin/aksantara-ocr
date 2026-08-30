@@ -214,6 +214,28 @@ factor* a model is getting wrong.
 Batching buckets lines by width — they span roughly 150–1500 px, so random
 batches would spend most of their compute on padding.
 
+### Running it on Kaggle
+
+Two kernels under `notebooks/kaggle/`, deliberately split:
+
+| kernel | hardware | does |
+|---|---|---|
+| `aksaraline-corpus` | CPU | glyph pool → render → verify, saves the corpus as its output |
+| `aksaraline-train` | GPU | attaches that output, runs the matrix |
+
+The split is not cosmetic. A Kaggle GPU session is capped at 9h and
+`/kaggle/working` does not survive between runs, so folding rendering into the
+training kernel would repeat ~1h of CPU work every time and risk losing the
+corpus along with a timed-out session. Kept separate, the corpus is built once
+and every training run attaches it; `06_run_matrix.py` skips finished cells, so
+a truncated session resumes by re-running with the previous output attached.
+
+```bash
+kaggle datasets create -p aksara_seq/build/kaggle_data
+kaggle kernels push -p aksara_seq/notebooks/kaggle/corpus
+kaggle kernels push -p aksara_seq/notebooks/kaggle/train
+```
+
 ## Second baseline: detection (YOLO)
 
 `scripts/05_export_yolo.py` converts a corpus to ultralytics format, with

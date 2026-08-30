@@ -22,3 +22,8 @@ configs/cleaning_changelog*.csv
 
 # Preloaded uint8 image arrays — rebuilt on demand, large.
 preload_cache/
+
+# aksara_seq (sequence-OCR subproject): generated glyph cache and rendered
+# corpora. Both are reproducible from configs/ via scripts 01 and 02.
+/aksara_seq/build/
+.venv-seq/

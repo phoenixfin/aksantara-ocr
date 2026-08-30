@@ -1,0 +1,12 @@
+# Control condition for the difficulty ablation: layout with no degradation.
+name: aksaraline_clean
+glyph_cache: aksara_seq/build/glyphs
+out: aksara_seq/build/corpus/clean
+scripts: [Sunda, Jawa, Bali, Lontara]
+seed: 20260830
+core_height: 48
+output_height: 96
+samples: {train: 20000, val: 2500, test: 2500}
+words_per_line: {1: 0.40, 2: 0.27, 3: 0.18, 4: 0.10, 5: 0.05}
+style_mix: {clean: 1.0}
+lexicon_fraction: 0.0

@@ -1,0 +1,22 @@
+# AksaraLine v1 -- the corpus the experiments are run on.
+#
+# lexicon_fraction stays at 0.0: the shipped lexicons are unverified seed
+# lists, and no unreviewed vocabulary should enter a published dataset. Raise
+# it only once a native-speaker-checked word list is in aksara_seq/lexicons/.
+name: aksaraline_v1
+glyph_cache: aksara_seq/build/glyphs
+out: aksara_seq/build/corpus/v1
+scripts: [Sunda, Jawa, Bali, Lontara]
+seed: 20260830
+core_height: 48
+output_height: 96
+samples:
+  train: 20000
+  val: 2500
+  test: 2500
+# Mostly one or two words per line; a tail of longer lines so the sequence
+# model cannot rely on a fixed output length.
+words_per_line: {1: 0.40, 2: 0.27, 3: 0.18, 4: 0.10, 5: 0.05}
+style_mix: {clean: 0.15, light: 0.30, medium: 0.35, heavy: 0.20}
+lexicon_fraction: 0.0
+include_digits: false

@@ -1,0 +1,15 @@
+# Small corpus for checking the pipeline end to end (~1 minute).
+name: aksaraline_smoke
+glyph_cache: aksara_seq/build/glyphs
+out: aksara_seq/build/corpus/smoke
+scripts: [Sunda, Jawa, Bali, Lontara]
+seed: 20260830
+core_height: 48
+output_height: 96
+samples:
+  train: 200
+  val: 50
+  test: 50
+words_per_line: {1: 0.45, 2: 0.25, 3: 0.16, 4: 0.09, 5: 0.05}
+style_mix: {clean: 0.15, light: 0.30, medium: 0.35, heavy: 0.20}
+lexicon_fraction: 0.0

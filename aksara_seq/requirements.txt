@@ -1,0 +1,6 @@
+numpy>=1.24
+pillow>=10.0
+pyyaml>=6.0
+
+# step 3 (recognition) only
+torch>=2.2

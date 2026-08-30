@@ -1,0 +1,30 @@
+# Seed lexicon for lontara (bug) -- UNVERIFIED PLACEHOLDER.
+#
+# Format: one word per line, syllables separated by "-", using the canonical
+# syllable labels of the corpus grid (see charset.json).  Lines after "#" are
+# comments.
+#
+# These lists were assembled without native-speaker review and are NOT a
+# linguistic resource.  They exist so the lexicon path is exercised and so a
+# real word list can be dropped in unchanged.  Corpus generation defaults to
+# lexicon_fraction: 0.0 -- pseudo-words only -- precisely so that no
+# unverified vocabulary silently enters the published dataset.
+#
+# Only open CV syllables are renderable: the corpus contributes no pasangan,
+# gantungan, virama or final-consonant marks, so words with codas cannot be
+# written and are omitted.
+ta-na
+bo-la
+a-na
+ma-ta
+ba-tu
+ka-yu
+ta-li
+ra-ga
+sa-ri
+gu-ru
+pa-da
+ba-sa
+ci-na
+da-ra
+la-ma

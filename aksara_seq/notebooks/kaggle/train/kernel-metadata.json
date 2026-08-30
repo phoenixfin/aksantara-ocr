@@ -10,6 +10,9 @@
   "enable_internet": true,
   "dataset_sources": [],
   "competition_sources": [],
-  "kernel_sources": ["adityafirmanihsan/aksaraline-corpus"],
-  "model_sources": []
+  "kernel_sources": [
+    "adityafirmanihsan/aksaraline-corpus"
+  ],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
 }

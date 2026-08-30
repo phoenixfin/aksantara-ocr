@@ -73,7 +73,7 @@ def main() -> int:
             print(f"  {s:9s} {h:9s} seed {sd}")
         return 0
 
-    rows, t0 = [], time.time()
+    rows, failures, t0 = [], [], time.time()
     for i, (script, head, seed) in enumerate(cells, start=1):
         tag = f"{script}_{head}" + (f"_s{seed}" if seed else "")
         run_dir = Path(args.out) / tag
@@ -93,6 +93,7 @@ def main() -> int:
             result = train(cfg)
         except Exception as exc:                       # keep the matrix going
             print(f"  FAILED: {exc!r}")
+            failures.append((tag, repr(exc)))
             continue
         rows.append(row_from(result))
 

@@ -20,11 +20,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from aksaraseq.recog.train import TrainConfig, train  # noqa: E402
+from aksaraseq.recog.vocab import Vocab, diagonal_holdout  # noqa: E402
 
 FIELDS = ["script", "head", "seed", "n_parameters", "best_epoch",
           "val_ser", "test_ser", "test_wer", "test_line_acc",
           "onset_error", "vowel_error", "minutes",
-          "ser_clean", "ser_light", "ser_medium", "ser_heavy"]
+          "ser_clean", "ser_light", "ser_medium", "ser_heavy",
+          "n_holdout", "holdout_recall", "seen_recall", "holdout_tokens",
+          "train_lines"]
 
 
 def row_from(result: dict) -> dict:
@@ -45,6 +48,11 @@ def row_from(result: dict) -> dict:
     for style in ("clean", "light", "medium", "heavy"):
         v = by_style.get(style, {}).get("ser")
         row[f"ser_{style}"] = round(v, 5) if v is not None else ""
+    row["n_holdout"] = len(cfg.get("holdout_cells", []))
+    for k in ("holdout_recall", "seen_recall", "holdout_tokens"):
+        v = test.get(k)
+        row[k] = round(v, 5) if isinstance(v, float) else (v if v is not None else "")
+    row["train_lines"] = result.get("train_lines", "")
     return row
 
 
@@ -62,6 +70,10 @@ def main() -> int:
     ap.add_argument("--height", type=int, default=64)
     ap.add_argument("--num-workers", type=int, default=2)
     ap.add_argument("--limit-train", type=int, default=0)
+    ap.add_argument("--holdout-frac", type=float, default=0.0,
+                    help="withhold this fraction of (onset,vowel) cells from "
+                         "training, to test whether a head can read a syllable "
+                         "it never saw")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -84,11 +96,18 @@ def main() -> int:
             continue
 
         print(f"\n[{i}/{len(cells)}] {tag}")
+        holdout = []
+        if args.holdout_frac > 0:
+            vocab = Vocab.from_charset(args.corpus / script / "charset.json")
+            holdout = diagonal_holdout(vocab, args.holdout_frac)
+            print(f"  withholding {len(holdout)} cells: {holdout}")
+
         cfg = TrainConfig(corpus=args.corpus, script=script, head=head,
                           out=args.out, epochs=args.epochs, seed=seed,
                           batch_size=args.batch_size, height=args.height,
                           num_workers=args.num_workers,
-                          limit_train=args.limit_train)
+                          limit_train=args.limit_train,
+                          holdout_cells=holdout, tag=tag)
         try:
             result = train(cfg)
         except Exception as exc:                       # keep the matrix going

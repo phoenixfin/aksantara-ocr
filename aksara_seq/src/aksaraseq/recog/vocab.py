@@ -109,3 +109,46 @@ class Vocab:
         return (f"{self.n_classes} classes (blank + {self.n_specials} special "
                 f"+ {len(self.syllables) - self.n_specials} syllables) "
                 f"= {len(self.onsets)} onsets x {len(self.vowels)} vowels")
+
+
+def diagonal_holdout(vocab: Vocab, frac: float = 0.10) -> list:
+    """Pick (onset, vowel) cells to withhold, spread across the grid.
+
+    Chosen on a rotating diagonal rather than at random, and never taking the
+    last cell of an onset or of a vowel: the factored head can only score an
+    unseen cell if *both* of its factors were trained somewhere else, so a
+    holdout that strands a factor would test nothing. The result is
+    deterministic, so every seed and both heads withhold exactly the same
+    syllables and the comparison stays paired.
+    """
+    cells = {}
+    for i, s in enumerate(vocab.syllables, start=1):
+        if vocab.special_of[i] >= 0:
+            continue
+        cells[(vocab.onsets[vocab.onset_of[i]],
+               vocab.vowels[vocab.vowel_of[i]])] = s
+
+    per_onset, per_vowel = {}, {}
+    for o, v in cells:
+        per_onset[o] = per_onset.get(o, 0) + 1
+        per_vowel[v] = per_vowel.get(v, 0) + 1
+
+    onsets = sorted({o for o, _ in cells})
+    vowels = sorted({v for _, v in cells})
+    target = max(1, int(round(frac * len(cells))))
+
+    held = []
+    for shift in range(len(vowels)):
+        for i, o in enumerate(onsets):
+            if len(held) >= target:
+                return sorted(held)
+            v = vowels[(i + shift) % len(vowels)]
+            syl = cells.get((o, v))
+            if syl is None or syl in held:
+                continue
+            if per_onset[o] <= 2 or per_vowel[v] <= 2:
+                continue
+            held.append(syl)
+            per_onset[o] -= 1
+            per_vowel[v] -= 1
+    return sorted(held)

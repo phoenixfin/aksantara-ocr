@@ -50,6 +50,10 @@ class TrainConfig:
     # collides across seeds when several run under one output root.
     tag: str = ""
     train_frac: float = 1.0            # recorded for the data-scaling curve
+    # Checkpoint to initialise the encoder from. Only backbone and RNN weights
+    # are copied; the head is vocabulary-specific and must be learned fresh,
+    # since the target script has a different syllable inventory.
+    init_from: str = ""
 
     def as_dict(self) -> dict:
         d = asdict(self)
@@ -171,6 +175,19 @@ def train(cfg: TrainConfig, log=print) -> dict:
                         rnn_hidden=cfg.rnn_hidden, rnn_layers=cfg.rnn_layers,
                         dropout=cfg.dropout).to(device)
     log(f"head={cfg.head}  parameters={count_parameters(model):,}  device={device}")
+
+    if cfg.init_from:
+        ckpt = torch.load(cfg.init_from, map_location=device, weights_only=False)
+        state = ckpt.get("model", ckpt)
+        enc = {k: v for k, v in state.items()
+               if k.startswith("backbone.") or k.startswith("rnn.")}
+        missing, unexpected = model.load_state_dict(enc, strict=False)
+        head_kept = [k for k in missing if k.startswith("head.")]
+        log(f"initialised encoder from {Path(cfg.init_from).parent.name}: "
+            f"{len(enc)} tensors copied, {len(head_kept)} head tensors left "
+            f"random, {len(unexpected)} unexpected")
+        if unexpected:
+            raise RuntimeError(f"unexpected keys when transferring: {unexpected[:4]}")
 
     ctc = nn.CTCLoss(blank=0, zero_infinity=True)
     opt = torch.optim.AdamW(model.parameters(), lr=cfg.lr,

@@ -49,6 +49,7 @@ class TrainConfig:
     # Directory name for this run. Left empty it is "<script>_<head>", which
     # collides across seeds when several run under one output root.
     tag: str = ""
+    train_frac: float = 1.0            # recorded for the data-scaling curve
 
     def as_dict(self) -> dict:
         d = asdict(self)

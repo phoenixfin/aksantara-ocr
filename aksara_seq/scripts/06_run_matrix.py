@@ -27,7 +27,7 @@ FIELDS = ["script", "head", "seed", "n_parameters", "best_epoch",
           "onset_error", "vowel_error", "minutes",
           "ser_clean", "ser_light", "ser_medium", "ser_heavy",
           "n_holdout", "holdout_recall", "seen_recall", "holdout_tokens",
-          "train_lines"]
+          "train_lines", "train_frac", "epochs"]
 
 
 def row_from(result: dict) -> dict:
@@ -53,6 +53,8 @@ def row_from(result: dict) -> dict:
         v = test.get(k)
         row[k] = round(v, 5) if isinstance(v, float) else (v if v is not None else "")
     row["train_lines"] = result.get("train_lines", "")
+    row["train_frac"] = cfg.get("train_frac", 1.0)
+    row["epochs"] = cfg["epochs"]
     return row
 
 
@@ -70,6 +72,13 @@ def main() -> int:
     ap.add_argument("--height", type=int, default=64)
     ap.add_argument("--num-workers", type=int, default=2)
     ap.add_argument("--limit-train", type=int, default=0)
+    ap.add_argument("--train-frac", type=float, default=1.0,
+                    help="train on this fraction of the training lines. Epochs "
+                         "are scaled up so every fraction gets a comparable "
+                         "optimisation budget, otherwise a small fraction is "
+                         "simply undertrained and the comparison is confounded")
+    ap.add_argument("--max-epochs", type=int, default=90,
+                    help="cap on the scaled epoch count")
     ap.add_argument("--holdout-frac", type=float, default=0.0,
                     help="withhold this fraction of (onset,vowel) cells from "
                          "training, to test whether a head can read a syllable "
@@ -96,6 +105,17 @@ def main() -> int:
             continue
 
         print(f"\n[{i}/{len(cells)}] {tag}")
+        limit_train = args.limit_train
+        epochs = args.epochs
+        if args.train_frac < 1.0:
+            n_train = sum(1 for _ in open(
+                args.corpus / script / "train" / "labels.jsonl", encoding="utf-8"))
+            limit_train = max(1, int(round(args.train_frac * n_train)))
+            epochs = min(args.max_epochs,
+                         max(args.epochs, int(round(args.epochs / args.train_frac))))
+            print(f"  train_frac {args.train_frac}: {limit_train} lines, "
+                  f"{epochs} epochs")
+
         holdout = []
         if args.holdout_frac > 0:
             vocab = Vocab.from_charset(args.corpus / script / "charset.json")
@@ -103,11 +123,12 @@ def main() -> int:
             print(f"  withholding {len(holdout)} cells: {holdout}")
 
         cfg = TrainConfig(corpus=args.corpus, script=script, head=head,
-                          out=args.out, epochs=args.epochs, seed=seed,
+                          out=args.out, epochs=epochs, seed=seed,
                           batch_size=args.batch_size, height=args.height,
                           num_workers=args.num_workers,
-                          limit_train=args.limit_train,
+                          limit_train=limit_train,
                           holdout_cells=holdout, tag=tag)
+        cfg.train_frac = args.train_frac
         try:
             result = train(cfg)
         except Exception as exc:                       # keep the matrix going
